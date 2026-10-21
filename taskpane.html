@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SlideKit</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="pane">
+    <header><b>SlideKit</b><span class="muted" id="host"></span></header>
+    <div class="hero">
+      迷ったら <kbd>⌃⌥P</kbd>（パレット）→ やりたいことを入力。<br>
+      一覧は <kbd>⌃⌥K</kbd>、このパネルは <kbd>⌃⌥I</kbd>。
+    </div>
+    <section>
+      <div id="ctx-title" class="muted"></div>
+      <div id="ctx"></div>
+    </section>
+    <section>
+      <h2>お知らせ</h2>
+      <div id="log"><p class="muted">リボンから実行すると、ここにショートカットのヒントが出ます。</p></div>
+    </section>
+    <section>
+      <h2>覚えるとお得</h2>
+      <div id="learn"></div>
+    </section>
+    <section>
+      <h2>すべてのコマンド</h2>
+      <div id="all"></div>
+    </section>
+  </div>
+  <script src="taskpane.js"></script>
+</body>
+</html>

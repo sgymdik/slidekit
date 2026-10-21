@@ -1,0 +1,576 @@
+{
+  "actions": [
+    {
+      "id": "AlignLeft",
+      "type": "ExecuteFunction",
+      "name": "左揃え"
+    },
+    {
+      "id": "AlignRight",
+      "type": "ExecuteFunction",
+      "name": "右揃え"
+    },
+    {
+      "id": "AlignTop",
+      "type": "ExecuteFunction",
+      "name": "上揃え"
+    },
+    {
+      "id": "AlignBottom",
+      "type": "ExecuteFunction",
+      "name": "下揃え"
+    },
+    {
+      "id": "AlignCenter",
+      "type": "ExecuteFunction",
+      "name": "左右中央"
+    },
+    {
+      "id": "AlignMiddle",
+      "type": "ExecuteFunction",
+      "name": "上下中央"
+    },
+    {
+      "id": "SlideCenterH",
+      "type": "ExecuteFunction",
+      "name": "スライド水平中央"
+    },
+    {
+      "id": "SlideCenterV",
+      "type": "ExecuteFunction",
+      "name": "スライド垂直中央"
+    },
+    {
+      "id": "SnapLeft",
+      "type": "ExecuteFunction",
+      "name": "スライド左端へ"
+    },
+    {
+      "id": "SnapRight",
+      "type": "ExecuteFunction",
+      "name": "スライド右端へ"
+    },
+    {
+      "id": "SnapTop",
+      "type": "ExecuteFunction",
+      "name": "スライド上端へ"
+    },
+    {
+      "id": "SnapBottom",
+      "type": "ExecuteFunction",
+      "name": "スライド下端へ"
+    },
+    {
+      "id": "DistributeH",
+      "type": "ExecuteFunction",
+      "name": "水平均等"
+    },
+    {
+      "id": "DistributeV",
+      "type": "ExecuteFunction",
+      "name": "垂直均等"
+    },
+    {
+      "id": "GapH",
+      "type": "ExecuteFunction",
+      "name": "横間隔を指定"
+    },
+    {
+      "id": "GapV",
+      "type": "ExecuteFunction",
+      "name": "縦間隔を指定"
+    },
+    {
+      "id": "MatchWidth",
+      "type": "ExecuteFunction",
+      "name": "幅を揃える"
+    },
+    {
+      "id": "MatchHeight",
+      "type": "ExecuteFunction",
+      "name": "高さを揃える"
+    },
+    {
+      "id": "MatchBoth",
+      "type": "ExecuteFunction",
+      "name": "サイズを揃える"
+    },
+    {
+      "id": "StretchLeft",
+      "type": "ExecuteFunction",
+      "name": "左端まで伸ばす"
+    },
+    {
+      "id": "StretchRight",
+      "type": "ExecuteFunction",
+      "name": "右端まで伸ばす"
+    },
+    {
+      "id": "StretchTop",
+      "type": "ExecuteFunction",
+      "name": "上端まで伸ばす"
+    },
+    {
+      "id": "StretchBottom",
+      "type": "ExecuteFunction",
+      "name": "下端まで伸ばす"
+    },
+    {
+      "id": "Scale",
+      "type": "ExecuteFunction",
+      "name": "倍率で拡大縮小"
+    },
+    {
+      "id": "Grid",
+      "type": "ExecuteFunction",
+      "name": "グリッド整列"
+    },
+    {
+      "id": "Swap",
+      "type": "ExecuteFunction",
+      "name": "位置を入れ替え"
+    },
+    {
+      "id": "Group",
+      "type": "ExecuteFunction",
+      "name": "グループ化"
+    },
+    {
+      "id": "Ungroup",
+      "type": "ExecuteFunction",
+      "name": "グループ解除"
+    },
+    {
+      "id": "BringToFront",
+      "type": "ExecuteFunction",
+      "name": "最前面へ"
+    },
+    {
+      "id": "BringForward",
+      "type": "ExecuteFunction",
+      "name": "前面へ"
+    },
+    {
+      "id": "SendBackward",
+      "type": "ExecuteFunction",
+      "name": "背面へ"
+    },
+    {
+      "id": "SendToBack",
+      "type": "ExecuteFunction",
+      "name": "最背面へ"
+    },
+    {
+      "id": "SelectNextRight",
+      "type": "ExecuteFunction",
+      "name": "右隣の図形を選択"
+    },
+    {
+      "id": "SelectNextLeft",
+      "type": "ExecuteFunction",
+      "name": "左隣の図形を選択"
+    },
+    {
+      "id": "SelectNextUp",
+      "type": "ExecuteFunction",
+      "name": "上隣の図形を選択"
+    },
+    {
+      "id": "SelectNextDown",
+      "type": "ExecuteFunction",
+      "name": "下隣の図形を選択"
+    },
+    {
+      "id": "PickStyle",
+      "type": "ExecuteFunction",
+      "name": "書式をつまむ"
+    },
+    {
+      "id": "ApplyStyle",
+      "type": "ExecuteFunction",
+      "name": "書式を貼る"
+    },
+    {
+      "id": "Transparency",
+      "type": "ExecuteFunction",
+      "name": "透明度"
+    },
+    {
+      "id": "SelectSameFill",
+      "type": "ExecuteFunction",
+      "name": "同じ色を選択"
+    },
+    {
+      "id": "SelectSameSize",
+      "type": "ExecuteFunction",
+      "name": "同じサイズを選択"
+    },
+    {
+      "id": "FontReplace",
+      "type": "ExecuteFunction",
+      "name": "フォント統一"
+    },
+    {
+      "id": "InsertHarvey",
+      "type": "ExecuteFunction",
+      "name": "ハーベイボール"
+    },
+    {
+      "id": "InsertChevron",
+      "type": "ExecuteFunction",
+      "name": "プロセスフロー"
+    },
+    {
+      "id": "InsertSticky",
+      "type": "ExecuteFunction",
+      "name": "付箋"
+    },
+    {
+      "id": "AgendaInsert",
+      "type": "ExecuteFunction",
+      "name": "アジェンダ挿入"
+    },
+    {
+      "id": "AgendaPerChapter",
+      "type": "ExecuteFunction",
+      "name": "アジェンダを各章の前に"
+    },
+    {
+      "id": "InsertTracker",
+      "type": "ExecuteFunction",
+      "name": "アジェンダトラッカー"
+    },
+    {
+      "id": "InsertTable",
+      "type": "ExecuteFunction",
+      "name": "表を貼り付け"
+    },
+    {
+      "id": "ChartStudio",
+      "type": "ExecuteFunction",
+      "name": "チャート"
+    },
+    {
+      "id": "Palette",
+      "type": "ExecuteFunction",
+      "name": "コマンドパレット"
+    },
+    {
+      "id": "Cheatsheet",
+      "type": "ExecuteFunction",
+      "name": "ショートカット一覧"
+    },
+    {
+      "id": "Pane",
+      "type": "ExecuteFunction",
+      "name": "ヒントパネル"
+    },
+    {
+      "id": "RenameSeq",
+      "type": "ExecuteFunction",
+      "name": "連番リネーム"
+    },
+    {
+      "id": "RemoveDuplicates",
+      "type": "ExecuteFunction",
+      "name": "重複図形を削除"
+    },
+    {
+      "id": "DeleteStickies",
+      "type": "ExecuteFunction",
+      "name": "付箋を一括削除"
+    },
+    {
+      "id": "DecimalToggle",
+      "type": "ExecuteFunction",
+      "name": "小数点 . ↔ ,"
+    },
+    {
+      "id": "Settings",
+      "type": "ExecuteFunction",
+      "name": "設定"
+    }
+  ],
+  "shortcuts": [
+    {
+      "action": "AlignLeft",
+      "key": {
+        "default": "Ctrl+Alt+Left",
+        "mac": "Ctrl+Alt+Left"
+      }
+    },
+    {
+      "action": "AlignRight",
+      "key": {
+        "default": "Ctrl+Alt+Right",
+        "mac": "Ctrl+Alt+Right"
+      }
+    },
+    {
+      "action": "AlignTop",
+      "key": {
+        "default": "Ctrl+Alt+Up",
+        "mac": "Ctrl+Alt+Up"
+      }
+    },
+    {
+      "action": "AlignBottom",
+      "key": {
+        "default": "Ctrl+Alt+Down",
+        "mac": "Ctrl+Alt+Down"
+      }
+    },
+    {
+      "action": "AlignCenter",
+      "key": {
+        "default": "Ctrl+Alt+C",
+        "mac": "Ctrl+Alt+C"
+      }
+    },
+    {
+      "action": "AlignMiddle",
+      "key": {
+        "default": "Ctrl+Alt+M",
+        "mac": "Ctrl+Alt+M"
+      }
+    },
+    {
+      "action": "SlideCenterH",
+      "key": {
+        "default": "Ctrl+Alt+Shift+C",
+        "mac": "Ctrl+Alt+Shift+C"
+      }
+    },
+    {
+      "action": "SlideCenterV",
+      "key": {
+        "default": "Ctrl+Alt+Shift+M",
+        "mac": "Ctrl+Alt+Shift+M"
+      }
+    },
+    {
+      "action": "SnapLeft",
+      "key": {
+        "default": "Ctrl+Alt+Shift+Left",
+        "mac": "Ctrl+Alt+Shift+Left"
+      }
+    },
+    {
+      "action": "SnapRight",
+      "key": {
+        "default": "Ctrl+Alt+Shift+Right",
+        "mac": "Ctrl+Alt+Shift+Right"
+      }
+    },
+    {
+      "action": "SnapTop",
+      "key": {
+        "default": "Ctrl+Alt+Shift+Up",
+        "mac": "Ctrl+Alt+Shift+Up"
+      }
+    },
+    {
+      "action": "SnapBottom",
+      "key": {
+        "default": "Ctrl+Alt+Shift+Down",
+        "mac": "Ctrl+Alt+Shift+Down"
+      }
+    },
+    {
+      "action": "DistributeH",
+      "key": {
+        "default": "Ctrl+Alt+H",
+        "mac": "Ctrl+Alt+H"
+      }
+    },
+    {
+      "action": "DistributeV",
+      "key": {
+        "default": "Ctrl+Alt+V",
+        "mac": "Ctrl+Alt+V"
+      }
+    },
+    {
+      "action": "GapH",
+      "key": {
+        "default": "Ctrl+Alt+Shift+H",
+        "mac": "Ctrl+Alt+Shift+H"
+      }
+    },
+    {
+      "action": "GapV",
+      "key": {
+        "default": "Ctrl+Alt+Shift+V",
+        "mac": "Ctrl+Alt+Shift+V"
+      }
+    },
+    {
+      "action": "MatchWidth",
+      "key": {
+        "default": "Ctrl+Alt+W",
+        "mac": "Ctrl+Alt+W"
+      }
+    },
+    {
+      "action": "MatchHeight",
+      "key": {
+        "default": "Ctrl+Alt+E",
+        "mac": "Ctrl+Alt+E"
+      }
+    },
+    {
+      "action": "MatchBoth",
+      "key": {
+        "default": "Ctrl+Alt+S",
+        "mac": "Ctrl+Alt+S"
+      }
+    },
+    {
+      "action": "Grid",
+      "key": {
+        "default": "Ctrl+Alt+T",
+        "mac": "Ctrl+Alt+T"
+      }
+    },
+    {
+      "action": "Swap",
+      "key": {
+        "default": "Ctrl+Alt+X",
+        "mac": "Ctrl+Alt+X"
+      }
+    },
+    {
+      "action": "Group",
+      "key": {
+        "default": "Ctrl+Alt+G",
+        "mac": "Ctrl+Alt+G"
+      }
+    },
+    {
+      "action": "Ungroup",
+      "key": {
+        "default": "Ctrl+Alt+U",
+        "mac": "Ctrl+Alt+U"
+      }
+    },
+    {
+      "action": "BringToFront",
+      "key": {
+        "default": "Ctrl+Alt+1",
+        "mac": "Ctrl+Alt+1"
+      }
+    },
+    {
+      "action": "BringForward",
+      "key": {
+        "default": "Ctrl+Alt+2",
+        "mac": "Ctrl+Alt+2"
+      }
+    },
+    {
+      "action": "SendBackward",
+      "key": {
+        "default": "Ctrl+Alt+3",
+        "mac": "Ctrl+Alt+3"
+      }
+    },
+    {
+      "action": "SendToBack",
+      "key": {
+        "default": "Ctrl+Alt+4",
+        "mac": "Ctrl+Alt+4"
+      }
+    },
+    {
+      "action": "SelectNextRight",
+      "key": {
+        "default": "Ctrl+Alt+Shift+L",
+        "mac": "Ctrl+Alt+Shift+L"
+      }
+    },
+    {
+      "action": "SelectNextLeft",
+      "key": {
+        "default": "Ctrl+Alt+Shift+J",
+        "mac": "Ctrl+Alt+Shift+J"
+      }
+    },
+    {
+      "action": "SelectNextUp",
+      "key": {
+        "default": "Ctrl+Alt+Shift+I",
+        "mac": "Ctrl+Alt+Shift+I"
+      }
+    },
+    {
+      "action": "SelectNextDown",
+      "key": {
+        "default": "Ctrl+Alt+Shift+K",
+        "mac": "Ctrl+Alt+Shift+K"
+      }
+    },
+    {
+      "action": "PickStyle",
+      "key": {
+        "default": "Ctrl+Alt+Q",
+        "mac": "Ctrl+Alt+Q"
+      }
+    },
+    {
+      "action": "ApplyStyle",
+      "key": {
+        "default": "Ctrl+Alt+A",
+        "mac": "Ctrl+Alt+A"
+      }
+    },
+    {
+      "action": "SelectSameFill",
+      "key": {
+        "default": "Ctrl+Alt+Shift+F",
+        "mac": "Ctrl+Alt+Shift+F"
+      }
+    },
+    {
+      "action": "InsertHarvey",
+      "key": {
+        "default": "Ctrl+Alt+B",
+        "mac": "Ctrl+Alt+B"
+      }
+    },
+    {
+      "action": "InsertSticky",
+      "key": {
+        "default": "Ctrl+Alt+N",
+        "mac": "Ctrl+Alt+N"
+      }
+    },
+    {
+      "action": "ChartStudio",
+      "key": {
+        "default": "Ctrl+Alt+R",
+        "mac": "Ctrl+Alt+R"
+      }
+    },
+    {
+      "action": "Palette",
+      "key": {
+        "default": "Ctrl+Alt+P",
+        "mac": "Ctrl+Alt+P"
+      }
+    },
+    {
+      "action": "Cheatsheet",
+      "key": {
+        "default": "Ctrl+Alt+K",
+        "mac": "Ctrl+Alt+K"
+      }
+    },
+    {
+      "action": "Pane",
+      "key": {
+        "default": "Ctrl+Alt+I",
+        "mac": "Ctrl+Alt+I"
+      }
+    }
+  ]
+}

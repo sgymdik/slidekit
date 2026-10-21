@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 生成ファイル: scripts/build.mjs が src/commands.ts から作る。直接編集しない -->
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
+  <Id>af62fd4e-29bf-40c5-ad04-42092f8a4496</Id>
+  <Version>2.0.0.0</Version>
+  <ProviderName>SlideKit</ProviderName>
+  <DefaultLocale>ja-JP</DefaultLocale>
+  <DisplayName DefaultValue="SlideKit for Excel"/>
+  <Description DefaultValue="図形整列・チャート・ショートカット中心の作業効率化アドイン"/>
+  <IconUrl DefaultValue="https://sgymdik.github.io/slidekit/assets/App-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://sgymdik.github.io/slidekit/assets/App-80.png"/>
+  <SupportUrl DefaultValue="https://sgymdik.github.io/slidekit/taskpane.html"/>
+  <AppDomains><AppDomain>https://sgymdik.github.io</AppDomain></AppDomains>
+  <Hosts><Host Name="Workbook"/></Hosts>
+  <Requirements><Sets DefaultMinVersion="1.1"><Set Name="SharedRuntime" MinVersion="1.1"/></Sets></Requirements>
+  <DefaultSettings><SourceLocation DefaultValue="https://sgymdik.github.io/slidekit/taskpane.html"/></DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Workbook">
+        <Runtimes><Runtime resid="Taskpane.Url" lifetime="long"/></Runtimes>
+        <DesktopFormFactor>
+          <GetStarted><Title resid="GetStarted.Title"/><Description resid="GetStarted.Desc"/><LearnMoreUrl resid="Help.Url"/></GetStarted>
+          <FunctionFile resid="Taskpane.Url"/>
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <CustomTab id="SlideKit.Tab">
+              <Group id="G_xFormat"><Label resid="G_xFormat"/><Icon><bt:Image size="16" resid="XCycleFontColor.16"/><bt:Image size="32" resid="XCycleFontColor.32"/><bt:Image size="80" resid="XCycleFontColor.80"/></Icon><Control xsi:type="Button" id="B_XCycleFontColor"><Label resid="L_XCycleFontColor"/><Supertip><Title resid="L_XCycleFontColor"/><Description resid="T_XCycleFontColor"/></Supertip><Icon><bt:Image size="16" resid="XCycleFontColor.16"/><bt:Image size="32" resid="XCycleFontColor.32"/><bt:Image size="80" resid="XCycleFontColor.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XCycleFontColor</FunctionName></Action></Control><Control xsi:type="Button" id="B_XCycleFill"><Label resid="L_XCycleFill"/><Supertip><Title resid="L_XCycleFill"/><Description resid="T_XCycleFill"/></Supertip><Icon><bt:Image size="16" resid="XCycleFill.16"/><bt:Image size="32" resid="XCycleFill.32"/><bt:Image size="80" resid="XCycleFill.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XCycleFill</FunctionName></Action></Control><Control xsi:type="Button" id="B_XCycleBorder"><Label resid="L_XCycleBorder"/><Supertip><Title resid="L_XCycleBorder"/><Description resid="T_XCycleBorder"/></Supertip><Icon><bt:Image size="16" resid="XCycleBorder.16"/><bt:Image size="32" resid="XCycleBorder.32"/><bt:Image size="80" resid="XCycleBorder.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XCycleBorder</FunctionName></Action></Control><Control xsi:type="Button" id="B_XCycleAlign"><Label resid="L_XCycleAlign"/><Supertip><Title resid="L_XCycleAlign"/><Description resid="T_XCycleAlign"/></Supertip><Icon><bt:Image size="16" resid="XCycleAlign.16"/><bt:Image size="32" resid="XCycleAlign.32"/><bt:Image size="80" resid="XCycleAlign.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XCycleAlign</FunctionName></Action></Control><Control xsi:type="Button" id="B_XCenterAcross"><Label resid="L_XCenterAcross"/><Supertip><Title resid="L_XCenterAcross"/><Description resid="T_XCenterAcross"/></Supertip><Icon><bt:Image size="16" resid="XCenterAcross.16"/><bt:Image size="32" resid="XCenterAcross.32"/><bt:Image size="80" resid="XCenterAcross.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XCenterAcross</FunctionName></Action></Control><Control xsi:type="Menu" id="M_xFormat"><Label resid="M_xFormat"/><Supertip><Title resid="M_xFormat"/><Description resid="MT_xFormat"/></Supertip><Icon><bt:Image size="16" resid="More.16"/><bt:Image size="32" resid="More.32"/><bt:Image size="80" resid="More.80"/></Icon><Items><Item id="I_XHeaderStyle"><Label resid="L_XHeaderStyle"/><Supertip><Title resid="L_XHeaderStyle"/><Description resid="T_XHeaderStyle"/></Supertip><Icon><bt:Image size="16" resid="XHeaderStyle.16"/><bt:Image size="32" resid="XHeaderStyle.32"/><bt:Image size="80" resid="XHeaderStyle.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XHeaderStyle</FunctionName></Action></Item><Item id="I_XIndentUp"><Label resid="L_XIndentUp"/><Supertip><Title resid="L_XIndentUp"/><Description resid="T_XIndentUp"/></Supertip><Icon><bt:Image size="16" resid="XIndentUp.16"/><bt:Image size="32" resid="XIndentUp.32"/><bt:Image size="80" resid="XIndentUp.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XIndentUp</FunctionName></Action></Item><Item id="I_XIndentDown"><Label resid="L_XIndentDown"/><Supertip><Title resid="L_XIndentDown"/><Description resid="T_XIndentDown"/></Supertip><Icon><bt:Image size="16" resid="XIndentDown.16"/><bt:Image size="32" resid="XIndentDown.32"/><bt:Image size="80" resid="XIndentDown.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XIndentDown</FunctionName></Action></Item></Items></Control></Group><Group id="G_xNumber"><Label resid="G_xNumber"/><Icon><bt:Image size="16" resid="XCycleNumber.16"/><bt:Image size="32" resid="XCycleNumber.32"/><bt:Image size="80" resid="XCycleNumber.80"/></Icon><Control xsi:type="Button" id="B_XCycleNumber"><Label resid="L_XCycleNumber"/><Supertip><Title resid="L_XCycleNumber"/><Description resid="T_XCycleNumber"/></Supertip><Icon><bt:Image size="16" resid="XCycleNumber.16"/><bt:Image size="32" resid="XCycleNumber.32"/><bt:Image size="80" resid="XCycleNumber.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XCycleNumber</FunctionName></Action></Control><Control xsi:type="Button" id="B_XCycleDate"><Label resid="L_XCycleDate"/><Supertip><Title resid="L_XCycleDate"/><Description resid="T_XCycleDate"/></Supertip><Icon><bt:Image size="16" resid="XCycleDate.16"/><bt:Image size="32" resid="XCycleDate.32"/><bt:Image size="80" resid="XCycleDate.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XCycleDate</FunctionName></Action></Control><Control xsi:type="Button" id="B_XDecimalUp"><Label resid="L_XDecimalUp"/><Supertip><Title resid="L_XDecimalUp"/><Description resid="T_XDecimalUp"/></Supertip><Icon><bt:Image size="16" resid="XDecimalUp.16"/><bt:Image size="32" resid="XDecimalUp.32"/><bt:Image size="80" resid="XDecimalUp.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XDecimalUp</FunctionName></Action></Control><Control xsi:type="Button" id="B_XDecimalDown"><Label resid="L_XDecimalDown"/><Supertip><Title resid="L_XDecimalDown"/><Description resid="T_XDecimalDown"/></Supertip><Icon><bt:Image size="16" resid="XDecimalDown.16"/><bt:Image size="32" resid="XDecimalDown.32"/><bt:Image size="80" resid="XDecimalDown.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XDecimalDown</FunctionName></Action></Control><Control xsi:type="Button" id="B_XScaleK"><Label resid="L_XScaleK"/><Supertip><Title resid="L_XScaleK"/><Description resid="T_XScaleK"/></Supertip><Icon><bt:Image size="16" resid="XScaleK.16"/><bt:Image size="32" resid="XScaleK.32"/><bt:Image size="80" resid="XScaleK.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XScaleK</FunctionName></Action></Control></Group><Group id="G_xCells"><Label resid="G_xCells"/><Icon><bt:Image size="16" resid="XAutofit.16"/><bt:Image size="32" resid="XAutofit.32"/><bt:Image size="80" resid="XAutofit.80"/></Icon><Control xsi:type="Button" id="B_XAutofit"><Label resid="L_XAutofit"/><Supertip><Title resid="L_XAutofit"/><Description resid="T_XAutofit"/></Supertip><Icon><bt:Image size="16" resid="XAutofit.16"/><bt:Image size="32" resid="XAutofit.32"/><bt:Image size="80" resid="XAutofit.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XAutofit</FunctionName></Action></Control><Control xsi:type="Button" id="B_XTrim"><Label resid="L_XTrim"/><Supertip><Title resid="L_XTrim"/><Description resid="T_XTrim"/></Supertip><Icon><bt:Image size="16" resid="XTrim.16"/><bt:Image size="32" resid="XTrim.32"/><bt:Image size="80" resid="XTrim.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XTrim</FunctionName></Action></Control><Control xsi:type="Button" id="B_XToValues"><Label resid="L_XToValues"/><Supertip><Title resid="L_XToValues"/><Description resid="T_XToValues"/></Supertip><Icon><bt:Image size="16" resid="XToValues.16"/><bt:Image size="32" resid="XToValues.32"/><bt:Image size="80" resid="XToValues.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XToValues</FunctionName></Action></Control><Control xsi:type="Button" id="B_XTextToNumber"><Label resid="L_XTextToNumber"/><Supertip><Title resid="L_XTextToNumber"/><Description resid="T_XTextToNumber"/></Supertip><Icon><bt:Image size="16" resid="XTextToNumber.16"/><bt:Image size="32" resid="XTextToNumber.32"/><bt:Image size="80" resid="XTextToNumber.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XTextToNumber</FunctionName></Action></Control><Control xsi:type="Button" id="B_XFillDown"><Label resid="L_XFillDown"/><Supertip><Title resid="L_XFillDown"/><Description resid="T_XFillDown"/></Supertip><Icon><bt:Image size="16" resid="XFillDown.16"/><bt:Image size="32" resid="XFillDown.32"/><bt:Image size="80" resid="XFillDown.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XFillDown</FunctionName></Action></Control><Control xsi:type="Menu" id="M_xCells"><Label resid="M_xCells"/><Supertip><Title resid="M_xCells"/><Description resid="MT_xCells"/></Supertip><Icon><bt:Image size="16" resid="More.16"/><bt:Image size="32" resid="More.32"/><bt:Image size="80" resid="More.80"/></Icon><Items><Item id="I_XWrapIfError"><Label resid="L_XWrapIfError"/><Supertip><Title resid="L_XWrapIfError"/><Description resid="T_XWrapIfError"/></Supertip><Icon><bt:Image size="16" resid="XWrapIfError.16"/><bt:Image size="32" resid="XWrapIfError.32"/><bt:Image size="80" resid="XWrapIfError.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XWrapIfError</FunctionName></Action></Item><Item id="I_XToggleAbsolute"><Label resid="L_XToggleAbsolute"/><Supertip><Title resid="L_XToggleAbsolute"/><Description resid="T_XToggleAbsolute"/></Supertip><Icon><bt:Image size="16" resid="XToggleAbsolute.16"/><bt:Image size="32" resid="XToggleAbsolute.32"/><bt:Image size="80" resid="XToggleAbsolute.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XToggleAbsolute</FunctionName></Action></Item><Item id="I_XCase"><Label resid="L_XCase"/><Supertip><Title resid="L_XCase"/><Description resid="T_XCase"/></Supertip><Icon><bt:Image size="16" resid="XCase.16"/><bt:Image size="32" resid="XCase.32"/><bt:Image size="80" resid="XCase.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XCase</FunctionName></Action></Item></Items></Control></Group><Group id="G_xAudit"><Label resid="G_xAudit"/><Icon><bt:Image size="16" resid="XTracePrecedents.16"/><bt:Image size="32" resid="XTracePrecedents.32"/><bt:Image size="80" resid="XTracePrecedents.80"/></Icon><Control xsi:type="Button" id="B_XTracePrecedents"><Label resid="L_XTracePrecedents"/><Supertip><Title resid="L_XTracePrecedents"/><Description resid="T_XTracePrecedents"/></Supertip><Icon><bt:Image size="16" resid="XTracePrecedents.16"/><bt:Image size="32" resid="XTracePrecedents.32"/><bt:Image size="80" resid="XTracePrecedents.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XTracePrecedents</FunctionName></Action></Control><Control xsi:type="Button" id="B_XTraceDependents"><Label resid="L_XTraceDependents"/><Supertip><Title resid="L_XTraceDependents"/><Description resid="T_XTraceDependents"/></Supertip><Icon><bt:Image size="16" resid="XTraceDependents.16"/><bt:Image size="32" resid="XTraceDependents.32"/><bt:Image size="80" resid="XTraceDependents.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XTraceDependents</FunctionName></Action></Control><Control xsi:type="Button" id="B_XHighlightFormulas"><Label resid="L_XHighlightFormulas"/><Supertip><Title resid="L_XHighlightFormulas"/><Description resid="T_XHighlightFormulas"/></Supertip><Icon><bt:Image size="16" resid="XHighlightFormulas.16"/><bt:Image size="32" resid="XHighlightFormulas.32"/><bt:Image size="80" resid="XHighlightFormulas.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XHighlightFormulas</FunctionName></Action></Control><Control xsi:type="Button" id="B_XFindErrors"><Label resid="L_XFindErrors"/><Supertip><Title resid="L_XFindErrors"/><Description resid="T_XFindErrors"/></Supertip><Icon><bt:Image size="16" resid="XFindErrors.16"/><bt:Image size="32" resid="XFindErrors.32"/><bt:Image size="80" resid="XFindErrors.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XFindErrors</FunctionName></Action></Control><Control xsi:type="Button" id="B_XFindHardcodes"><Label resid="L_XFindHardcodes"/><Supertip><Title resid="L_XFindHardcodes"/><Description resid="T_XFindHardcodes"/></Supertip><Icon><bt:Image size="16" resid="XFindHardcodes.16"/><bt:Image size="32" resid="XFindHardcodes.32"/><bt:Image size="80" resid="XFindHardcodes.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XFindHardcodes</FunctionName></Action></Control></Group><Group id="G_xSheet"><Label resid="G_xSheet"/><Icon><bt:Image size="16" resid="XSheetNext.16"/><bt:Image size="32" resid="XSheetNext.32"/><bt:Image size="80" resid="XSheetNext.80"/></Icon><Control xsi:type="Button" id="B_XSheetNext"><Label resid="L_XSheetNext"/><Supertip><Title resid="L_XSheetNext"/><Description resid="T_XSheetNext"/></Supertip><Icon><bt:Image size="16" resid="XSheetNext.16"/><bt:Image size="32" resid="XSheetNext.32"/><bt:Image size="80" resid="XSheetNext.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XSheetNext</FunctionName></Action></Control><Control xsi:type="Button" id="B_XSheetPrev"><Label resid="L_XSheetPrev"/><Supertip><Title resid="L_XSheetPrev"/><Description resid="T_XSheetPrev"/></Supertip><Icon><bt:Image size="16" resid="XSheetPrev.16"/><bt:Image size="32" resid="XSheetPrev.32"/><bt:Image size="80" resid="XSheetPrev.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XSheetPrev</FunctionName></Action></Control><Control xsi:type="Button" id="B_XSheetIndex"><Label resid="L_XSheetIndex"/><Supertip><Title resid="L_XSheetIndex"/><Description resid="T_XSheetIndex"/></Supertip><Icon><bt:Image size="16" resid="XSheetIndex.16"/><bt:Image size="32" resid="XSheetIndex.32"/><bt:Image size="80" resid="XSheetIndex.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XSheetIndex</FunctionName></Action></Control><Control xsi:type="Button" id="B_XResetView"><Label resid="L_XResetView"/><Supertip><Title resid="L_XResetView"/><Description resid="T_XResetView"/></Supertip><Icon><bt:Image size="16" resid="XResetView.16"/><bt:Image size="32" resid="XResetView.32"/><bt:Image size="80" resid="XResetView.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XResetView</FunctionName></Action></Control><Control xsi:type="Button" id="B_XGridlines"><Label resid="L_XGridlines"/><Supertip><Title resid="L_XGridlines"/><Description resid="T_XGridlines"/></Supertip><Icon><bt:Image size="16" resid="XGridlines.16"/><bt:Image size="32" resid="XGridlines.32"/><bt:Image size="80" resid="XGridlines.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XGridlines</FunctionName></Action></Control><Control xsi:type="Menu" id="M_xSheet"><Label resid="M_xSheet"/><Supertip><Title resid="M_xSheet"/><Description resid="MT_xSheet"/></Supertip><Icon><bt:Image size="16" resid="More.16"/><bt:Image size="32" resid="More.32"/><bt:Image size="80" resid="More.80"/></Icon><Items><Item id="I_XFreeze"><Label resid="L_XFreeze"/><Supertip><Title resid="L_XFreeze"/><Description resid="T_XFreeze"/></Supertip><Icon><bt:Image size="16" resid="XFreeze.16"/><bt:Image size="32" resid="XFreeze.32"/><bt:Image size="80" resid="XFreeze.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XFreeze</FunctionName></Action></Item><Item id="I_XGroupRows"><Label resid="L_XGroupRows"/><Supertip><Title resid="L_XGroupRows"/><Description resid="T_XGroupRows"/></Supertip><Icon><bt:Image size="16" resid="XGroupRows.16"/><bt:Image size="32" resid="XGroupRows.32"/><bt:Image size="80" resid="XGroupRows.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XGroupRows</FunctionName></Action></Item><Item id="I_XUngroupRows"><Label resid="L_XUngroupRows"/><Supertip><Title resid="L_XUngroupRows"/><Description resid="T_XUngroupRows"/></Supertip><Icon><bt:Image size="16" resid="XUngroupRows.16"/><bt:Image size="32" resid="XUngroupRows.32"/><bt:Image size="80" resid="XUngroupRows.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XUngroupRows</FunctionName></Action></Item></Items></Control></Group><Group id="G_xTools"><Label resid="G_xTools"/><Icon><bt:Image size="16" resid="XPalette.16"/><bt:Image size="32" resid="XPalette.32"/><bt:Image size="80" resid="XPalette.80"/></Icon><Control xsi:type="Button" id="B_XPalette"><Label resid="L_XPalette"/><Supertip><Title resid="L_XPalette"/><Description resid="T_XPalette"/></Supertip><Icon><bt:Image size="16" resid="XPalette.16"/><bt:Image size="32" resid="XPalette.32"/><bt:Image size="80" resid="XPalette.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XPalette</FunctionName></Action></Control><Control xsi:type="Button" id="B_XCheatsheet"><Label resid="L_XCheatsheet"/><Supertip><Title resid="L_XCheatsheet"/><Description resid="T_XCheatsheet"/></Supertip><Icon><bt:Image size="16" resid="XCheatsheet.16"/><bt:Image size="32" resid="XCheatsheet.32"/><bt:Image size="80" resid="XCheatsheet.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XCheatsheet</FunctionName></Action></Control><Control xsi:type="Button" id="B_XPane"><Label resid="L_XPane"/><Supertip><Title resid="L_XPane"/><Description resid="T_XPane"/></Supertip><Icon><bt:Image size="16" resid="XPane.16"/><bt:Image size="32" resid="XPane.32"/><bt:Image size="80" resid="XPane.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_XPane</FunctionName></Action></Control></Group>
+              <Label resid="Tab.Label"/>
+            </CustomTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="More.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/More-16.png"/>
+        <bt:Image id="More.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/More-32.png"/>
+        <bt:Image id="More.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/More-80.png"/>
+        <bt:Image id="XHeaderStyle.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XHeaderStyle-16.png"/>
+        <bt:Image id="XHeaderStyle.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XHeaderStyle-32.png"/>
+        <bt:Image id="XHeaderStyle.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XHeaderStyle-80.png"/>
+        <bt:Image id="XIndentUp.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XIndentUp-16.png"/>
+        <bt:Image id="XIndentUp.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XIndentUp-32.png"/>
+        <bt:Image id="XIndentUp.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XIndentUp-80.png"/>
+        <bt:Image id="XIndentDown.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XIndentDown-16.png"/>
+        <bt:Image id="XIndentDown.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XIndentDown-32.png"/>
+        <bt:Image id="XIndentDown.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XIndentDown-80.png"/>
+        <bt:Image id="XCycleFontColor.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCycleFontColor-16.png"/>
+        <bt:Image id="XCycleFontColor.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCycleFontColor-32.png"/>
+        <bt:Image id="XCycleFontColor.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCycleFontColor-80.png"/>
+        <bt:Image id="XCycleFill.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCycleFill-16.png"/>
+        <bt:Image id="XCycleFill.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCycleFill-32.png"/>
+        <bt:Image id="XCycleFill.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCycleFill-80.png"/>
+        <bt:Image id="XCycleBorder.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCycleBorder-16.png"/>
+        <bt:Image id="XCycleBorder.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCycleBorder-32.png"/>
+        <bt:Image id="XCycleBorder.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCycleBorder-80.png"/>
+        <bt:Image id="XCycleAlign.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCycleAlign-16.png"/>
+        <bt:Image id="XCycleAlign.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCycleAlign-32.png"/>
+        <bt:Image id="XCycleAlign.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCycleAlign-80.png"/>
+        <bt:Image id="XCenterAcross.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCenterAcross-16.png"/>
+        <bt:Image id="XCenterAcross.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCenterAcross-32.png"/>
+        <bt:Image id="XCenterAcross.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCenterAcross-80.png"/>
+        <bt:Image id="XCycleNumber.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCycleNumber-16.png"/>
+        <bt:Image id="XCycleNumber.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCycleNumber-32.png"/>
+        <bt:Image id="XCycleNumber.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCycleNumber-80.png"/>
+        <bt:Image id="XCycleDate.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCycleDate-16.png"/>
+        <bt:Image id="XCycleDate.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCycleDate-32.png"/>
+        <bt:Image id="XCycleDate.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCycleDate-80.png"/>
+        <bt:Image id="XDecimalUp.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XDecimalUp-16.png"/>
+        <bt:Image id="XDecimalUp.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XDecimalUp-32.png"/>
+        <bt:Image id="XDecimalUp.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XDecimalUp-80.png"/>
+        <bt:Image id="XDecimalDown.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XDecimalDown-16.png"/>
+        <bt:Image id="XDecimalDown.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XDecimalDown-32.png"/>
+        <bt:Image id="XDecimalDown.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XDecimalDown-80.png"/>
+        <bt:Image id="XScaleK.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XScaleK-16.png"/>
+        <bt:Image id="XScaleK.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XScaleK-32.png"/>
+        <bt:Image id="XScaleK.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XScaleK-80.png"/>
+        <bt:Image id="XWrapIfError.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XWrapIfError-16.png"/>
+        <bt:Image id="XWrapIfError.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XWrapIfError-32.png"/>
+        <bt:Image id="XWrapIfError.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XWrapIfError-80.png"/>
+        <bt:Image id="XToggleAbsolute.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XToggleAbsolute-16.png"/>
+        <bt:Image id="XToggleAbsolute.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XToggleAbsolute-32.png"/>
+        <bt:Image id="XToggleAbsolute.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XToggleAbsolute-80.png"/>
+        <bt:Image id="XCase.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCase-16.png"/>
+        <bt:Image id="XCase.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCase-32.png"/>
+        <bt:Image id="XCase.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCase-80.png"/>
+        <bt:Image id="XAutofit.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XAutofit-16.png"/>
+        <bt:Image id="XAutofit.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XAutofit-32.png"/>
+        <bt:Image id="XAutofit.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XAutofit-80.png"/>
+        <bt:Image id="XTrim.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XTrim-16.png"/>
+        <bt:Image id="XTrim.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XTrim-32.png"/>
+        <bt:Image id="XTrim.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XTrim-80.png"/>
+        <bt:Image id="XToValues.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XToValues-16.png"/>
+        <bt:Image id="XToValues.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XToValues-32.png"/>
+        <bt:Image id="XToValues.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XToValues-80.png"/>
+        <bt:Image id="XTextToNumber.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XTextToNumber-16.png"/>
+        <bt:Image id="XTextToNumber.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XTextToNumber-32.png"/>
+        <bt:Image id="XTextToNumber.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XTextToNumber-80.png"/>
+        <bt:Image id="XFillDown.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XFillDown-16.png"/>
+        <bt:Image id="XFillDown.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XFillDown-32.png"/>
+        <bt:Image id="XFillDown.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XFillDown-80.png"/>
+        <bt:Image id="XTracePrecedents.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XTracePrecedents-16.png"/>
+        <bt:Image id="XTracePrecedents.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XTracePrecedents-32.png"/>
+        <bt:Image id="XTracePrecedents.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XTracePrecedents-80.png"/>
+        <bt:Image id="XTraceDependents.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XTraceDependents-16.png"/>
+        <bt:Image id="XTraceDependents.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XTraceDependents-32.png"/>
+        <bt:Image id="XTraceDependents.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XTraceDependents-80.png"/>
+        <bt:Image id="XHighlightFormulas.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XHighlightFormulas-16.png"/>
+        <bt:Image id="XHighlightFormulas.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XHighlightFormulas-32.png"/>
+        <bt:Image id="XHighlightFormulas.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XHighlightFormulas-80.png"/>
+        <bt:Image id="XFindErrors.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XFindErrors-16.png"/>
+        <bt:Image id="XFindErrors.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XFindErrors-32.png"/>
+        <bt:Image id="XFindErrors.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XFindErrors-80.png"/>
+        <bt:Image id="XFindHardcodes.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XFindHardcodes-16.png"/>
+        <bt:Image id="XFindHardcodes.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XFindHardcodes-32.png"/>
+        <bt:Image id="XFindHardcodes.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XFindHardcodes-80.png"/>
+        <bt:Image id="XFreeze.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XFreeze-16.png"/>
+        <bt:Image id="XFreeze.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XFreeze-32.png"/>
+        <bt:Image id="XFreeze.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XFreeze-80.png"/>
+        <bt:Image id="XGroupRows.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XGroupRows-16.png"/>
+        <bt:Image id="XGroupRows.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XGroupRows-32.png"/>
+        <bt:Image id="XGroupRows.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XGroupRows-80.png"/>
+        <bt:Image id="XUngroupRows.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XUngroupRows-16.png"/>
+        <bt:Image id="XUngroupRows.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XUngroupRows-32.png"/>
+        <bt:Image id="XUngroupRows.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XUngroupRows-80.png"/>
+        <bt:Image id="XSheetNext.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XSheetNext-16.png"/>
+        <bt:Image id="XSheetNext.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XSheetNext-32.png"/>
+        <bt:Image id="XSheetNext.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XSheetNext-80.png"/>
+        <bt:Image id="XSheetPrev.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XSheetPrev-16.png"/>
+        <bt:Image id="XSheetPrev.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XSheetPrev-32.png"/>
+        <bt:Image id="XSheetPrev.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XSheetPrev-80.png"/>
+        <bt:Image id="XSheetIndex.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XSheetIndex-16.png"/>
+        <bt:Image id="XSheetIndex.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XSheetIndex-32.png"/>
+        <bt:Image id="XSheetIndex.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XSheetIndex-80.png"/>
+        <bt:Image id="XResetView.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XResetView-16.png"/>
+        <bt:Image id="XResetView.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XResetView-32.png"/>
+        <bt:Image id="XResetView.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XResetView-80.png"/>
+        <bt:Image id="XGridlines.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XGridlines-16.png"/>
+        <bt:Image id="XGridlines.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XGridlines-32.png"/>
+        <bt:Image id="XGridlines.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XGridlines-80.png"/>
+        <bt:Image id="XPalette.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XPalette-16.png"/>
+        <bt:Image id="XPalette.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XPalette-32.png"/>
+        <bt:Image id="XPalette.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XPalette-80.png"/>
+        <bt:Image id="XCheatsheet.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCheatsheet-16.png"/>
+        <bt:Image id="XCheatsheet.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCheatsheet-32.png"/>
+        <bt:Image id="XCheatsheet.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XCheatsheet-80.png"/>
+        <bt:Image id="XPane.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/XPane-16.png"/>
+        <bt:Image id="XPane.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/XPane-32.png"/>
+        <bt:Image id="XPane.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/XPane-80.png"/>
+        <bt:Image id="App.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/App-16.png"/>
+        <bt:Image id="App.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/App-32.png"/>
+        <bt:Image id="App.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/App-80.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://sgymdik.github.io/slidekit/taskpane.html"/>
+        <bt:Url id="Help.Url" DefaultValue="https://sgymdik.github.io/slidekit/taskpane.html"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="G_xFormat" DefaultValue="書式"/>
+        <bt:String id="M_xFormat" DefaultValue="その他"/>
+        <bt:String id="L_XHeaderStyle" DefaultValue="見出しスタイル"/>
+        <bt:String id="L_XIndentUp" DefaultValue="インデント +"/>
+        <bt:String id="L_XIndentDown" DefaultValue="インデント −"/>
+        <bt:String id="L_XCycleFontColor" DefaultValue="文字色を巡回"/>
+        <bt:String id="L_XCycleFill" DefaultValue="塗りを巡回"/>
+        <bt:String id="L_XCycleBorder" DefaultValue="罫線を巡回"/>
+        <bt:String id="L_XCycleAlign" DefaultValue="横位置を巡回"/>
+        <bt:String id="L_XCenterAcross" DefaultValue="選択範囲内で中央"/>
+        <bt:String id="G_xNumber" DefaultValue="数値"/>
+        <bt:String id="L_XCycleNumber" DefaultValue="数値書式を巡回"/>
+        <bt:String id="L_XCycleDate" DefaultValue="日付書式を巡回"/>
+        <bt:String id="L_XDecimalUp" DefaultValue="小数桁 +"/>
+        <bt:String id="L_XDecimalDown" DefaultValue="小数桁 −"/>
+        <bt:String id="L_XScaleK" DefaultValue="千単位表示"/>
+        <bt:String id="G_xCells" DefaultValue="セル"/>
+        <bt:String id="M_xCells" DefaultValue="その他"/>
+        <bt:String id="L_XWrapIfError" DefaultValue="IFERROR で囲む"/>
+        <bt:String id="L_XToggleAbsolute" DefaultValue="参照の絶対/相対"/>
+        <bt:String id="L_XCase" DefaultValue="大文字/小文字/全半角"/>
+        <bt:String id="L_XAutofit" DefaultValue="列幅を自動調整"/>
+        <bt:String id="L_XTrim" DefaultValue="空白を除去"/>
+        <bt:String id="L_XToValues" DefaultValue="値に変換"/>
+        <bt:String id="L_XTextToNumber" DefaultValue="文字列→数値"/>
+        <bt:String id="L_XFillDown" DefaultValue="空白を上の値で埋める"/>
+        <bt:String id="G_xAudit" DefaultValue="検査"/>
+        <bt:String id="L_XTracePrecedents" DefaultValue="参照元へジャンプ"/>
+        <bt:String id="L_XTraceDependents" DefaultValue="参照先へジャンプ"/>
+        <bt:String id="L_XHighlightFormulas" DefaultValue="数式/定数を色分け"/>
+        <bt:String id="L_XFindErrors" DefaultValue="エラーセルを選択"/>
+        <bt:String id="L_XFindHardcodes" DefaultValue="数式内の直書き数値"/>
+        <bt:String id="G_xSheet" DefaultValue="シート"/>
+        <bt:String id="M_xSheet" DefaultValue="その他"/>
+        <bt:String id="L_XFreeze" DefaultValue="ウィンドウ枠固定"/>
+        <bt:String id="L_XGroupRows" DefaultValue="行/列をグループ化"/>
+        <bt:String id="L_XUngroupRows" DefaultValue="グループ解除"/>
+        <bt:String id="L_XSheetNext" DefaultValue="次のシート"/>
+        <bt:String id="L_XSheetPrev" DefaultValue="前のシート"/>
+        <bt:String id="L_XSheetIndex" DefaultValue="目次シート作成"/>
+        <bt:String id="L_XResetView" DefaultValue="全シート A1 へ"/>
+        <bt:String id="L_XGridlines" DefaultValue="枠線表示 切替"/>
+        <bt:String id="G_xTools" DefaultValue="ツール"/>
+        <bt:String id="L_XPalette" DefaultValue="コマンドパレット"/>
+        <bt:String id="L_XCheatsheet" DefaultValue="ショートカット一覧"/>
+        <bt:String id="L_XPane" DefaultValue="ヒントパネル"/>
+        <bt:String id="Tab.Label" DefaultValue="SlideKit"/>
+        <bt:String id="GetStarted.Title" DefaultValue="SlideKit を読み込みました"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="MT_xFormat" DefaultValue="見出しスタイル / インデント + / インデント −"/>
+        <bt:String id="T_XHeaderStyle" DefaultValue="濃紺塗り・白太字・中央・下罫線を一発適用
+⌃⌥H
+⌃⌥P → HD"/>
+        <bt:String id="T_XIndentUp" DefaultValue="インデントを 1 段増やす
+⌃⌥→
+⌃⌥P → I+"/>
+        <bt:String id="T_XIndentDown" DefaultValue="インデントを 1 段減らす
+⌃⌥←
+⌃⌥P → I-"/>
+        <bt:String id="T_XCycleFontColor" DefaultValue="黒 → 青（入力値）→ 緑（他シート参照）→ 赤 を巡回（金融モデル慣習）
+⌃⌥C
+⌃⌥P → FC"/>
+        <bt:String id="T_XCycleFill" DefaultValue="なし → 薄黄（入力欄）→ 薄灰 → 薄青 を巡回
+⌃⌥F
+⌃⌥P → FL"/>
+        <bt:String id="T_XCycleBorder" DefaultValue="外枠 → 下線 → 格子 → なし を巡回
+⌃⌥B
+⌃⌥P → BD"/>
+        <bt:String id="T_XCycleAlign" DefaultValue="左 → 中央 → 右 → 選択範囲内で中央（結合しない中央）を巡回
+⌃⌥A
+⌃⌥P → AL"/>
+        <bt:String id="T_XCenterAcross" DefaultValue="結合せずに中央揃え（セル結合の代替）
+⌃⌥M
+⌃⌥P → CA"/>
+        <bt:String id="T_XCycleNumber" DefaultValue="#,##0 → #,##0.0 → 0% → 0.0% → ¥#,##0 → 千円 → 百万円 を巡回
+⌃⌥1
+⌃⌥P → N1"/>
+        <bt:String id="T_XCycleDate" DefaultValue="yyyy/mm/dd → yyyy-mm-dd → m/d → yyyy年m月d日 → mmm-yy を巡回
+⌃⌥2
+⌃⌥P → N2"/>
+        <bt:String id="T_XDecimalUp" DefaultValue="小数点以下の桁を 1 つ増やす
+⌃⌥⇧↑
+⌃⌥P → D+"/>
+        <bt:String id="T_XDecimalDown" DefaultValue="小数点以下の桁を 1 つ減らす
+⌃⌥⇧↓
+⌃⌥P → D-"/>
+        <bt:String id="T_XScaleK" DefaultValue="値はそのまま、表示だけ千単位（#,##0,）にする
+⌃⌥P → NK"/>
+        <bt:String id="MT_xCells" DefaultValue="IFERROR で囲む / 参照の絶対/相対 / 大文字/小文字/全半角"/>
+        <bt:String id="T_XWrapIfError" DefaultValue="数式を IFERROR(…, &quot;&quot;) で囲む
+⌃⌥P → IE"/>
+        <bt:String id="T_XToggleAbsolute" DefaultValue="選択範囲の数式の参照を A1 → $A$1 → A$1 → $A1 → A1 と巡回
+⌃⌥4
+⌃⌥P → AB"/>
+        <bt:String id="T_XCase" DefaultValue="UPPER → lower → 全角→半角 を巡回
+⌃⌥P → CS"/>
+        <bt:String id="T_XAutofit" DefaultValue="選択範囲（未選択なら使用範囲）の列幅・行高を自動調整
+⌃⌥W
+⌃⌥P → AF"/>
+        <bt:String id="T_XTrim" DefaultValue="前後の空白・全角空白・連続空白を除去
+⌃⌥P → TM"/>
+        <bt:String id="T_XToValues" DefaultValue="数式を計算結果の値に置き換える
+⌃⌥V
+⌃⌥P → VL"/>
+        <bt:String id="T_XTextToNumber" DefaultValue="文字列として入っている数字（全角・カンマ付き含む）を数値に変換
+⌃⌥P → TN"/>
+        <bt:String id="T_XFillDown" DefaultValue="選択範囲内の空白セルを、すぐ上の値で埋める（帳票の縦結合崩し）
+⌃⌥D
+⌃⌥P → FD"/>
+        <bt:String id="T_XTracePrecedents" DefaultValue="アクティブセルの参照元を選択（もう一度で次へ）
+⌃⌥R
+⌃⌥P → TP"/>
+        <bt:String id="T_XTraceDependents" DefaultValue="アクティブセルを参照しているセルを選択
+⌃⌥⇧R
+⌃⌥P → TD"/>
+        <bt:String id="T_XHighlightFormulas" DefaultValue="数式・定数・他シート参照を色分けハイライト（もう一度で解除）
+⌃⌥P → HF"/>
+        <bt:String id="T_XFindErrors" DefaultValue="シート内の #N/A #DIV/0! などエラーのセルを全選択
+⌃⌥E
+⌃⌥P → ER"/>
+        <bt:String id="T_XFindHardcodes" DefaultValue="数式中に定数（=A1*1.1 の 1.1 など）を含むセルを選択
+⌃⌥P → HC"/>
+        <bt:String id="MT_xSheet" DefaultValue="ウィンドウ枠固定 / 行/列をグループ化 / グループ解除"/>
+        <bt:String id="T_XFreeze" DefaultValue="アクティブセルの左上で固定（固定済みなら解除）
+⌃⌥Z
+⌃⌥P → FZ"/>
+        <bt:String id="T_XGroupRows" DefaultValue="選択した行（列全体を選んでいれば列）をグループ化
+⌃⌥G
+⌃⌥P → GR"/>
+        <bt:String id="T_XUngroupRows" DefaultValue="選択した行/列のグループを解除
+⌃⌥U
+⌃⌥P → UG"/>
+        <bt:String id="T_XSheetNext" DefaultValue="次のシートへ移動
+⌃⌥⇧→
+⌃⌥P → &gt;&gt;"/>
+        <bt:String id="T_XSheetPrev" DefaultValue="前のシートへ移動
+⌃⌥⇧←
+⌃⌥P → &lt;&lt;"/>
+        <bt:String id="T_XSheetIndex" DefaultValue="全シートへのハイパーリンク付き目次シートを先頭に作成
+⌃⌥P → TC"/>
+        <bt:String id="T_XResetView" DefaultValue="全シートの選択を A1 に戻し、先頭シートを表示（提出前の作法）
+⌃⌥0
+⌃⌥P → A1"/>
+        <bt:String id="T_XGridlines" DefaultValue="シートの枠線の表示/非表示を切替
+⌃⌥L
+⌃⌥P → GL"/>
+        <bt:String id="T_XPalette" DefaultValue="全コマンドを検索・コード入力で実行
+⌃⌥P
+⌃⌥P → PP"/>
+        <bt:String id="T_XCheatsheet" DefaultValue="ショートカットとクイックコードの一覧
+⌃⌥K
+⌃⌥P → ??"/>
+        <bt:String id="T_XPane" DefaultValue="選択に応じて使えるショートカットを表示するパネルを開く
+⌃⌥I
+⌃⌥P → HP"/>
+        <bt:String id="GetStarted.Desc" DefaultValue="「SlideKit」タブから使えます。⌃⌥P でコマンドパレット、⌃⌥K でショートカット一覧。"/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+  <ExtendedOverrides Url="https://sgymdik.github.io/slidekit/shortcuts-xl.json"/>
+</OfficeApp>

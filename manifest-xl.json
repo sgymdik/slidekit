@@ -1,0 +1,1726 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.30/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.30",
+  "version": "2.0.0",
+  "id": "af62fd4e-29bf-40c5-ad04-42092f8a4496",
+  "developer": {
+    "name": "SlideKit",
+    "websiteUrl": "https://sgymdik.github.io/slidekit/taskpane.html",
+    "privacyUrl": "https://sgymdik.github.io/slidekit/taskpane.html",
+    "termsOfUseUrl": "https://sgymdik.github.io/slidekit/taskpane.html"
+  },
+  "name": {
+    "short": "SlideKit Excel",
+    "full": "SlideKit for Excel"
+  },
+  "description": {
+    "short": "図形整列・チャート・ショートカット中心の作業効率化アドイン",
+    "full": "⌥ → Y → 番号、⌃⌥ ショートカット、⌃⌥P のコマンドパレットで操作できる作業効率化アドイン"
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#1F3A5F",
+  "validDomains": [
+    "sgymdik.github.io"
+  ],
+  "authorization": {
+    "permissions": {
+      "resourceSpecific": [
+        {
+          "name": "Document.ReadWrite.User",
+          "type": "Delegated"
+        }
+      ]
+    }
+  },
+  "extensions": [
+    {
+      "requirements": {
+        "scopes": [
+          "workbook"
+        ],
+        "capabilities": [
+          {
+            "name": "SharedRuntime",
+            "minVersion": "1.1"
+          }
+        ]
+      },
+      "runtimes": [
+        {
+          "id": "SharedRuntime",
+          "type": "general",
+          "code": {
+            "page": "https://sgymdik.github.io/slidekit/taskpane.html"
+          },
+          "lifetime": "long",
+          "actions": [
+            {
+              "id": "ShowPane",
+              "type": "openPage"
+            },
+            {
+              "id": "XCycleNumber",
+              "type": "executeFunction",
+              "displayName": "数値書式を巡回"
+            },
+            {
+              "id": "XCycleDate",
+              "type": "executeFunction",
+              "displayName": "日付書式を巡回"
+            },
+            {
+              "id": "XDecimalUp",
+              "type": "executeFunction",
+              "displayName": "小数桁 +"
+            },
+            {
+              "id": "XDecimalDown",
+              "type": "executeFunction",
+              "displayName": "小数桁 −"
+            },
+            {
+              "id": "XScaleK",
+              "type": "executeFunction",
+              "displayName": "千単位表示"
+            },
+            {
+              "id": "XCycleFontColor",
+              "type": "executeFunction",
+              "displayName": "文字色を巡回"
+            },
+            {
+              "id": "XCycleFill",
+              "type": "executeFunction",
+              "displayName": "塗りを巡回"
+            },
+            {
+              "id": "XCycleBorder",
+              "type": "executeFunction",
+              "displayName": "罫線を巡回"
+            },
+            {
+              "id": "XCycleAlign",
+              "type": "executeFunction",
+              "displayName": "横位置を巡回"
+            },
+            {
+              "id": "XCenterAcross",
+              "type": "executeFunction",
+              "displayName": "選択範囲内で中央"
+            },
+            {
+              "id": "XHeaderStyle",
+              "type": "executeFunction",
+              "displayName": "見出しスタイル"
+            },
+            {
+              "id": "XIndentUp",
+              "type": "executeFunction",
+              "displayName": "インデント +"
+            },
+            {
+              "id": "XIndentDown",
+              "type": "executeFunction",
+              "displayName": "インデント −"
+            },
+            {
+              "id": "XAutofit",
+              "type": "executeFunction",
+              "displayName": "列幅を自動調整"
+            },
+            {
+              "id": "XTrim",
+              "type": "executeFunction",
+              "displayName": "空白を除去"
+            },
+            {
+              "id": "XToValues",
+              "type": "executeFunction",
+              "displayName": "値に変換"
+            },
+            {
+              "id": "XTextToNumber",
+              "type": "executeFunction",
+              "displayName": "文字列→数値"
+            },
+            {
+              "id": "XFillDown",
+              "type": "executeFunction",
+              "displayName": "空白を上の値で埋める"
+            },
+            {
+              "id": "XWrapIfError",
+              "type": "executeFunction",
+              "displayName": "IFERROR で囲む"
+            },
+            {
+              "id": "XToggleAbsolute",
+              "type": "executeFunction",
+              "displayName": "参照の絶対/相対"
+            },
+            {
+              "id": "XCase",
+              "type": "executeFunction",
+              "displayName": "大文字/小文字/全半角"
+            },
+            {
+              "id": "XTracePrecedents",
+              "type": "executeFunction",
+              "displayName": "参照元へジャンプ"
+            },
+            {
+              "id": "XTraceDependents",
+              "type": "executeFunction",
+              "displayName": "参照先へジャンプ"
+            },
+            {
+              "id": "XHighlightFormulas",
+              "type": "executeFunction",
+              "displayName": "数式/定数を色分け"
+            },
+            {
+              "id": "XFindErrors",
+              "type": "executeFunction",
+              "displayName": "エラーセルを選択"
+            },
+            {
+              "id": "XFindHardcodes",
+              "type": "executeFunction",
+              "displayName": "数式内の直書き数値"
+            },
+            {
+              "id": "XSheetNext",
+              "type": "executeFunction",
+              "displayName": "次のシート"
+            },
+            {
+              "id": "XSheetPrev",
+              "type": "executeFunction",
+              "displayName": "前のシート"
+            },
+            {
+              "id": "XSheetIndex",
+              "type": "executeFunction",
+              "displayName": "目次シート作成"
+            },
+            {
+              "id": "XResetView",
+              "type": "executeFunction",
+              "displayName": "全シート A1 へ"
+            },
+            {
+              "id": "XGridlines",
+              "type": "executeFunction",
+              "displayName": "枠線表示 切替"
+            },
+            {
+              "id": "XFreeze",
+              "type": "executeFunction",
+              "displayName": "ウィンドウ枠固定"
+            },
+            {
+              "id": "XGroupRows",
+              "type": "executeFunction",
+              "displayName": "行/列をグループ化"
+            },
+            {
+              "id": "XUngroupRows",
+              "type": "executeFunction",
+              "displayName": "グループ解除"
+            },
+            {
+              "id": "XPalette",
+              "type": "executeFunction",
+              "displayName": "コマンドパレット"
+            },
+            {
+              "id": "XCheatsheet",
+              "type": "executeFunction",
+              "displayName": "ショートカット一覧"
+            },
+            {
+              "id": "XPane",
+              "type": "executeFunction",
+              "displayName": "ヒントパネル"
+            },
+            {
+              "id": "R_XCycleNumber",
+              "type": "executeFunction",
+              "displayName": "数値書式を巡回"
+            },
+            {
+              "id": "R_XCycleDate",
+              "type": "executeFunction",
+              "displayName": "日付書式を巡回"
+            },
+            {
+              "id": "R_XDecimalUp",
+              "type": "executeFunction",
+              "displayName": "小数桁 +"
+            },
+            {
+              "id": "R_XDecimalDown",
+              "type": "executeFunction",
+              "displayName": "小数桁 −"
+            },
+            {
+              "id": "R_XScaleK",
+              "type": "executeFunction",
+              "displayName": "千単位表示"
+            },
+            {
+              "id": "R_XCycleFontColor",
+              "type": "executeFunction",
+              "displayName": "文字色を巡回"
+            },
+            {
+              "id": "R_XCycleFill",
+              "type": "executeFunction",
+              "displayName": "塗りを巡回"
+            },
+            {
+              "id": "R_XCycleBorder",
+              "type": "executeFunction",
+              "displayName": "罫線を巡回"
+            },
+            {
+              "id": "R_XCycleAlign",
+              "type": "executeFunction",
+              "displayName": "横位置を巡回"
+            },
+            {
+              "id": "R_XCenterAcross",
+              "type": "executeFunction",
+              "displayName": "選択範囲内で中央"
+            },
+            {
+              "id": "R_XHeaderStyle",
+              "type": "executeFunction",
+              "displayName": "見出しスタイル"
+            },
+            {
+              "id": "R_XIndentUp",
+              "type": "executeFunction",
+              "displayName": "インデント +"
+            },
+            {
+              "id": "R_XIndentDown",
+              "type": "executeFunction",
+              "displayName": "インデント −"
+            },
+            {
+              "id": "R_XAutofit",
+              "type": "executeFunction",
+              "displayName": "列幅を自動調整"
+            },
+            {
+              "id": "R_XTrim",
+              "type": "executeFunction",
+              "displayName": "空白を除去"
+            },
+            {
+              "id": "R_XToValues",
+              "type": "executeFunction",
+              "displayName": "値に変換"
+            },
+            {
+              "id": "R_XTextToNumber",
+              "type": "executeFunction",
+              "displayName": "文字列→数値"
+            },
+            {
+              "id": "R_XFillDown",
+              "type": "executeFunction",
+              "displayName": "空白を上の値で埋める"
+            },
+            {
+              "id": "R_XWrapIfError",
+              "type": "executeFunction",
+              "displayName": "IFERROR で囲む"
+            },
+            {
+              "id": "R_XToggleAbsolute",
+              "type": "executeFunction",
+              "displayName": "参照の絶対/相対"
+            },
+            {
+              "id": "R_XCase",
+              "type": "executeFunction",
+              "displayName": "大文字/小文字/全半角"
+            },
+            {
+              "id": "R_XTracePrecedents",
+              "type": "executeFunction",
+              "displayName": "参照元へジャンプ"
+            },
+            {
+              "id": "R_XTraceDependents",
+              "type": "executeFunction",
+              "displayName": "参照先へジャンプ"
+            },
+            {
+              "id": "R_XHighlightFormulas",
+              "type": "executeFunction",
+              "displayName": "数式/定数を色分け"
+            },
+            {
+              "id": "R_XFindErrors",
+              "type": "executeFunction",
+              "displayName": "エラーセルを選択"
+            },
+            {
+              "id": "R_XFindHardcodes",
+              "type": "executeFunction",
+              "displayName": "数式内の直書き数値"
+            },
+            {
+              "id": "R_XSheetNext",
+              "type": "executeFunction",
+              "displayName": "次のシート"
+            },
+            {
+              "id": "R_XSheetPrev",
+              "type": "executeFunction",
+              "displayName": "前のシート"
+            },
+            {
+              "id": "R_XSheetIndex",
+              "type": "executeFunction",
+              "displayName": "目次シート作成"
+            },
+            {
+              "id": "R_XResetView",
+              "type": "executeFunction",
+              "displayName": "全シート A1 へ"
+            },
+            {
+              "id": "R_XGridlines",
+              "type": "executeFunction",
+              "displayName": "枠線表示 切替"
+            },
+            {
+              "id": "R_XFreeze",
+              "type": "executeFunction",
+              "displayName": "ウィンドウ枠固定"
+            },
+            {
+              "id": "R_XGroupRows",
+              "type": "executeFunction",
+              "displayName": "行/列をグループ化"
+            },
+            {
+              "id": "R_XUngroupRows",
+              "type": "executeFunction",
+              "displayName": "グループ解除"
+            },
+            {
+              "id": "R_XPalette",
+              "type": "executeFunction",
+              "displayName": "コマンドパレット"
+            },
+            {
+              "id": "R_XCheatsheet",
+              "type": "executeFunction",
+              "displayName": "ショートカット一覧"
+            },
+            {
+              "id": "R_XPane",
+              "type": "executeFunction",
+              "displayName": "ヒントパネル"
+            }
+          ]
+        }
+      ],
+      "ribbons": [
+        {
+          "requirements": {
+            "scopes": [
+              "workbook"
+            ]
+          },
+          "tabs": [
+            {
+              "id": "SlideKit.Tab",
+              "label": "SlideKit",
+              "keytip": "Y",
+              "groups": [
+                {
+                  "id": "G_xFormat",
+                  "label": "書式",
+                  "icons": [
+                    {
+                      "size": 16,
+                      "url": "https://sgymdik.github.io/slidekit/assets/XCycleFontColor-16.png"
+                    },
+                    {
+                      "size": 32,
+                      "url": "https://sgymdik.github.io/slidekit/assets/XCycleFontColor-32.png"
+                    },
+                    {
+                      "size": 80,
+                      "url": "https://sgymdik.github.io/slidekit/assets/XCycleFontColor-80.png"
+                    }
+                  ],
+                  "controls": [
+                    {
+                      "id": "B_XCycleFontColor",
+                      "type": "button",
+                      "label": "2 文字色を巡回",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCycleFontColor-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCycleFontColor-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCycleFontColor-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "文字色を巡回",
+                        "description": "黒 → 青（入力値）→ 緑（他シート参照）→ 赤 を巡回（金融モデル慣習）　⌥ → Y → 2　⌃⌥C　⌃⌥P → FC"
+                      },
+                      "actionId": "R_XCycleFontColor",
+                      "keytip": "2"
+                    },
+                    {
+                      "id": "B_XCycleFill",
+                      "type": "button",
+                      "label": "3 塗りを巡回",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCycleFill-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCycleFill-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCycleFill-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "塗りを巡回",
+                        "description": "なし → 薄黄（入力欄）→ 薄灰 → 薄青 を巡回　⌥ → Y → 3　⌃⌥F　⌃⌥P → FL"
+                      },
+                      "actionId": "R_XCycleFill",
+                      "keytip": "3"
+                    },
+                    {
+                      "id": "B_XCycleBorder",
+                      "type": "button",
+                      "label": "4 罫線を巡回",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCycleBorder-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCycleBorder-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCycleBorder-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "罫線を巡回",
+                        "description": "外枠 → 下線 → 格子 → なし を巡回　⌥ → Y → 4　⌃⌥B　⌃⌥P → BD"
+                      },
+                      "actionId": "R_XCycleBorder",
+                      "keytip": "4"
+                    },
+                    {
+                      "id": "B_XCycleAlign",
+                      "type": "button",
+                      "label": "F4 横位置を巡回",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCycleAlign-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCycleAlign-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCycleAlign-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "横位置を巡回",
+                        "description": "左 → 中央 → 右 → 選択範囲内で中央（結合しない中央）を巡回　⌥ → Y → F4　⌃⌥A　⌃⌥P → AL"
+                      },
+                      "actionId": "R_XCycleAlign",
+                      "keytip": "F4"
+                    },
+                    {
+                      "id": "B_XCenterAcross",
+                      "type": "button",
+                      "label": "F5 選択範囲内で中央",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCenterAcross-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCenterAcross-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCenterAcross-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "選択範囲内で中央",
+                        "description": "結合せずに中央揃え（セル結合の代替）　⌥ → Y → F5　⌃⌥M　⌃⌥P → CA"
+                      },
+                      "actionId": "R_XCenterAcross",
+                      "keytip": "F5"
+                    },
+                    {
+                      "id": "B_XHeaderStyle",
+                      "type": "button",
+                      "label": "5 見出しスタイル",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XHeaderStyle-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XHeaderStyle-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XHeaderStyle-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "見出しスタイル",
+                        "description": "濃紺塗り・白太字・中央・下罫線を一発適用　⌥ → Y → 5　⌃⌥H　⌃⌥P → HD"
+                      },
+                      "actionId": "R_XHeaderStyle",
+                      "keytip": "5"
+                    },
+                    {
+                      "id": "B_XIndentUp",
+                      "type": "button",
+                      "label": "F7 インデント +",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XIndentUp-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XIndentUp-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XIndentUp-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "インデント +",
+                        "description": "インデントを 1 段増やす　⌥ → Y → F7　⌃⌥→　⌃⌥P → I+"
+                      },
+                      "actionId": "R_XIndentUp",
+                      "keytip": "F7"
+                    },
+                    {
+                      "id": "B_XIndentDown",
+                      "type": "button",
+                      "label": "F8 インデント −",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XIndentDown-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XIndentDown-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XIndentDown-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "インデント −",
+                        "description": "インデントを 1 段減らす　⌥ → Y → F8　⌃⌥←　⌃⌥P → I-"
+                      },
+                      "actionId": "R_XIndentDown",
+                      "keytip": "F8"
+                    }
+                  ]
+                },
+                {
+                  "id": "G_xNumber",
+                  "label": "数値",
+                  "icons": [
+                    {
+                      "size": 16,
+                      "url": "https://sgymdik.github.io/slidekit/assets/XCycleNumber-16.png"
+                    },
+                    {
+                      "size": 32,
+                      "url": "https://sgymdik.github.io/slidekit/assets/XCycleNumber-32.png"
+                    },
+                    {
+                      "size": 80,
+                      "url": "https://sgymdik.github.io/slidekit/assets/XCycleNumber-80.png"
+                    }
+                  ],
+                  "controls": [
+                    {
+                      "id": "B_XCycleNumber",
+                      "type": "button",
+                      "label": "1 数値書式を巡回",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCycleNumber-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCycleNumber-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCycleNumber-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "数値書式を巡回",
+                        "description": "#,##0 → #,##0.0 → 0% → 0.0% → ¥#,##0 → 千円 → 百万円 を巡回　⌥ → Y → 1　⌃⌥1　⌃⌥P → N1"
+                      },
+                      "actionId": "R_XCycleNumber",
+                      "keytip": "1"
+                    },
+                    {
+                      "id": "B_XCycleDate",
+                      "type": "button",
+                      "label": "N2 日付書式を巡回",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCycleDate-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCycleDate-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCycleDate-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "日付書式を巡回",
+                        "description": "yyyy/mm/dd → yyyy-mm-dd → m/d → yyyy年m月d日 → mmm-yy を巡回　⌥ → Y → N2　⌃⌥2　⌃⌥P → N2"
+                      },
+                      "actionId": "R_XCycleDate",
+                      "keytip": "N2"
+                    },
+                    {
+                      "id": "B_XDecimalUp",
+                      "type": "button",
+                      "label": "N3 小数桁 +",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XDecimalUp-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XDecimalUp-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XDecimalUp-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "小数桁 +",
+                        "description": "小数点以下の桁を 1 つ増やす　⌥ → Y → N3　⌃⌥⇧↑　⌃⌥P → D+"
+                      },
+                      "actionId": "R_XDecimalUp",
+                      "keytip": "N3"
+                    },
+                    {
+                      "id": "B_XDecimalDown",
+                      "type": "button",
+                      "label": "N4 小数桁 −",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XDecimalDown-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XDecimalDown-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XDecimalDown-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "小数桁 −",
+                        "description": "小数点以下の桁を 1 つ減らす　⌥ → Y → N4　⌃⌥⇧↓　⌃⌥P → D-"
+                      },
+                      "actionId": "R_XDecimalDown",
+                      "keytip": "N4"
+                    },
+                    {
+                      "id": "B_XScaleK",
+                      "type": "button",
+                      "label": "N5 千単位表示",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XScaleK-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XScaleK-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XScaleK-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "千単位表示",
+                        "description": "値はそのまま、表示だけ千単位（#,##0,）にする　⌥ → Y → N5　⌃⌥P → NK"
+                      },
+                      "actionId": "R_XScaleK",
+                      "keytip": "N5"
+                    }
+                  ]
+                },
+                {
+                  "id": "G_xCells",
+                  "label": "セル",
+                  "icons": [
+                    {
+                      "size": 16,
+                      "url": "https://sgymdik.github.io/slidekit/assets/XAutofit-16.png"
+                    },
+                    {
+                      "size": 32,
+                      "url": "https://sgymdik.github.io/slidekit/assets/XAutofit-32.png"
+                    },
+                    {
+                      "size": 80,
+                      "url": "https://sgymdik.github.io/slidekit/assets/XAutofit-80.png"
+                    }
+                  ],
+                  "controls": [
+                    {
+                      "id": "B_XAutofit",
+                      "type": "button",
+                      "label": "6 列幅を自動調整",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XAutofit-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XAutofit-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XAutofit-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "列幅を自動調整",
+                        "description": "選択範囲（未選択なら使用範囲）の列幅・行高を自動調整　⌥ → Y → 6　⌃⌥W　⌃⌥P → AF"
+                      },
+                      "actionId": "R_XAutofit",
+                      "keytip": "6"
+                    },
+                    {
+                      "id": "B_XTrim",
+                      "type": "button",
+                      "label": "C2 空白を除去",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XTrim-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XTrim-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XTrim-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "空白を除去",
+                        "description": "前後の空白・全角空白・連続空白を除去　⌥ → Y → C2　⌃⌥P → TM"
+                      },
+                      "actionId": "R_XTrim",
+                      "keytip": "C2"
+                    },
+                    {
+                      "id": "B_XToValues",
+                      "type": "button",
+                      "label": "7 値に変換",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XToValues-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XToValues-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XToValues-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "値に変換",
+                        "description": "数式を計算結果の値に置き換える　⌥ → Y → 7　⌃⌥V　⌃⌥P → VL"
+                      },
+                      "actionId": "R_XToValues",
+                      "keytip": "7"
+                    },
+                    {
+                      "id": "B_XTextToNumber",
+                      "type": "button",
+                      "label": "C4 文字列→数値",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XTextToNumber-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XTextToNumber-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XTextToNumber-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "文字列→数値",
+                        "description": "文字列として入っている数字（全角・カンマ付き含む）を数値に変換　⌥ → Y → C4　⌃⌥P → TN"
+                      },
+                      "actionId": "R_XTextToNumber",
+                      "keytip": "C4"
+                    },
+                    {
+                      "id": "B_XFillDown",
+                      "type": "button",
+                      "label": "C5 空白を上の値で埋める",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XFillDown-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XFillDown-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XFillDown-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "空白を上の値で埋める",
+                        "description": "選択範囲内の空白セルを、すぐ上の値で埋める（帳票の縦結合崩し）　⌥ → Y → C5　⌃⌥D　⌃⌥P → FD"
+                      },
+                      "actionId": "R_XFillDown",
+                      "keytip": "C5"
+                    },
+                    {
+                      "id": "B_XWrapIfError",
+                      "type": "button",
+                      "label": "C6 IFERROR で囲む",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XWrapIfError-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XWrapIfError-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XWrapIfError-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "IFERROR で囲む",
+                        "description": "数式を IFERROR(…, \"\") で囲む　⌥ → Y → C6　⌃⌥P → IE"
+                      },
+                      "actionId": "R_XWrapIfError",
+                      "keytip": "C6"
+                    },
+                    {
+                      "id": "B_XToggleAbsolute",
+                      "type": "button",
+                      "label": "C7 参照の絶対/相対",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XToggleAbsolute-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XToggleAbsolute-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XToggleAbsolute-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "参照の絶対/相対",
+                        "description": "選択範囲の数式の参照を A1 → $A$1 → A$1 → $A1 → A1 と巡回　⌥ → Y → C7　⌃⌥4　⌃⌥P → AB"
+                      },
+                      "actionId": "R_XToggleAbsolute",
+                      "keytip": "C7"
+                    },
+                    {
+                      "id": "B_XCase",
+                      "type": "button",
+                      "label": "C8 大文字/小文字/全半角",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCase-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCase-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCase-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "大文字/小文字/全半角",
+                        "description": "UPPER → lower → 全角→半角 を巡回　⌥ → Y → C8　⌃⌥P → CS"
+                      },
+                      "actionId": "R_XCase",
+                      "keytip": "C8"
+                    }
+                  ]
+                },
+                {
+                  "id": "G_xAudit",
+                  "label": "検査",
+                  "icons": [
+                    {
+                      "size": 16,
+                      "url": "https://sgymdik.github.io/slidekit/assets/XTracePrecedents-16.png"
+                    },
+                    {
+                      "size": 32,
+                      "url": "https://sgymdik.github.io/slidekit/assets/XTracePrecedents-32.png"
+                    },
+                    {
+                      "size": 80,
+                      "url": "https://sgymdik.github.io/slidekit/assets/XTracePrecedents-80.png"
+                    }
+                  ],
+                  "controls": [
+                    {
+                      "id": "B_XTracePrecedents",
+                      "type": "button",
+                      "label": "A1 参照元へジャンプ",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XTracePrecedents-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XTracePrecedents-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XTracePrecedents-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "参照元へジャンプ",
+                        "description": "アクティブセルの参照元を選択（もう一度で次へ）　⌥ → Y → A1　⌃⌥R　⌃⌥P → TP"
+                      },
+                      "actionId": "R_XTracePrecedents",
+                      "keytip": "A1"
+                    },
+                    {
+                      "id": "B_XTraceDependents",
+                      "type": "button",
+                      "label": "A2 参照先へジャンプ",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XTraceDependents-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XTraceDependents-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XTraceDependents-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "参照先へジャンプ",
+                        "description": "アクティブセルを参照しているセルを選択　⌥ → Y → A2　⌃⌥⇧R　⌃⌥P → TD"
+                      },
+                      "actionId": "R_XTraceDependents",
+                      "keytip": "A2"
+                    },
+                    {
+                      "id": "B_XHighlightFormulas",
+                      "type": "button",
+                      "label": "A3 数式/定数を色分け",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XHighlightFormulas-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XHighlightFormulas-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XHighlightFormulas-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "数式/定数を色分け",
+                        "description": "数式・定数・他シート参照を色分けハイライト（もう一度で解除）　⌥ → Y → A3　⌃⌥P → HF"
+                      },
+                      "actionId": "R_XHighlightFormulas",
+                      "keytip": "A3"
+                    },
+                    {
+                      "id": "B_XFindErrors",
+                      "type": "button",
+                      "label": "A4 エラーセルを選択",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XFindErrors-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XFindErrors-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XFindErrors-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "エラーセルを選択",
+                        "description": "シート内の #N/A #DIV/0! などエラーのセルを全選択　⌥ → Y → A4　⌃⌥E　⌃⌥P → ER"
+                      },
+                      "actionId": "R_XFindErrors",
+                      "keytip": "A4"
+                    },
+                    {
+                      "id": "B_XFindHardcodes",
+                      "type": "button",
+                      "label": "A5 数式内の直書き数値",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XFindHardcodes-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XFindHardcodes-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XFindHardcodes-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "数式内の直書き数値",
+                        "description": "数式中に定数（=A1*1.1 の 1.1 など）を含むセルを選択　⌥ → Y → A5　⌃⌥P → HC"
+                      },
+                      "actionId": "R_XFindHardcodes",
+                      "keytip": "A5"
+                    }
+                  ]
+                },
+                {
+                  "id": "G_xSheet",
+                  "label": "シート",
+                  "icons": [
+                    {
+                      "size": 16,
+                      "url": "https://sgymdik.github.io/slidekit/assets/XSheetNext-16.png"
+                    },
+                    {
+                      "size": 32,
+                      "url": "https://sgymdik.github.io/slidekit/assets/XSheetNext-32.png"
+                    },
+                    {
+                      "size": 80,
+                      "url": "https://sgymdik.github.io/slidekit/assets/XSheetNext-80.png"
+                    }
+                  ],
+                  "controls": [
+                    {
+                      "id": "B_XSheetNext",
+                      "type": "button",
+                      "label": "S1 次のシート",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XSheetNext-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XSheetNext-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XSheetNext-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "次のシート",
+                        "description": "次のシートへ移動　⌥ → Y → S1　⌃⌥⇧→　⌃⌥P → >>"
+                      },
+                      "actionId": "R_XSheetNext",
+                      "keytip": "S1"
+                    },
+                    {
+                      "id": "B_XSheetPrev",
+                      "type": "button",
+                      "label": "S2 前のシート",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XSheetPrev-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XSheetPrev-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XSheetPrev-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "前のシート",
+                        "description": "前のシートへ移動　⌥ → Y → S2　⌃⌥⇧←　⌃⌥P → <<"
+                      },
+                      "actionId": "R_XSheetPrev",
+                      "keytip": "S2"
+                    },
+                    {
+                      "id": "B_XSheetIndex",
+                      "type": "button",
+                      "label": "S3 目次シート作成",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XSheetIndex-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XSheetIndex-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XSheetIndex-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "目次シート作成",
+                        "description": "全シートへのハイパーリンク付き目次シートを先頭に作成　⌥ → Y → S3　⌃⌥P → TC"
+                      },
+                      "actionId": "R_XSheetIndex",
+                      "keytip": "S3"
+                    },
+                    {
+                      "id": "B_XResetView",
+                      "type": "button",
+                      "label": "S4 全シート A1 へ",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XResetView-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XResetView-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XResetView-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "全シート A1 へ",
+                        "description": "全シートの選択を A1 に戻し、先頭シートを表示（提出前の作法）　⌥ → Y → S4　⌃⌥0　⌃⌥P → A1"
+                      },
+                      "actionId": "R_XResetView",
+                      "keytip": "S4"
+                    },
+                    {
+                      "id": "B_XGridlines",
+                      "type": "button",
+                      "label": "S5 枠線表示 切替",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XGridlines-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XGridlines-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XGridlines-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "枠線表示 切替",
+                        "description": "シートの枠線の表示/非表示を切替　⌥ → Y → S5　⌃⌥L　⌃⌥P → GL"
+                      },
+                      "actionId": "R_XGridlines",
+                      "keytip": "S5"
+                    },
+                    {
+                      "id": "B_XFreeze",
+                      "type": "button",
+                      "label": "S6 ウィンドウ枠固定",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XFreeze-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XFreeze-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XFreeze-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "ウィンドウ枠固定",
+                        "description": "アクティブセルの左上で固定（固定済みなら解除）　⌥ → Y → S6　⌃⌥Z　⌃⌥P → FZ"
+                      },
+                      "actionId": "R_XFreeze",
+                      "keytip": "S6"
+                    },
+                    {
+                      "id": "B_XGroupRows",
+                      "type": "button",
+                      "label": "S7 行/列をグループ化",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XGroupRows-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XGroupRows-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XGroupRows-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "行/列をグループ化",
+                        "description": "選択した行（列全体を選んでいれば列）をグループ化　⌥ → Y → S7　⌃⌥G　⌃⌥P → GR"
+                      },
+                      "actionId": "R_XGroupRows",
+                      "keytip": "S7"
+                    },
+                    {
+                      "id": "B_XUngroupRows",
+                      "type": "button",
+                      "label": "S8 グループ解除",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XUngroupRows-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XUngroupRows-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XUngroupRows-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "グループ解除",
+                        "description": "選択した行/列のグループを解除　⌥ → Y → S8　⌃⌥U　⌃⌥P → UG"
+                      },
+                      "actionId": "R_XUngroupRows",
+                      "keytip": "S8"
+                    }
+                  ]
+                },
+                {
+                  "id": "G_xTools",
+                  "label": "ツール",
+                  "icons": [
+                    {
+                      "size": 16,
+                      "url": "https://sgymdik.github.io/slidekit/assets/XPalette-16.png"
+                    },
+                    {
+                      "size": 32,
+                      "url": "https://sgymdik.github.io/slidekit/assets/XPalette-32.png"
+                    },
+                    {
+                      "size": 80,
+                      "url": "https://sgymdik.github.io/slidekit/assets/XPalette-80.png"
+                    }
+                  ],
+                  "controls": [
+                    {
+                      "id": "B_XPalette",
+                      "type": "button",
+                      "label": "8 コマンドパレット",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XPalette-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XPalette-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XPalette-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "コマンドパレット",
+                        "description": "全コマンドを検索・コード入力で実行　⌥ → Y → 8　⌃⌥P　⌃⌥P → PP"
+                      },
+                      "actionId": "R_XPalette",
+                      "keytip": "8"
+                    },
+                    {
+                      "id": "B_XCheatsheet",
+                      "type": "button",
+                      "label": "9 ショートカット一覧",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCheatsheet-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCheatsheet-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XCheatsheet-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "ショートカット一覧",
+                        "description": "ショートカットとクイックコードの一覧　⌥ → Y → 9　⌃⌥K　⌃⌥P → ??"
+                      },
+                      "actionId": "R_XCheatsheet",
+                      "keytip": "9"
+                    },
+                    {
+                      "id": "B_XPane",
+                      "type": "button",
+                      "label": "T3 ヒントパネル",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XPane-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XPane-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XPane-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "ヒントパネル",
+                        "description": "選択に応じて使えるショートカットを表示するパネルを開く　⌥ → Y → T3　⌃⌥I　⌃⌥P → HP"
+                      },
+                      "actionId": "R_XPane",
+                      "keytip": "T3"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboardShortcuts": [
+        {
+          "requirements": {
+            "capabilities": [
+              {
+                "name": "SharedRuntime",
+                "minVersion": "1.1"
+              }
+            ]
+          },
+          "shortcuts": [
+            {
+              "key": {
+                "default": "Ctrl+Alt+1",
+                "mac": "Ctrl+Alt+1"
+              },
+              "actionId": "XCycleNumber"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+2",
+                "mac": "Ctrl+Alt+2"
+              },
+              "actionId": "XCycleDate"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+Up",
+                "mac": "Ctrl+Alt+Shift+Up"
+              },
+              "actionId": "XDecimalUp"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+Down",
+                "mac": "Ctrl+Alt+Shift+Down"
+              },
+              "actionId": "XDecimalDown"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+C",
+                "mac": "Ctrl+Alt+C"
+              },
+              "actionId": "XCycleFontColor"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+F",
+                "mac": "Ctrl+Alt+F"
+              },
+              "actionId": "XCycleFill"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+B",
+                "mac": "Ctrl+Alt+B"
+              },
+              "actionId": "XCycleBorder"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+A",
+                "mac": "Ctrl+Alt+A"
+              },
+              "actionId": "XCycleAlign"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+M",
+                "mac": "Ctrl+Alt+M"
+              },
+              "actionId": "XCenterAcross"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+H",
+                "mac": "Ctrl+Alt+H"
+              },
+              "actionId": "XHeaderStyle"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Right",
+                "mac": "Ctrl+Alt+Right"
+              },
+              "actionId": "XIndentUp"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Left",
+                "mac": "Ctrl+Alt+Left"
+              },
+              "actionId": "XIndentDown"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+W",
+                "mac": "Ctrl+Alt+W"
+              },
+              "actionId": "XAutofit"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+V",
+                "mac": "Ctrl+Alt+V"
+              },
+              "actionId": "XToValues"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+D",
+                "mac": "Ctrl+Alt+D"
+              },
+              "actionId": "XFillDown"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+4",
+                "mac": "Ctrl+Alt+4"
+              },
+              "actionId": "XToggleAbsolute"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+R",
+                "mac": "Ctrl+Alt+R"
+              },
+              "actionId": "XTracePrecedents"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+R",
+                "mac": "Ctrl+Alt+Shift+R"
+              },
+              "actionId": "XTraceDependents"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+E",
+                "mac": "Ctrl+Alt+E"
+              },
+              "actionId": "XFindErrors"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+Right",
+                "mac": "Ctrl+Alt+Shift+Right"
+              },
+              "actionId": "XSheetNext"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+Left",
+                "mac": "Ctrl+Alt+Shift+Left"
+              },
+              "actionId": "XSheetPrev"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+0",
+                "mac": "Ctrl+Alt+0"
+              },
+              "actionId": "XResetView"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+L",
+                "mac": "Ctrl+Alt+L"
+              },
+              "actionId": "XGridlines"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Z",
+                "mac": "Ctrl+Alt+Z"
+              },
+              "actionId": "XFreeze"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+G",
+                "mac": "Ctrl+Alt+G"
+              },
+              "actionId": "XGroupRows"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+U",
+                "mac": "Ctrl+Alt+U"
+              },
+              "actionId": "XUngroupRows"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+P",
+                "mac": "Ctrl+Alt+P"
+              },
+              "actionId": "XPalette"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+K",
+                "mac": "Ctrl+Alt+K"
+              },
+              "actionId": "XCheatsheet"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+I",
+                "mac": "Ctrl+Alt+I"
+              },
+              "actionId": "XPane"
+            }
+          ]
+        }
+      ],
+      "getStartedMessages": [
+        {
+          "title": "SlideKit を読み込みました",
+          "description": "⌥ → Y → 番号 でリボンを操作。⌃⌥P でコマンドパレット、⌃⌥K で一覧。",
+          "learnMoreUrl": "https://sgymdik.github.io/slidekit/taskpane.html"
+        }
+      ]
+    }
+  ]
+}

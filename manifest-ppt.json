@@ -1,0 +1,2598 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.30/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.30",
+  "version": "2.0.0",
+  "id": "ea7d314e-45c3-40f6-9561-9ff8cfb9b9ee",
+  "developer": {
+    "name": "SlideKit",
+    "websiteUrl": "https://sgymdik.github.io/slidekit/taskpane.html",
+    "privacyUrl": "https://sgymdik.github.io/slidekit/taskpane.html",
+    "termsOfUseUrl": "https://sgymdik.github.io/slidekit/taskpane.html"
+  },
+  "name": {
+    "short": "SlideKit",
+    "full": "SlideKit for PowerPoint"
+  },
+  "description": {
+    "short": "図形整列・チャート・ショートカット中心の作業効率化アドイン",
+    "full": "⌥ → Y → 番号、⌃⌥ ショートカット、⌃⌥P のコマンドパレットで操作できる作業効率化アドイン"
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#1F3A5F",
+  "validDomains": [
+    "sgymdik.github.io"
+  ],
+  "authorization": {
+    "permissions": {
+      "resourceSpecific": [
+        {
+          "name": "Document.ReadWrite.User",
+          "type": "Delegated"
+        }
+      ]
+    }
+  },
+  "extensions": [
+    {
+      "requirements": {
+        "scopes": [
+          "presentation"
+        ],
+        "capabilities": [
+          {
+            "name": "SharedRuntime",
+            "minVersion": "1.1"
+          }
+        ]
+      },
+      "runtimes": [
+        {
+          "id": "SharedRuntime",
+          "type": "general",
+          "code": {
+            "page": "https://sgymdik.github.io/slidekit/taskpane.html"
+          },
+          "lifetime": "long",
+          "actions": [
+            {
+              "id": "ShowPane",
+              "type": "openPage"
+            },
+            {
+              "id": "AlignLeft",
+              "type": "executeFunction",
+              "displayName": "左揃え"
+            },
+            {
+              "id": "AlignRight",
+              "type": "executeFunction",
+              "displayName": "右揃え"
+            },
+            {
+              "id": "AlignTop",
+              "type": "executeFunction",
+              "displayName": "上揃え"
+            },
+            {
+              "id": "AlignBottom",
+              "type": "executeFunction",
+              "displayName": "下揃え"
+            },
+            {
+              "id": "AlignCenter",
+              "type": "executeFunction",
+              "displayName": "左右中央"
+            },
+            {
+              "id": "AlignMiddle",
+              "type": "executeFunction",
+              "displayName": "上下中央"
+            },
+            {
+              "id": "SlideCenterH",
+              "type": "executeFunction",
+              "displayName": "スライド水平中央"
+            },
+            {
+              "id": "SlideCenterV",
+              "type": "executeFunction",
+              "displayName": "スライド垂直中央"
+            },
+            {
+              "id": "SnapLeft",
+              "type": "executeFunction",
+              "displayName": "スライド左端へ"
+            },
+            {
+              "id": "SnapRight",
+              "type": "executeFunction",
+              "displayName": "スライド右端へ"
+            },
+            {
+              "id": "SnapTop",
+              "type": "executeFunction",
+              "displayName": "スライド上端へ"
+            },
+            {
+              "id": "SnapBottom",
+              "type": "executeFunction",
+              "displayName": "スライド下端へ"
+            },
+            {
+              "id": "DistributeH",
+              "type": "executeFunction",
+              "displayName": "水平均等"
+            },
+            {
+              "id": "DistributeV",
+              "type": "executeFunction",
+              "displayName": "垂直均等"
+            },
+            {
+              "id": "GapH",
+              "type": "executeFunction",
+              "displayName": "横間隔を指定"
+            },
+            {
+              "id": "GapV",
+              "type": "executeFunction",
+              "displayName": "縦間隔を指定"
+            },
+            {
+              "id": "MatchWidth",
+              "type": "executeFunction",
+              "displayName": "幅を揃える"
+            },
+            {
+              "id": "MatchHeight",
+              "type": "executeFunction",
+              "displayName": "高さを揃える"
+            },
+            {
+              "id": "MatchBoth",
+              "type": "executeFunction",
+              "displayName": "サイズを揃える"
+            },
+            {
+              "id": "StretchLeft",
+              "type": "executeFunction",
+              "displayName": "左端まで伸ばす"
+            },
+            {
+              "id": "StretchRight",
+              "type": "executeFunction",
+              "displayName": "右端まで伸ばす"
+            },
+            {
+              "id": "StretchTop",
+              "type": "executeFunction",
+              "displayName": "上端まで伸ばす"
+            },
+            {
+              "id": "StretchBottom",
+              "type": "executeFunction",
+              "displayName": "下端まで伸ばす"
+            },
+            {
+              "id": "Scale",
+              "type": "executeFunction",
+              "displayName": "倍率で拡大縮小"
+            },
+            {
+              "id": "Grid",
+              "type": "executeFunction",
+              "displayName": "グリッド整列"
+            },
+            {
+              "id": "Swap",
+              "type": "executeFunction",
+              "displayName": "位置を入れ替え"
+            },
+            {
+              "id": "Group",
+              "type": "executeFunction",
+              "displayName": "グループ化"
+            },
+            {
+              "id": "Ungroup",
+              "type": "executeFunction",
+              "displayName": "グループ解除"
+            },
+            {
+              "id": "BringToFront",
+              "type": "executeFunction",
+              "displayName": "最前面へ"
+            },
+            {
+              "id": "BringForward",
+              "type": "executeFunction",
+              "displayName": "前面へ"
+            },
+            {
+              "id": "SendBackward",
+              "type": "executeFunction",
+              "displayName": "背面へ"
+            },
+            {
+              "id": "SendToBack",
+              "type": "executeFunction",
+              "displayName": "最背面へ"
+            },
+            {
+              "id": "SelectNextRight",
+              "type": "executeFunction",
+              "displayName": "右隣の図形を選択"
+            },
+            {
+              "id": "SelectNextLeft",
+              "type": "executeFunction",
+              "displayName": "左隣の図形を選択"
+            },
+            {
+              "id": "SelectNextUp",
+              "type": "executeFunction",
+              "displayName": "上隣の図形を選択"
+            },
+            {
+              "id": "SelectNextDown",
+              "type": "executeFunction",
+              "displayName": "下隣の図形を選択"
+            },
+            {
+              "id": "PickStyle",
+              "type": "executeFunction",
+              "displayName": "書式をつまむ"
+            },
+            {
+              "id": "ApplyStyle",
+              "type": "executeFunction",
+              "displayName": "書式を貼る"
+            },
+            {
+              "id": "Transparency",
+              "type": "executeFunction",
+              "displayName": "透明度"
+            },
+            {
+              "id": "SelectSameFill",
+              "type": "executeFunction",
+              "displayName": "同じ色を選択"
+            },
+            {
+              "id": "SelectSameSize",
+              "type": "executeFunction",
+              "displayName": "同じサイズを選択"
+            },
+            {
+              "id": "FontReplace",
+              "type": "executeFunction",
+              "displayName": "フォント統一"
+            },
+            {
+              "id": "InsertHarvey",
+              "type": "executeFunction",
+              "displayName": "ハーベイボール"
+            },
+            {
+              "id": "InsertChevron",
+              "type": "executeFunction",
+              "displayName": "プロセスフロー"
+            },
+            {
+              "id": "InsertSticky",
+              "type": "executeFunction",
+              "displayName": "付箋"
+            },
+            {
+              "id": "AgendaInsert",
+              "type": "executeFunction",
+              "displayName": "アジェンダ挿入"
+            },
+            {
+              "id": "AgendaPerChapter",
+              "type": "executeFunction",
+              "displayName": "アジェンダを各章の前に"
+            },
+            {
+              "id": "InsertTracker",
+              "type": "executeFunction",
+              "displayName": "アジェンダトラッカー"
+            },
+            {
+              "id": "InsertTable",
+              "type": "executeFunction",
+              "displayName": "表を貼り付け"
+            },
+            {
+              "id": "ChartStudio",
+              "type": "executeFunction",
+              "displayName": "チャート"
+            },
+            {
+              "id": "Palette",
+              "type": "executeFunction",
+              "displayName": "コマンドパレット"
+            },
+            {
+              "id": "Cheatsheet",
+              "type": "executeFunction",
+              "displayName": "ショートカット一覧"
+            },
+            {
+              "id": "Pane",
+              "type": "executeFunction",
+              "displayName": "ヒントパネル"
+            },
+            {
+              "id": "RenameSeq",
+              "type": "executeFunction",
+              "displayName": "連番リネーム"
+            },
+            {
+              "id": "RemoveDuplicates",
+              "type": "executeFunction",
+              "displayName": "重複図形を削除"
+            },
+            {
+              "id": "DeleteStickies",
+              "type": "executeFunction",
+              "displayName": "付箋を一括削除"
+            },
+            {
+              "id": "DecimalToggle",
+              "type": "executeFunction",
+              "displayName": "小数点 . ↔ ,"
+            },
+            {
+              "id": "Settings",
+              "type": "executeFunction",
+              "displayName": "設定"
+            },
+            {
+              "id": "R_AlignLeft",
+              "type": "executeFunction",
+              "displayName": "左揃え"
+            },
+            {
+              "id": "R_AlignRight",
+              "type": "executeFunction",
+              "displayName": "右揃え"
+            },
+            {
+              "id": "R_AlignTop",
+              "type": "executeFunction",
+              "displayName": "上揃え"
+            },
+            {
+              "id": "R_AlignBottom",
+              "type": "executeFunction",
+              "displayName": "下揃え"
+            },
+            {
+              "id": "R_AlignCenter",
+              "type": "executeFunction",
+              "displayName": "左右中央"
+            },
+            {
+              "id": "R_AlignMiddle",
+              "type": "executeFunction",
+              "displayName": "上下中央"
+            },
+            {
+              "id": "R_SlideCenterH",
+              "type": "executeFunction",
+              "displayName": "スライド水平中央"
+            },
+            {
+              "id": "R_SlideCenterV",
+              "type": "executeFunction",
+              "displayName": "スライド垂直中央"
+            },
+            {
+              "id": "R_SnapLeft",
+              "type": "executeFunction",
+              "displayName": "スライド左端へ"
+            },
+            {
+              "id": "R_SnapRight",
+              "type": "executeFunction",
+              "displayName": "スライド右端へ"
+            },
+            {
+              "id": "R_SnapTop",
+              "type": "executeFunction",
+              "displayName": "スライド上端へ"
+            },
+            {
+              "id": "R_SnapBottom",
+              "type": "executeFunction",
+              "displayName": "スライド下端へ"
+            },
+            {
+              "id": "R_DistributeH",
+              "type": "executeFunction",
+              "displayName": "水平均等"
+            },
+            {
+              "id": "R_DistributeV",
+              "type": "executeFunction",
+              "displayName": "垂直均等"
+            },
+            {
+              "id": "R_GapH",
+              "type": "executeFunction",
+              "displayName": "横間隔を指定"
+            },
+            {
+              "id": "R_GapV",
+              "type": "executeFunction",
+              "displayName": "縦間隔を指定"
+            },
+            {
+              "id": "R_MatchWidth",
+              "type": "executeFunction",
+              "displayName": "幅を揃える"
+            },
+            {
+              "id": "R_MatchHeight",
+              "type": "executeFunction",
+              "displayName": "高さを揃える"
+            },
+            {
+              "id": "R_MatchBoth",
+              "type": "executeFunction",
+              "displayName": "サイズを揃える"
+            },
+            {
+              "id": "R_StretchLeft",
+              "type": "executeFunction",
+              "displayName": "左端まで伸ばす"
+            },
+            {
+              "id": "R_StretchRight",
+              "type": "executeFunction",
+              "displayName": "右端まで伸ばす"
+            },
+            {
+              "id": "R_StretchTop",
+              "type": "executeFunction",
+              "displayName": "上端まで伸ばす"
+            },
+            {
+              "id": "R_StretchBottom",
+              "type": "executeFunction",
+              "displayName": "下端まで伸ばす"
+            },
+            {
+              "id": "R_Scale",
+              "type": "executeFunction",
+              "displayName": "倍率で拡大縮小"
+            },
+            {
+              "id": "R_Grid",
+              "type": "executeFunction",
+              "displayName": "グリッド整列"
+            },
+            {
+              "id": "R_Swap",
+              "type": "executeFunction",
+              "displayName": "位置を入れ替え"
+            },
+            {
+              "id": "R_Group",
+              "type": "executeFunction",
+              "displayName": "グループ化"
+            },
+            {
+              "id": "R_Ungroup",
+              "type": "executeFunction",
+              "displayName": "グループ解除"
+            },
+            {
+              "id": "R_BringToFront",
+              "type": "executeFunction",
+              "displayName": "最前面へ"
+            },
+            {
+              "id": "R_BringForward",
+              "type": "executeFunction",
+              "displayName": "前面へ"
+            },
+            {
+              "id": "R_SendBackward",
+              "type": "executeFunction",
+              "displayName": "背面へ"
+            },
+            {
+              "id": "R_SendToBack",
+              "type": "executeFunction",
+              "displayName": "最背面へ"
+            },
+            {
+              "id": "R_SelectNextRight",
+              "type": "executeFunction",
+              "displayName": "右隣の図形を選択"
+            },
+            {
+              "id": "R_SelectNextLeft",
+              "type": "executeFunction",
+              "displayName": "左隣の図形を選択"
+            },
+            {
+              "id": "R_SelectNextUp",
+              "type": "executeFunction",
+              "displayName": "上隣の図形を選択"
+            },
+            {
+              "id": "R_SelectNextDown",
+              "type": "executeFunction",
+              "displayName": "下隣の図形を選択"
+            },
+            {
+              "id": "R_PickStyle",
+              "type": "executeFunction",
+              "displayName": "書式をつまむ"
+            },
+            {
+              "id": "R_ApplyStyle",
+              "type": "executeFunction",
+              "displayName": "書式を貼る"
+            },
+            {
+              "id": "R_Transparency",
+              "type": "executeFunction",
+              "displayName": "透明度"
+            },
+            {
+              "id": "R_SelectSameFill",
+              "type": "executeFunction",
+              "displayName": "同じ色を選択"
+            },
+            {
+              "id": "R_SelectSameSize",
+              "type": "executeFunction",
+              "displayName": "同じサイズを選択"
+            },
+            {
+              "id": "R_FontReplace",
+              "type": "executeFunction",
+              "displayName": "フォント統一"
+            },
+            {
+              "id": "R_InsertHarvey",
+              "type": "executeFunction",
+              "displayName": "ハーベイボール"
+            },
+            {
+              "id": "R_InsertChevron",
+              "type": "executeFunction",
+              "displayName": "プロセスフロー"
+            },
+            {
+              "id": "R_InsertSticky",
+              "type": "executeFunction",
+              "displayName": "付箋"
+            },
+            {
+              "id": "R_AgendaInsert",
+              "type": "executeFunction",
+              "displayName": "アジェンダ挿入"
+            },
+            {
+              "id": "R_AgendaPerChapter",
+              "type": "executeFunction",
+              "displayName": "アジェンダを各章の前に"
+            },
+            {
+              "id": "R_InsertTracker",
+              "type": "executeFunction",
+              "displayName": "アジェンダトラッカー"
+            },
+            {
+              "id": "R_InsertTable",
+              "type": "executeFunction",
+              "displayName": "表を貼り付け"
+            },
+            {
+              "id": "R_ChartStudio",
+              "type": "executeFunction",
+              "displayName": "チャート"
+            },
+            {
+              "id": "R_Palette",
+              "type": "executeFunction",
+              "displayName": "コマンドパレット"
+            },
+            {
+              "id": "R_Cheatsheet",
+              "type": "executeFunction",
+              "displayName": "ショートカット一覧"
+            },
+            {
+              "id": "R_Pane",
+              "type": "executeFunction",
+              "displayName": "ヒントパネル"
+            },
+            {
+              "id": "R_RenameSeq",
+              "type": "executeFunction",
+              "displayName": "連番リネーム"
+            },
+            {
+              "id": "R_RemoveDuplicates",
+              "type": "executeFunction",
+              "displayName": "重複図形を削除"
+            },
+            {
+              "id": "R_DeleteStickies",
+              "type": "executeFunction",
+              "displayName": "付箋を一括削除"
+            },
+            {
+              "id": "R_DecimalToggle",
+              "type": "executeFunction",
+              "displayName": "小数点 . ↔ ,"
+            },
+            {
+              "id": "R_Settings",
+              "type": "executeFunction",
+              "displayName": "設定"
+            }
+          ]
+        }
+      ],
+      "ribbons": [
+        {
+          "requirements": {
+            "scopes": [
+              "presentation"
+            ]
+          },
+          "tabs": [
+            {
+              "id": "SlideKit.Tab",
+              "label": "SlideKit",
+              "keytip": "Y",
+              "groups": [
+                {
+                  "id": "G_pAlign",
+                  "label": "揃え",
+                  "icons": [
+                    {
+                      "size": 16,
+                      "url": "https://sgymdik.github.io/slidekit/assets/AlignLeft-16.png"
+                    },
+                    {
+                      "size": 32,
+                      "url": "https://sgymdik.github.io/slidekit/assets/AlignLeft-32.png"
+                    },
+                    {
+                      "size": 80,
+                      "url": "https://sgymdik.github.io/slidekit/assets/AlignLeft-80.png"
+                    }
+                  ],
+                  "controls": [
+                    {
+                      "id": "B_AlignLeft",
+                      "type": "button",
+                      "label": "1 左揃え",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AlignLeft-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AlignLeft-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AlignLeft-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "左揃え",
+                        "description": "選択図形の左端を、最も左の図形に揃える（基準図形モード時は最初に選んだ図形）　⌥ → Y → 1　⌃⌥←　⌃⌥P → AL"
+                      },
+                      "actionId": "R_AlignLeft",
+                      "keytip": "1"
+                    },
+                    {
+                      "id": "B_AlignRight",
+                      "type": "button",
+                      "label": "A2 右揃え",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AlignRight-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AlignRight-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AlignRight-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "右揃え",
+                        "description": "選択図形の右端を揃える　⌥ → Y → A2　⌃⌥→　⌃⌥P → AR"
+                      },
+                      "actionId": "R_AlignRight",
+                      "keytip": "A2"
+                    },
+                    {
+                      "id": "B_AlignTop",
+                      "type": "button",
+                      "label": "2 上揃え",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AlignTop-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AlignTop-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AlignTop-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "上揃え",
+                        "description": "選択図形の上端を揃える　⌥ → Y → 2　⌃⌥↑　⌃⌥P → AT"
+                      },
+                      "actionId": "R_AlignTop",
+                      "keytip": "2"
+                    },
+                    {
+                      "id": "B_AlignBottom",
+                      "type": "button",
+                      "label": "A4 下揃え",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AlignBottom-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AlignBottom-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AlignBottom-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "下揃え",
+                        "description": "選択図形の下端を揃える　⌥ → Y → A4　⌃⌥↓　⌃⌥P → AB"
+                      },
+                      "actionId": "R_AlignBottom",
+                      "keytip": "A4"
+                    },
+                    {
+                      "id": "B_AlignCenter",
+                      "type": "button",
+                      "label": "A5 左右中央",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AlignCenter-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AlignCenter-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AlignCenter-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "左右中央",
+                        "description": "選択図形の左右中央を揃える　⌥ → Y → A5　⌃⌥C　⌃⌥P → AC"
+                      },
+                      "actionId": "R_AlignCenter",
+                      "keytip": "A5"
+                    },
+                    {
+                      "id": "B_AlignMiddle",
+                      "type": "button",
+                      "label": "A6 上下中央",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AlignMiddle-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AlignMiddle-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AlignMiddle-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "上下中央",
+                        "description": "選択図形の上下中央を揃える　⌥ → Y → A6　⌃⌥M　⌃⌥P → AM"
+                      },
+                      "actionId": "R_AlignMiddle",
+                      "keytip": "A6"
+                    }
+                  ]
+                },
+                {
+                  "id": "G_pSlide",
+                  "label": "スライド基準",
+                  "icons": [
+                    {
+                      "size": 16,
+                      "url": "https://sgymdik.github.io/slidekit/assets/SlideCenterH-16.png"
+                    },
+                    {
+                      "size": 32,
+                      "url": "https://sgymdik.github.io/slidekit/assets/SlideCenterH-32.png"
+                    },
+                    {
+                      "size": 80,
+                      "url": "https://sgymdik.github.io/slidekit/assets/SlideCenterH-80.png"
+                    }
+                  ],
+                  "controls": [
+                    {
+                      "id": "B_SlideCenterH",
+                      "type": "button",
+                      "label": "E1 スライド水平中央",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SlideCenterH-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SlideCenterH-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SlideCenterH-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "スライド水平中央",
+                        "description": "選択範囲全体をスライドの左右中央へ（相対位置は維持）　⌥ → Y → E1　⌃⌥⇧C　⌃⌥P → SC"
+                      },
+                      "actionId": "R_SlideCenterH",
+                      "keytip": "E1"
+                    },
+                    {
+                      "id": "B_SlideCenterV",
+                      "type": "button",
+                      "label": "E2 スライド垂直中央",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SlideCenterV-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SlideCenterV-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SlideCenterV-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "スライド垂直中央",
+                        "description": "選択範囲全体をスライドの上下中央へ　⌥ → Y → E2　⌃⌥⇧M　⌃⌥P → SM"
+                      },
+                      "actionId": "R_SlideCenterV",
+                      "keytip": "E2"
+                    },
+                    {
+                      "id": "B_SnapLeft",
+                      "type": "button",
+                      "label": "E3 スライド左端へ",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SnapLeft-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SnapLeft-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SnapLeft-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "スライド左端へ",
+                        "description": "選択範囲をスライドの左マージン（設定値）へ寄せる　⌥ → Y → E3　⌃⌥⇧←　⌃⌥P → SL"
+                      },
+                      "actionId": "R_SnapLeft",
+                      "keytip": "E3"
+                    },
+                    {
+                      "id": "B_SnapRight",
+                      "type": "button",
+                      "label": "E4 スライド右端へ",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SnapRight-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SnapRight-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SnapRight-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "スライド右端へ",
+                        "description": "選択範囲をスライドの右マージンへ寄せる　⌥ → Y → E4　⌃⌥⇧→　⌃⌥P → SR"
+                      },
+                      "actionId": "R_SnapRight",
+                      "keytip": "E4"
+                    },
+                    {
+                      "id": "B_SnapTop",
+                      "type": "button",
+                      "label": "E5 スライド上端へ",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SnapTop-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SnapTop-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SnapTop-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "スライド上端へ",
+                        "description": "選択範囲をスライドの上マージンへ寄せる　⌥ → Y → E5　⌃⌥⇧↑　⌃⌥P → ST"
+                      },
+                      "actionId": "R_SnapTop",
+                      "keytip": "E5"
+                    },
+                    {
+                      "id": "B_SnapBottom",
+                      "type": "button",
+                      "label": "E6 スライド下端へ",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SnapBottom-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SnapBottom-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SnapBottom-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "スライド下端へ",
+                        "description": "選択範囲をスライドの下マージンへ寄せる　⌥ → Y → E6　⌃⌥⇧↓　⌃⌥P → SB"
+                      },
+                      "actionId": "R_SnapBottom",
+                      "keytip": "E6"
+                    }
+                  ]
+                },
+                {
+                  "id": "G_pSize",
+                  "label": "均等・サイズ",
+                  "icons": [
+                    {
+                      "size": 16,
+                      "url": "https://sgymdik.github.io/slidekit/assets/DistributeH-16.png"
+                    },
+                    {
+                      "size": 32,
+                      "url": "https://sgymdik.github.io/slidekit/assets/DistributeH-32.png"
+                    },
+                    {
+                      "size": 80,
+                      "url": "https://sgymdik.github.io/slidekit/assets/DistributeH-80.png"
+                    }
+                  ],
+                  "controls": [
+                    {
+                      "id": "B_DistributeH",
+                      "type": "button",
+                      "label": "3 水平均等",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/DistributeH-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/DistributeH-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/DistributeH-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "水平均等",
+                        "description": "左右両端の図形を固定し、間隔を均等にする　⌥ → Y → 3　⌃⌥H　⌃⌥P → DH"
+                      },
+                      "actionId": "R_DistributeH",
+                      "keytip": "3"
+                    },
+                    {
+                      "id": "B_DistributeV",
+                      "type": "button",
+                      "label": "4 垂直均等",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/DistributeV-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/DistributeV-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/DistributeV-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "垂直均等",
+                        "description": "上下両端の図形を固定し、間隔を均等にする　⌥ → Y → 4　⌃⌥V　⌃⌥P → DV"
+                      },
+                      "actionId": "R_DistributeV",
+                      "keytip": "4"
+                    },
+                    {
+                      "id": "B_MatchWidth",
+                      "type": "button",
+                      "label": "S3 幅を揃える",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/MatchWidth-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/MatchWidth-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/MatchWidth-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "幅を揃える",
+                        "description": "基準図形（最初に選んだ図形）の幅に揃える　⌥ → Y → S3　⌃⌥W　⌃⌥P → MW"
+                      },
+                      "actionId": "R_MatchWidth",
+                      "keytip": "S3"
+                    },
+                    {
+                      "id": "B_MatchHeight",
+                      "type": "button",
+                      "label": "S4 高さを揃える",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/MatchHeight-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/MatchHeight-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/MatchHeight-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "高さを揃える",
+                        "description": "基準図形の高さに揃える　⌥ → Y → S4　⌃⌥E　⌃⌥P → ME"
+                      },
+                      "actionId": "R_MatchHeight",
+                      "keytip": "S4"
+                    },
+                    {
+                      "id": "B_MatchBoth",
+                      "type": "button",
+                      "label": "5 サイズを揃える",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/MatchBoth-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/MatchBoth-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/MatchBoth-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "サイズを揃える",
+                        "description": "基準図形の幅・高さ両方に揃える　⌥ → Y → 5　⌃⌥S　⌃⌥P → MS"
+                      },
+                      "actionId": "R_MatchBoth",
+                      "keytip": "5"
+                    },
+                    {
+                      "id": "B_Scale",
+                      "type": "button",
+                      "label": "S6 倍率で拡大縮小",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Scale-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Scale-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Scale-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "倍率で拡大縮小",
+                        "description": "中心を保って指定 % で拡大縮小（文字サイズも追従）　⌥ → Y → S6　⌃⌥P → SZ"
+                      },
+                      "actionId": "R_Scale",
+                      "keytip": "S6"
+                    }
+                  ]
+                },
+                {
+                  "id": "G_pStretch",
+                  "label": "間隔・伸縮",
+                  "icons": [
+                    {
+                      "size": 16,
+                      "url": "https://sgymdik.github.io/slidekit/assets/GapH-16.png"
+                    },
+                    {
+                      "size": 32,
+                      "url": "https://sgymdik.github.io/slidekit/assets/GapH-32.png"
+                    },
+                    {
+                      "size": 80,
+                      "url": "https://sgymdik.github.io/slidekit/assets/GapH-80.png"
+                    }
+                  ],
+                  "controls": [
+                    {
+                      "id": "B_GapH",
+                      "type": "button",
+                      "label": "X1 横間隔を指定",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/GapH-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/GapH-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/GapH-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "横間隔を指定",
+                        "description": "左から順に、指定した pt 間隔で並べ直す（既定は設定の「標準間隔」）　⌥ → Y → X1　⌃⌥⇧H　⌃⌥P → GH"
+                      },
+                      "actionId": "R_GapH",
+                      "keytip": "X1"
+                    },
+                    {
+                      "id": "B_GapV",
+                      "type": "button",
+                      "label": "X2 縦間隔を指定",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/GapV-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/GapV-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/GapV-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "縦間隔を指定",
+                        "description": "上から順に、指定 pt 間隔で並べ直す　⌥ → Y → X2　⌃⌥⇧V　⌃⌥P → GV"
+                      },
+                      "actionId": "R_GapV",
+                      "keytip": "X2"
+                    },
+                    {
+                      "id": "B_StretchLeft",
+                      "type": "button",
+                      "label": "X3 左端まで伸ばす",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/StretchLeft-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/StretchLeft-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/StretchLeft-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "左端まで伸ばす",
+                        "description": "選択図形の左辺を、最も左の図形の左辺まで伸ばす（右辺は固定）　⌥ → Y → X3　⌃⌥P → XL"
+                      },
+                      "actionId": "R_StretchLeft",
+                      "keytip": "X3"
+                    },
+                    {
+                      "id": "B_StretchRight",
+                      "type": "button",
+                      "label": "X4 右端まで伸ばす",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/StretchRight-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/StretchRight-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/StretchRight-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "右端まで伸ばす",
+                        "description": "右辺を最も右の図形の右辺まで伸ばす　⌥ → Y → X4　⌃⌥P → XR"
+                      },
+                      "actionId": "R_StretchRight",
+                      "keytip": "X4"
+                    },
+                    {
+                      "id": "B_StretchTop",
+                      "type": "button",
+                      "label": "X5 上端まで伸ばす",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/StretchTop-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/StretchTop-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/StretchTop-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "上端まで伸ばす",
+                        "description": "上辺を最も上の図形の上辺まで伸ばす　⌥ → Y → X5　⌃⌥P → XT"
+                      },
+                      "actionId": "R_StretchTop",
+                      "keytip": "X5"
+                    },
+                    {
+                      "id": "B_StretchBottom",
+                      "type": "button",
+                      "label": "X6 下端まで伸ばす",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/StretchBottom-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/StretchBottom-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/StretchBottom-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "下端まで伸ばす",
+                        "description": "下辺を最も下の図形の下辺まで伸ばす　⌥ → Y → X6　⌃⌥P → XB"
+                      },
+                      "actionId": "R_StretchBottom",
+                      "keytip": "X6"
+                    }
+                  ]
+                },
+                {
+                  "id": "G_pArrange",
+                  "label": "配置",
+                  "icons": [
+                    {
+                      "size": 16,
+                      "url": "https://sgymdik.github.io/slidekit/assets/Grid-16.png"
+                    },
+                    {
+                      "size": 32,
+                      "url": "https://sgymdik.github.io/slidekit/assets/Grid-32.png"
+                    },
+                    {
+                      "size": 80,
+                      "url": "https://sgymdik.github.io/slidekit/assets/Grid-80.png"
+                    }
+                  ],
+                  "controls": [
+                    {
+                      "id": "B_Grid",
+                      "type": "button",
+                      "label": "R1 グリッド整列",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Grid-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Grid-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Grid-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "グリッド整列",
+                        "description": "選択図形を N 列のグリッドに並べ直す（間隔は標準間隔）　⌥ → Y → R1　⌃⌥T　⌃⌥P → GR"
+                      },
+                      "actionId": "R_Grid",
+                      "keytip": "R1"
+                    },
+                    {
+                      "id": "B_Swap",
+                      "type": "button",
+                      "label": "R2 位置を入れ替え",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Swap-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Swap-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Swap-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "位置を入れ替え",
+                        "description": "2 つの図形の位置を入れ替える（中心基準なのでサイズが違っても自然）　⌥ → Y → R2　⌃⌥X　⌃⌥P → SW"
+                      },
+                      "actionId": "R_Swap",
+                      "keytip": "R2"
+                    },
+                    {
+                      "id": "B_Group",
+                      "type": "button",
+                      "label": "6 グループ化",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Group-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Group-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Group-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "グループ化",
+                        "description": "選択図形をグループ化　⌥ → Y → 6　⌃⌥G　⌃⌥P → GG"
+                      },
+                      "actionId": "R_Group",
+                      "keytip": "6"
+                    },
+                    {
+                      "id": "B_Ungroup",
+                      "type": "button",
+                      "label": "R4 グループ解除",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Ungroup-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Ungroup-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Ungroup-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "グループ解除",
+                        "description": "選択中のグループを解除　⌥ → Y → R4　⌃⌥U　⌃⌥P → UG"
+                      },
+                      "actionId": "R_Ungroup",
+                      "keytip": "R4"
+                    }
+                  ]
+                },
+                {
+                  "id": "G_pNav",
+                  "label": "重ね順・移動",
+                  "icons": [
+                    {
+                      "size": 16,
+                      "url": "https://sgymdik.github.io/slidekit/assets/BringToFront-16.png"
+                    },
+                    {
+                      "size": 32,
+                      "url": "https://sgymdik.github.io/slidekit/assets/BringToFront-32.png"
+                    },
+                    {
+                      "size": 80,
+                      "url": "https://sgymdik.github.io/slidekit/assets/BringToFront-80.png"
+                    }
+                  ],
+                  "controls": [
+                    {
+                      "id": "B_BringToFront",
+                      "type": "button",
+                      "label": "Z1 最前面へ",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/BringToFront-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/BringToFront-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/BringToFront-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "最前面へ",
+                        "description": "最前面へ移動　⌥ → Y → Z1　⌃⌥1　⌃⌥P → Z1"
+                      },
+                      "actionId": "R_BringToFront",
+                      "keytip": "Z1"
+                    },
+                    {
+                      "id": "B_BringForward",
+                      "type": "button",
+                      "label": "Z2 前面へ",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/BringForward-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/BringForward-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/BringForward-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "前面へ",
+                        "description": "1 つ前面へ　⌥ → Y → Z2　⌃⌥2　⌃⌥P → Z2"
+                      },
+                      "actionId": "R_BringForward",
+                      "keytip": "Z2"
+                    },
+                    {
+                      "id": "B_SendBackward",
+                      "type": "button",
+                      "label": "Z3 背面へ",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SendBackward-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SendBackward-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SendBackward-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "背面へ",
+                        "description": "1 つ背面へ　⌥ → Y → Z3　⌃⌥3　⌃⌥P → Z3"
+                      },
+                      "actionId": "R_SendBackward",
+                      "keytip": "Z3"
+                    },
+                    {
+                      "id": "B_SendToBack",
+                      "type": "button",
+                      "label": "Z4 最背面へ",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SendToBack-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SendToBack-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SendToBack-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "最背面へ",
+                        "description": "最背面へ移動　⌥ → Y → Z4　⌃⌥4　⌃⌥P → Z4"
+                      },
+                      "actionId": "R_SendToBack",
+                      "keytip": "Z4"
+                    },
+                    {
+                      "id": "B_SelectNextRight",
+                      "type": "button",
+                      "label": "Z5 右隣の図形を選択",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SelectNextRight-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SelectNextRight-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SelectNextRight-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "右隣の図形を選択",
+                        "description": "選択中の図形から右方向にある最も近い図形を選択（旧 Alt+矢印 の代替）　⌥ → Y → Z5　⌃⌥⇧L　⌃⌥P → NR"
+                      },
+                      "actionId": "R_SelectNextRight",
+                      "keytip": "Z5"
+                    },
+                    {
+                      "id": "B_SelectNextLeft",
+                      "type": "button",
+                      "label": "Z6 左隣の図形を選択",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SelectNextLeft-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SelectNextLeft-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SelectNextLeft-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "左隣の図形を選択",
+                        "description": "左方向にある最も近い図形を選択　⌥ → Y → Z6　⌃⌥⇧J　⌃⌥P → NL"
+                      },
+                      "actionId": "R_SelectNextLeft",
+                      "keytip": "Z6"
+                    },
+                    {
+                      "id": "B_SelectNextUp",
+                      "type": "button",
+                      "label": "Z7 上隣の図形を選択",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SelectNextUp-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SelectNextUp-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SelectNextUp-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "上隣の図形を選択",
+                        "description": "上方向にある最も近い図形を選択　⌥ → Y → Z7　⌃⌥⇧I　⌃⌥P → NU"
+                      },
+                      "actionId": "R_SelectNextUp",
+                      "keytip": "Z7"
+                    },
+                    {
+                      "id": "B_SelectNextDown",
+                      "type": "button",
+                      "label": "Z8 下隣の図形を選択",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SelectNextDown-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SelectNextDown-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SelectNextDown-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "下隣の図形を選択",
+                        "description": "下方向にある最も近い図形を選択　⌥ → Y → Z8　⌃⌥⇧K　⌃⌥P → ND"
+                      },
+                      "actionId": "R_SelectNextDown",
+                      "keytip": "Z8"
+                    }
+                  ]
+                },
+                {
+                  "id": "G_pStyle",
+                  "label": "書式",
+                  "icons": [
+                    {
+                      "size": 16,
+                      "url": "https://sgymdik.github.io/slidekit/assets/PickStyle-16.png"
+                    },
+                    {
+                      "size": 32,
+                      "url": "https://sgymdik.github.io/slidekit/assets/PickStyle-32.png"
+                    },
+                    {
+                      "size": 80,
+                      "url": "https://sgymdik.github.io/slidekit/assets/PickStyle-80.png"
+                    }
+                  ],
+                  "controls": [
+                    {
+                      "id": "B_PickStyle",
+                      "type": "button",
+                      "label": "F1 書式をつまむ",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/PickStyle-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/PickStyle-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/PickStyle-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "書式をつまむ",
+                        "description": "選択図形の塗り・線・文字書式を記憶（スポイト）　⌥ → Y → F1　⌃⌥Q　⌃⌥P → FP"
+                      },
+                      "actionId": "R_PickStyle",
+                      "keytip": "F1"
+                    },
+                    {
+                      "id": "B_ApplyStyle",
+                      "type": "button",
+                      "label": "F2 書式を貼る",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/ApplyStyle-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/ApplyStyle-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/ApplyStyle-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "書式を貼る",
+                        "description": "記憶した書式を選択図形に適用　⌥ → Y → F2　⌃⌥A　⌃⌥P → FA"
+                      },
+                      "actionId": "R_ApplyStyle",
+                      "keytip": "F2"
+                    },
+                    {
+                      "id": "B_Transparency",
+                      "type": "button",
+                      "label": "F3 透明度",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Transparency-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Transparency-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Transparency-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "透明度",
+                        "description": "塗りの透明度を設定（0〜100%）　⌥ → Y → F3　⌃⌥P → TR"
+                      },
+                      "actionId": "R_Transparency",
+                      "keytip": "F3"
+                    },
+                    {
+                      "id": "B_SelectSameFill",
+                      "type": "button",
+                      "label": "F4 同じ色を選択",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SelectSameFill-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SelectSameFill-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SelectSameFill-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "同じ色を選択",
+                        "description": "選択図形と同じ塗り色の図形をスライド内で全選択　⌥ → Y → F4　⌃⌥⇧F　⌃⌥P → SF"
+                      },
+                      "actionId": "R_SelectSameFill",
+                      "keytip": "F4"
+                    },
+                    {
+                      "id": "B_SelectSameSize",
+                      "type": "button",
+                      "label": "F5 同じサイズを選択",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SelectSameSize-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SelectSameSize-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/SelectSameSize-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "同じサイズを選択",
+                        "description": "選択図形と同じサイズ（±0.5pt）の図形を全選択　⌥ → Y → F5　⌃⌥P → SS"
+                      },
+                      "actionId": "R_SelectSameSize",
+                      "keytip": "F5"
+                    },
+                    {
+                      "id": "B_FontReplace",
+                      "type": "button",
+                      "label": "F6 フォント統一",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/FontReplace-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/FontReplace-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/FontReplace-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "フォント統一",
+                        "description": "全スライドのフォントを指定フォントへ置換（既定: Meiryo UI）　⌥ → Y → F6　⌃⌥P → FR"
+                      },
+                      "actionId": "R_FontReplace",
+                      "keytip": "F6"
+                    }
+                  ]
+                },
+                {
+                  "id": "G_pInsert",
+                  "label": "挿入",
+                  "icons": [
+                    {
+                      "size": 16,
+                      "url": "https://sgymdik.github.io/slidekit/assets/InsertHarvey-16.png"
+                    },
+                    {
+                      "size": 32,
+                      "url": "https://sgymdik.github.io/slidekit/assets/InsertHarvey-32.png"
+                    },
+                    {
+                      "size": 80,
+                      "url": "https://sgymdik.github.io/slidekit/assets/InsertHarvey-80.png"
+                    }
+                  ],
+                  "controls": [
+                    {
+                      "id": "B_InsertHarvey",
+                      "type": "button",
+                      "label": "I1 ハーベイボール",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/InsertHarvey-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/InsertHarvey-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/InsertHarvey-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "ハーベイボール",
+                        "description": "0/25/50/75/100% のハーベイボールを挿入。選択中のハーベイボールなら値を切替　⌥ → Y → I1　⌃⌥B　⌃⌥P → HB"
+                      },
+                      "actionId": "R_InsertHarvey",
+                      "keytip": "I1"
+                    },
+                    {
+                      "id": "B_InsertChevron",
+                      "type": "button",
+                      "label": "I2 プロセスフロー",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/InsertChevron-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/InsertChevron-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/InsertChevron-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "プロセスフロー",
+                        "description": "シェブロンのプロセスフローを挿入（ステップ名を入力）　⌥ → Y → I2　⌃⌥P → PF"
+                      },
+                      "actionId": "R_InsertChevron",
+                      "keytip": "I2"
+                    },
+                    {
+                      "id": "B_InsertSticky",
+                      "type": "button",
+                      "label": "I3 付箋",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/InsertSticky-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/InsertSticky-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/InsertSticky-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "付箋",
+                        "description": "レビュー用の黄色い付箋を挿入（[ToDo] 一括削除の対象）　⌥ → Y → I3　⌃⌥N　⌃⌥P → NT"
+                      },
+                      "actionId": "R_InsertSticky",
+                      "keytip": "I3"
+                    },
+                    {
+                      "id": "B_AgendaInsert",
+                      "type": "button",
+                      "label": "I4 アジェンダ挿入",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AgendaInsert-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AgendaInsert-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AgendaInsert-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "アジェンダ挿入",
+                        "description": "表示中のスライドの次にアジェンダ（目次）スライドを追加。章はセクション見出しのスライドから自動で拾う　⌥ → Y → I4　⌃⌥P → AN"
+                      },
+                      "actionId": "R_AgendaInsert",
+                      "keytip": "I4"
+                    },
+                    {
+                      "id": "B_AgendaPerChapter",
+                      "type": "button",
+                      "label": "I5 アジェンダを各章の前に",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AgendaPerChapter-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AgendaPerChapter-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AgendaPerChapter-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "アジェンダを各章の前に",
+                        "description": "各章（セクション見出し）の前に、現在地をハイライトしたアジェンダを置く。もう一度実行すると作り直す　⌥ → Y → I5　⌃⌥P → AP"
+                      },
+                      "actionId": "R_AgendaPerChapter",
+                      "keytip": "I5"
+                    },
+                    {
+                      "id": "B_InsertTracker",
+                      "type": "button",
+                      "label": "I6 アジェンダトラッカー",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/InsertTracker-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/InsertTracker-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/InsertTracker-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "アジェンダトラッカー",
+                        "description": "スライド右上に章トラッカー（現在地ハイライト）を挿入　⌥ → Y → I6　⌃⌥P → AG"
+                      },
+                      "actionId": "R_InsertTracker",
+                      "keytip": "I6"
+                    },
+                    {
+                      "id": "B_InsertTable",
+                      "type": "button",
+                      "label": "I7 表を貼り付け",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/InsertTable-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/InsertTable-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/InsertTable-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "表を貼り付け",
+                        "description": "Excel からコピーしたセル範囲（タブ区切り）を書式付きの表として挿入　⌥ → Y → I7　⌃⌥P → TB"
+                      },
+                      "actionId": "R_InsertTable",
+                      "keytip": "I7"
+                    },
+                    {
+                      "id": "B_ChartStudio",
+                      "type": "button",
+                      "label": "7 チャート",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/ChartStudio-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/ChartStudio-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/ChartStudio-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "チャート",
+                        "description": "滝グラフ・積み上げ棒・Gantt・Marimekko をデータから図形で生成　⌥ → Y → 7　⌃⌥R　⌃⌥P → CH"
+                      },
+                      "actionId": "R_ChartStudio",
+                      "keytip": "7"
+                    }
+                  ]
+                },
+                {
+                  "id": "G_pTools",
+                  "label": "ツール",
+                  "icons": [
+                    {
+                      "size": 16,
+                      "url": "https://sgymdik.github.io/slidekit/assets/Palette-16.png"
+                    },
+                    {
+                      "size": 32,
+                      "url": "https://sgymdik.github.io/slidekit/assets/Palette-32.png"
+                    },
+                    {
+                      "size": 80,
+                      "url": "https://sgymdik.github.io/slidekit/assets/Palette-80.png"
+                    }
+                  ],
+                  "controls": [
+                    {
+                      "id": "B_Palette",
+                      "type": "button",
+                      "label": "8 コマンドパレット",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Palette-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Palette-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Palette-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "コマンドパレット",
+                        "description": "全コマンドを検索・コード入力で実行（迷ったらこれ）　⌥ → Y → 8　⌃⌥P　⌃⌥P → PP"
+                      },
+                      "actionId": "R_Palette",
+                      "keytip": "8"
+                    },
+                    {
+                      "id": "B_Cheatsheet",
+                      "type": "button",
+                      "label": "9 ショートカット一覧",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Cheatsheet-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Cheatsheet-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Cheatsheet-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "ショートカット一覧",
+                        "description": "ショートカットとクイックコードの一覧（ヒント）　⌥ → Y → 9　⌃⌥K　⌃⌥P → ??"
+                      },
+                      "actionId": "R_Cheatsheet",
+                      "keytip": "9"
+                    },
+                    {
+                      "id": "B_Pane",
+                      "type": "button",
+                      "label": "T3 ヒントパネル",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Pane-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Pane-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Pane-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "ヒントパネル",
+                        "description": "選択に応じて使えるショートカットを表示するパネルを開く　⌥ → Y → T3　⌃⌥I　⌃⌥P → HP"
+                      },
+                      "actionId": "R_Pane",
+                      "keytip": "T3"
+                    },
+                    {
+                      "id": "B_RenameSeq",
+                      "type": "button",
+                      "label": "T4 連番リネーム",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/RenameSeq-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/RenameSeq-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/RenameSeq-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "連番リネーム",
+                        "description": "選択図形の名前を位置順に「接頭辞_01…」へ　⌥ → Y → T4　⌃⌥P → RN"
+                      },
+                      "actionId": "R_RenameSeq",
+                      "keytip": "T4"
+                    },
+                    {
+                      "id": "B_RemoveDuplicates",
+                      "type": "button",
+                      "label": "T5 重複図形を削除",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/RemoveDuplicates-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/RemoveDuplicates-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/RemoveDuplicates-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "重複図形を削除",
+                        "description": "同じ位置・サイズ・テキストで重なった図形を削除　⌥ → Y → T5　⌃⌥P → RD"
+                      },
+                      "actionId": "R_RemoveDuplicates",
+                      "keytip": "T5"
+                    },
+                    {
+                      "id": "B_DeleteStickies",
+                      "type": "button",
+                      "label": "T6 付箋を一括削除",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/DeleteStickies-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/DeleteStickies-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/DeleteStickies-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "付箋を一括削除",
+                        "description": "全スライドから付箋（SlideKit 製）を削除　⌥ → Y → T6　⌃⌥P → DS"
+                      },
+                      "actionId": "R_DeleteStickies",
+                      "keytip": "T6"
+                    },
+                    {
+                      "id": "B_DecimalToggle",
+                      "type": "button",
+                      "label": "T7 小数点 . ↔ ,",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/DecimalToggle-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/DecimalToggle-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/DecimalToggle-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "小数点 . ↔ ,",
+                        "description": "選択図形のテキストの小数点記号を切替　⌥ → Y → T7　⌃⌥P → DT"
+                      },
+                      "actionId": "R_DecimalToggle",
+                      "keytip": "T7"
+                    },
+                    {
+                      "id": "B_Settings",
+                      "type": "button",
+                      "label": "T8 設定",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Settings-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Settings-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/Settings-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "設定",
+                        "description": "標準間隔・マージン・基準図形モード・ヒント表示を設定　⌥ → Y → T8　⌃⌥P → CF"
+                      },
+                      "actionId": "R_Settings",
+                      "keytip": "T8"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keyboardShortcuts": [
+        {
+          "requirements": {
+            "capabilities": [
+              {
+                "name": "SharedRuntime",
+                "minVersion": "1.1"
+              }
+            ]
+          },
+          "shortcuts": [
+            {
+              "key": {
+                "default": "Ctrl+Alt+Left",
+                "mac": "Ctrl+Alt+Left"
+              },
+              "actionId": "AlignLeft"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Right",
+                "mac": "Ctrl+Alt+Right"
+              },
+              "actionId": "AlignRight"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Up",
+                "mac": "Ctrl+Alt+Up"
+              },
+              "actionId": "AlignTop"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Down",
+                "mac": "Ctrl+Alt+Down"
+              },
+              "actionId": "AlignBottom"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+C",
+                "mac": "Ctrl+Alt+C"
+              },
+              "actionId": "AlignCenter"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+M",
+                "mac": "Ctrl+Alt+M"
+              },
+              "actionId": "AlignMiddle"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+C",
+                "mac": "Ctrl+Alt+Shift+C"
+              },
+              "actionId": "SlideCenterH"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+M",
+                "mac": "Ctrl+Alt+Shift+M"
+              },
+              "actionId": "SlideCenterV"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+Left",
+                "mac": "Ctrl+Alt+Shift+Left"
+              },
+              "actionId": "SnapLeft"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+Right",
+                "mac": "Ctrl+Alt+Shift+Right"
+              },
+              "actionId": "SnapRight"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+Up",
+                "mac": "Ctrl+Alt+Shift+Up"
+              },
+              "actionId": "SnapTop"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+Down",
+                "mac": "Ctrl+Alt+Shift+Down"
+              },
+              "actionId": "SnapBottom"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+H",
+                "mac": "Ctrl+Alt+H"
+              },
+              "actionId": "DistributeH"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+V",
+                "mac": "Ctrl+Alt+V"
+              },
+              "actionId": "DistributeV"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+H",
+                "mac": "Ctrl+Alt+Shift+H"
+              },
+              "actionId": "GapH"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+V",
+                "mac": "Ctrl+Alt+Shift+V"
+              },
+              "actionId": "GapV"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+W",
+                "mac": "Ctrl+Alt+W"
+              },
+              "actionId": "MatchWidth"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+E",
+                "mac": "Ctrl+Alt+E"
+              },
+              "actionId": "MatchHeight"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+S",
+                "mac": "Ctrl+Alt+S"
+              },
+              "actionId": "MatchBoth"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+T",
+                "mac": "Ctrl+Alt+T"
+              },
+              "actionId": "Grid"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+X",
+                "mac": "Ctrl+Alt+X"
+              },
+              "actionId": "Swap"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+G",
+                "mac": "Ctrl+Alt+G"
+              },
+              "actionId": "Group"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+U",
+                "mac": "Ctrl+Alt+U"
+              },
+              "actionId": "Ungroup"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+1",
+                "mac": "Ctrl+Alt+1"
+              },
+              "actionId": "BringToFront"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+2",
+                "mac": "Ctrl+Alt+2"
+              },
+              "actionId": "BringForward"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+3",
+                "mac": "Ctrl+Alt+3"
+              },
+              "actionId": "SendBackward"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+4",
+                "mac": "Ctrl+Alt+4"
+              },
+              "actionId": "SendToBack"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+L",
+                "mac": "Ctrl+Alt+Shift+L"
+              },
+              "actionId": "SelectNextRight"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+J",
+                "mac": "Ctrl+Alt+Shift+J"
+              },
+              "actionId": "SelectNextLeft"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+I",
+                "mac": "Ctrl+Alt+Shift+I"
+              },
+              "actionId": "SelectNextUp"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+K",
+                "mac": "Ctrl+Alt+Shift+K"
+              },
+              "actionId": "SelectNextDown"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Q",
+                "mac": "Ctrl+Alt+Q"
+              },
+              "actionId": "PickStyle"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+A",
+                "mac": "Ctrl+Alt+A"
+              },
+              "actionId": "ApplyStyle"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+F",
+                "mac": "Ctrl+Alt+Shift+F"
+              },
+              "actionId": "SelectSameFill"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+B",
+                "mac": "Ctrl+Alt+B"
+              },
+              "actionId": "InsertHarvey"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+N",
+                "mac": "Ctrl+Alt+N"
+              },
+              "actionId": "InsertSticky"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+R",
+                "mac": "Ctrl+Alt+R"
+              },
+              "actionId": "ChartStudio"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+P",
+                "mac": "Ctrl+Alt+P"
+              },
+              "actionId": "Palette"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+K",
+                "mac": "Ctrl+Alt+K"
+              },
+              "actionId": "Cheatsheet"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+I",
+                "mac": "Ctrl+Alt+I"
+              },
+              "actionId": "Pane"
+            }
+          ]
+        }
+      ],
+      "getStartedMessages": [
+        {
+          "title": "SlideKit を読み込みました",
+          "description": "⌥ → Y → 番号 でリボンを操作。⌃⌥P でコマンドパレット、⌃⌥K で一覧。",
+          "learnMoreUrl": "https://sgymdik.github.io/slidekit/taskpane.html"
+        }
+      ]
+    }
+  ]
+}

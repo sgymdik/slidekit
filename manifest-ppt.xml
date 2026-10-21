@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 生成ファイル: scripts/build.mjs が src/commands.ts から作る。直接編集しない -->
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
+  <Id>ea7d314e-45c3-40f6-9561-9ff8cfb9b9ee</Id>
+  <Version>2.0.0.0</Version>
+  <ProviderName>SlideKit</ProviderName>
+  <DefaultLocale>ja-JP</DefaultLocale>
+  <DisplayName DefaultValue="SlideKit"/>
+  <Description DefaultValue="図形整列・チャート・ショートカット中心の作業効率化アドイン"/>
+  <IconUrl DefaultValue="https://sgymdik.github.io/slidekit/assets/App-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://sgymdik.github.io/slidekit/assets/App-80.png"/>
+  <SupportUrl DefaultValue="https://sgymdik.github.io/slidekit/taskpane.html"/>
+  <AppDomains><AppDomain>https://sgymdik.github.io</AppDomain></AppDomains>
+  <Hosts><Host Name="Presentation"/></Hosts>
+  <Requirements><Sets DefaultMinVersion="1.1"><Set Name="SharedRuntime" MinVersion="1.1"/></Sets></Requirements>
+  <DefaultSettings><SourceLocation DefaultValue="https://sgymdik.github.io/slidekit/taskpane.html"/></DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Presentation">
+        <Runtimes><Runtime resid="Taskpane.Url" lifetime="long"/></Runtimes>
+        <DesktopFormFactor>
+          <GetStarted><Title resid="GetStarted.Title"/><Description resid="GetStarted.Desc"/><LearnMoreUrl resid="Help.Url"/></GetStarted>
+          <FunctionFile resid="Taskpane.Url"/>
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <CustomTab id="SlideKit.Tab">
+              <Group id="G_pAlign"><Label resid="G_pAlign"/><Icon><bt:Image size="16" resid="AlignLeft.16"/><bt:Image size="32" resid="AlignLeft.32"/><bt:Image size="80" resid="AlignLeft.80"/></Icon><Control xsi:type="Button" id="B_AlignLeft"><Label resid="L_AlignLeft"/><Supertip><Title resid="L_AlignLeft"/><Description resid="T_AlignLeft"/></Supertip><Icon><bt:Image size="16" resid="AlignLeft.16"/><bt:Image size="32" resid="AlignLeft.32"/><bt:Image size="80" resid="AlignLeft.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_AlignLeft</FunctionName></Action></Control><Control xsi:type="Button" id="B_AlignRight"><Label resid="L_AlignRight"/><Supertip><Title resid="L_AlignRight"/><Description resid="T_AlignRight"/></Supertip><Icon><bt:Image size="16" resid="AlignRight.16"/><bt:Image size="32" resid="AlignRight.32"/><bt:Image size="80" resid="AlignRight.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_AlignRight</FunctionName></Action></Control><Control xsi:type="Button" id="B_AlignTop"><Label resid="L_AlignTop"/><Supertip><Title resid="L_AlignTop"/><Description resid="T_AlignTop"/></Supertip><Icon><bt:Image size="16" resid="AlignTop.16"/><bt:Image size="32" resid="AlignTop.32"/><bt:Image size="80" resid="AlignTop.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_AlignTop</FunctionName></Action></Control><Control xsi:type="Button" id="B_AlignBottom"><Label resid="L_AlignBottom"/><Supertip><Title resid="L_AlignBottom"/><Description resid="T_AlignBottom"/></Supertip><Icon><bt:Image size="16" resid="AlignBottom.16"/><bt:Image size="32" resid="AlignBottom.32"/><bt:Image size="80" resid="AlignBottom.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_AlignBottom</FunctionName></Action></Control><Control xsi:type="Button" id="B_AlignCenter"><Label resid="L_AlignCenter"/><Supertip><Title resid="L_AlignCenter"/><Description resid="T_AlignCenter"/></Supertip><Icon><bt:Image size="16" resid="AlignCenter.16"/><bt:Image size="32" resid="AlignCenter.32"/><bt:Image size="80" resid="AlignCenter.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_AlignCenter</FunctionName></Action></Control><Control xsi:type="Button" id="B_AlignMiddle"><Label resid="L_AlignMiddle"/><Supertip><Title resid="L_AlignMiddle"/><Description resid="T_AlignMiddle"/></Supertip><Icon><bt:Image size="16" resid="AlignMiddle.16"/><bt:Image size="32" resid="AlignMiddle.32"/><bt:Image size="80" resid="AlignMiddle.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_AlignMiddle</FunctionName></Action></Control></Group><Group id="G_pSlide"><Label resid="G_pSlide"/><Icon><bt:Image size="16" resid="SlideCenterH.16"/><bt:Image size="32" resid="SlideCenterH.32"/><bt:Image size="80" resid="SlideCenterH.80"/></Icon><Control xsi:type="Button" id="B_SlideCenterH"><Label resid="L_SlideCenterH"/><Supertip><Title resid="L_SlideCenterH"/><Description resid="T_SlideCenterH"/></Supertip><Icon><bt:Image size="16" resid="SlideCenterH.16"/><bt:Image size="32" resid="SlideCenterH.32"/><bt:Image size="80" resid="SlideCenterH.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_SlideCenterH</FunctionName></Action></Control><Control xsi:type="Button" id="B_SlideCenterV"><Label resid="L_SlideCenterV"/><Supertip><Title resid="L_SlideCenterV"/><Description resid="T_SlideCenterV"/></Supertip><Icon><bt:Image size="16" resid="SlideCenterV.16"/><bt:Image size="32" resid="SlideCenterV.32"/><bt:Image size="80" resid="SlideCenterV.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_SlideCenterV</FunctionName></Action></Control><Control xsi:type="Button" id="B_SnapLeft"><Label resid="L_SnapLeft"/><Supertip><Title resid="L_SnapLeft"/><Description resid="T_SnapLeft"/></Supertip><Icon><bt:Image size="16" resid="SnapLeft.16"/><bt:Image size="32" resid="SnapLeft.32"/><bt:Image size="80" resid="SnapLeft.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_SnapLeft</FunctionName></Action></Control><Control xsi:type="Button" id="B_SnapRight"><Label resid="L_SnapRight"/><Supertip><Title resid="L_SnapRight"/><Description resid="T_SnapRight"/></Supertip><Icon><bt:Image size="16" resid="SnapRight.16"/><bt:Image size="32" resid="SnapRight.32"/><bt:Image size="80" resid="SnapRight.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_SnapRight</FunctionName></Action></Control><Control xsi:type="Button" id="B_SnapTop"><Label resid="L_SnapTop"/><Supertip><Title resid="L_SnapTop"/><Description resid="T_SnapTop"/></Supertip><Icon><bt:Image size="16" resid="SnapTop.16"/><bt:Image size="32" resid="SnapTop.32"/><bt:Image size="80" resid="SnapTop.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_SnapTop</FunctionName></Action></Control><Control xsi:type="Button" id="B_SnapBottom"><Label resid="L_SnapBottom"/><Supertip><Title resid="L_SnapBottom"/><Description resid="T_SnapBottom"/></Supertip><Icon><bt:Image size="16" resid="SnapBottom.16"/><bt:Image size="32" resid="SnapBottom.32"/><bt:Image size="80" resid="SnapBottom.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_SnapBottom</FunctionName></Action></Control></Group><Group id="G_pSize"><Label resid="G_pSize"/><Icon><bt:Image size="16" resid="DistributeH.16"/><bt:Image size="32" resid="DistributeH.32"/><bt:Image size="80" resid="DistributeH.80"/></Icon><Control xsi:type="Button" id="B_DistributeH"><Label resid="L_DistributeH"/><Supertip><Title resid="L_DistributeH"/><Description resid="T_DistributeH"/></Supertip><Icon><bt:Image size="16" resid="DistributeH.16"/><bt:Image size="32" resid="DistributeH.32"/><bt:Image size="80" resid="DistributeH.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_DistributeH</FunctionName></Action></Control><Control xsi:type="Button" id="B_DistributeV"><Label resid="L_DistributeV"/><Supertip><Title resid="L_DistributeV"/><Description resid="T_DistributeV"/></Supertip><Icon><bt:Image size="16" resid="DistributeV.16"/><bt:Image size="32" resid="DistributeV.32"/><bt:Image size="80" resid="DistributeV.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_DistributeV</FunctionName></Action></Control><Control xsi:type="Button" id="B_MatchWidth"><Label resid="L_MatchWidth"/><Supertip><Title resid="L_MatchWidth"/><Description resid="T_MatchWidth"/></Supertip><Icon><bt:Image size="16" resid="MatchWidth.16"/><bt:Image size="32" resid="MatchWidth.32"/><bt:Image size="80" resid="MatchWidth.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_MatchWidth</FunctionName></Action></Control><Control xsi:type="Button" id="B_MatchHeight"><Label resid="L_MatchHeight"/><Supertip><Title resid="L_MatchHeight"/><Description resid="T_MatchHeight"/></Supertip><Icon><bt:Image size="16" resid="MatchHeight.16"/><bt:Image size="32" resid="MatchHeight.32"/><bt:Image size="80" resid="MatchHeight.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_MatchHeight</FunctionName></Action></Control><Control xsi:type="Button" id="B_MatchBoth"><Label resid="L_MatchBoth"/><Supertip><Title resid="L_MatchBoth"/><Description resid="T_MatchBoth"/></Supertip><Icon><bt:Image size="16" resid="MatchBoth.16"/><bt:Image size="32" resid="MatchBoth.32"/><bt:Image size="80" resid="MatchBoth.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_MatchBoth</FunctionName></Action></Control><Control xsi:type="Button" id="B_Scale"><Label resid="L_Scale"/><Supertip><Title resid="L_Scale"/><Description resid="T_Scale"/></Supertip><Icon><bt:Image size="16" resid="Scale.16"/><bt:Image size="32" resid="Scale.32"/><bt:Image size="80" resid="Scale.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_Scale</FunctionName></Action></Control></Group><Group id="G_pStretch"><Label resid="G_pStretch"/><Icon><bt:Image size="16" resid="GapH.16"/><bt:Image size="32" resid="GapH.32"/><bt:Image size="80" resid="GapH.80"/></Icon><Control xsi:type="Button" id="B_GapH"><Label resid="L_GapH"/><Supertip><Title resid="L_GapH"/><Description resid="T_GapH"/></Supertip><Icon><bt:Image size="16" resid="GapH.16"/><bt:Image size="32" resid="GapH.32"/><bt:Image size="80" resid="GapH.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_GapH</FunctionName></Action></Control><Control xsi:type="Button" id="B_GapV"><Label resid="L_GapV"/><Supertip><Title resid="L_GapV"/><Description resid="T_GapV"/></Supertip><Icon><bt:Image size="16" resid="GapV.16"/><bt:Image size="32" resid="GapV.32"/><bt:Image size="80" resid="GapV.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_GapV</FunctionName></Action></Control><Control xsi:type="Button" id="B_StretchLeft"><Label resid="L_StretchLeft"/><Supertip><Title resid="L_StretchLeft"/><Description resid="T_StretchLeft"/></Supertip><Icon><bt:Image size="16" resid="StretchLeft.16"/><bt:Image size="32" resid="StretchLeft.32"/><bt:Image size="80" resid="StretchLeft.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_StretchLeft</FunctionName></Action></Control><Control xsi:type="Button" id="B_StretchRight"><Label resid="L_StretchRight"/><Supertip><Title resid="L_StretchRight"/><Description resid="T_StretchRight"/></Supertip><Icon><bt:Image size="16" resid="StretchRight.16"/><bt:Image size="32" resid="StretchRight.32"/><bt:Image size="80" resid="StretchRight.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_StretchRight</FunctionName></Action></Control><Control xsi:type="Button" id="B_StretchTop"><Label resid="L_StretchTop"/><Supertip><Title resid="L_StretchTop"/><Description resid="T_StretchTop"/></Supertip><Icon><bt:Image size="16" resid="StretchTop.16"/><bt:Image size="32" resid="StretchTop.32"/><bt:Image size="80" resid="StretchTop.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_StretchTop</FunctionName></Action></Control><Control xsi:type="Button" id="B_StretchBottom"><Label resid="L_StretchBottom"/><Supertip><Title resid="L_StretchBottom"/><Description resid="T_StretchBottom"/></Supertip><Icon><bt:Image size="16" resid="StretchBottom.16"/><bt:Image size="32" resid="StretchBottom.32"/><bt:Image size="80" resid="StretchBottom.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_StretchBottom</FunctionName></Action></Control></Group><Group id="G_pArrange"><Label resid="G_pArrange"/><Icon><bt:Image size="16" resid="Grid.16"/><bt:Image size="32" resid="Grid.32"/><bt:Image size="80" resid="Grid.80"/></Icon><Control xsi:type="Button" id="B_Grid"><Label resid="L_Grid"/><Supertip><Title resid="L_Grid"/><Description resid="T_Grid"/></Supertip><Icon><bt:Image size="16" resid="Grid.16"/><bt:Image size="32" resid="Grid.32"/><bt:Image size="80" resid="Grid.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_Grid</FunctionName></Action></Control><Control xsi:type="Button" id="B_Swap"><Label resid="L_Swap"/><Supertip><Title resid="L_Swap"/><Description resid="T_Swap"/></Supertip><Icon><bt:Image size="16" resid="Swap.16"/><bt:Image size="32" resid="Swap.32"/><bt:Image size="80" resid="Swap.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_Swap</FunctionName></Action></Control><Control xsi:type="Button" id="B_Group"><Label resid="L_Group"/><Supertip><Title resid="L_Group"/><Description resid="T_Group"/></Supertip><Icon><bt:Image size="16" resid="Group.16"/><bt:Image size="32" resid="Group.32"/><bt:Image size="80" resid="Group.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_Group</FunctionName></Action></Control><Control xsi:type="Button" id="B_Ungroup"><Label resid="L_Ungroup"/><Supertip><Title resid="L_Ungroup"/><Description resid="T_Ungroup"/></Supertip><Icon><bt:Image size="16" resid="Ungroup.16"/><bt:Image size="32" resid="Ungroup.32"/><bt:Image size="80" resid="Ungroup.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_Ungroup</FunctionName></Action></Control></Group><Group id="G_pNav"><Label resid="G_pNav"/><Icon><bt:Image size="16" resid="BringToFront.16"/><bt:Image size="32" resid="BringToFront.32"/><bt:Image size="80" resid="BringToFront.80"/></Icon><Control xsi:type="Button" id="B_BringToFront"><Label resid="L_BringToFront"/><Supertip><Title resid="L_BringToFront"/><Description resid="T_BringToFront"/></Supertip><Icon><bt:Image size="16" resid="BringToFront.16"/><bt:Image size="32" resid="BringToFront.32"/><bt:Image size="80" resid="BringToFront.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_BringToFront</FunctionName></Action></Control><Control xsi:type="Button" id="B_BringForward"><Label resid="L_BringForward"/><Supertip><Title resid="L_BringForward"/><Description resid="T_BringForward"/></Supertip><Icon><bt:Image size="16" resid="BringForward.16"/><bt:Image size="32" resid="BringForward.32"/><bt:Image size="80" resid="BringForward.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_BringForward</FunctionName></Action></Control><Control xsi:type="Button" id="B_SendBackward"><Label resid="L_SendBackward"/><Supertip><Title resid="L_SendBackward"/><Description resid="T_SendBackward"/></Supertip><Icon><bt:Image size="16" resid="SendBackward.16"/><bt:Image size="32" resid="SendBackward.32"/><bt:Image size="80" resid="SendBackward.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_SendBackward</FunctionName></Action></Control><Control xsi:type="Button" id="B_SendToBack"><Label resid="L_SendToBack"/><Supertip><Title resid="L_SendToBack"/><Description resid="T_SendToBack"/></Supertip><Icon><bt:Image size="16" resid="SendToBack.16"/><bt:Image size="32" resid="SendToBack.32"/><bt:Image size="80" resid="SendToBack.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_SendToBack</FunctionName></Action></Control><Control xsi:type="Button" id="B_SelectNextRight"><Label resid="L_SelectNextRight"/><Supertip><Title resid="L_SelectNextRight"/><Description resid="T_SelectNextRight"/></Supertip><Icon><bt:Image size="16" resid="SelectNextRight.16"/><bt:Image size="32" resid="SelectNextRight.32"/><bt:Image size="80" resid="SelectNextRight.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_SelectNextRight</FunctionName></Action></Control><Control xsi:type="Menu" id="M_pNav"><Label resid="M_pNav"/><Supertip><Title resid="M_pNav"/><Description resid="MT_pNav"/></Supertip><Icon><bt:Image size="16" resid="More.16"/><bt:Image size="32" resid="More.32"/><bt:Image size="80" resid="More.80"/></Icon><Items><Item id="I_SelectNextLeft"><Label resid="L_SelectNextLeft"/><Supertip><Title resid="L_SelectNextLeft"/><Description resid="T_SelectNextLeft"/></Supertip><Icon><bt:Image size="16" resid="SelectNextLeft.16"/><bt:Image size="32" resid="SelectNextLeft.32"/><bt:Image size="80" resid="SelectNextLeft.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_SelectNextLeft</FunctionName></Action></Item><Item id="I_SelectNextUp"><Label resid="L_SelectNextUp"/><Supertip><Title resid="L_SelectNextUp"/><Description resid="T_SelectNextUp"/></Supertip><Icon><bt:Image size="16" resid="SelectNextUp.16"/><bt:Image size="32" resid="SelectNextUp.32"/><bt:Image size="80" resid="SelectNextUp.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_SelectNextUp</FunctionName></Action></Item><Item id="I_SelectNextDown"><Label resid="L_SelectNextDown"/><Supertip><Title resid="L_SelectNextDown"/><Description resid="T_SelectNextDown"/></Supertip><Icon><bt:Image size="16" resid="SelectNextDown.16"/><bt:Image size="32" resid="SelectNextDown.32"/><bt:Image size="80" resid="SelectNextDown.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_SelectNextDown</FunctionName></Action></Item></Items></Control></Group><Group id="G_pStyle"><Label resid="G_pStyle"/><Icon><bt:Image size="16" resid="PickStyle.16"/><bt:Image size="32" resid="PickStyle.32"/><bt:Image size="80" resid="PickStyle.80"/></Icon><Control xsi:type="Button" id="B_PickStyle"><Label resid="L_PickStyle"/><Supertip><Title resid="L_PickStyle"/><Description resid="T_PickStyle"/></Supertip><Icon><bt:Image size="16" resid="PickStyle.16"/><bt:Image size="32" resid="PickStyle.32"/><bt:Image size="80" resid="PickStyle.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_PickStyle</FunctionName></Action></Control><Control xsi:type="Button" id="B_ApplyStyle"><Label resid="L_ApplyStyle"/><Supertip><Title resid="L_ApplyStyle"/><Description resid="T_ApplyStyle"/></Supertip><Icon><bt:Image size="16" resid="ApplyStyle.16"/><bt:Image size="32" resid="ApplyStyle.32"/><bt:Image size="80" resid="ApplyStyle.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_ApplyStyle</FunctionName></Action></Control><Control xsi:type="Button" id="B_Transparency"><Label resid="L_Transparency"/><Supertip><Title resid="L_Transparency"/><Description resid="T_Transparency"/></Supertip><Icon><bt:Image size="16" resid="Transparency.16"/><bt:Image size="32" resid="Transparency.32"/><bt:Image size="80" resid="Transparency.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_Transparency</FunctionName></Action></Control><Control xsi:type="Button" id="B_SelectSameFill"><Label resid="L_SelectSameFill"/><Supertip><Title resid="L_SelectSameFill"/><Description resid="T_SelectSameFill"/></Supertip><Icon><bt:Image size="16" resid="SelectSameFill.16"/><bt:Image size="32" resid="SelectSameFill.32"/><bt:Image size="80" resid="SelectSameFill.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_SelectSameFill</FunctionName></Action></Control><Control xsi:type="Button" id="B_SelectSameSize"><Label resid="L_SelectSameSize"/><Supertip><Title resid="L_SelectSameSize"/><Description resid="T_SelectSameSize"/></Supertip><Icon><bt:Image size="16" resid="SelectSameSize.16"/><bt:Image size="32" resid="SelectSameSize.32"/><bt:Image size="80" resid="SelectSameSize.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_SelectSameSize</FunctionName></Action></Control><Control xsi:type="Button" id="B_FontReplace"><Label resid="L_FontReplace"/><Supertip><Title resid="L_FontReplace"/><Description resid="T_FontReplace"/></Supertip><Icon><bt:Image size="16" resid="FontReplace.16"/><bt:Image size="32" resid="FontReplace.32"/><bt:Image size="80" resid="FontReplace.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_FontReplace</FunctionName></Action></Control></Group><Group id="G_pInsert"><Label resid="G_pInsert"/><Icon><bt:Image size="16" resid="InsertHarvey.16"/><bt:Image size="32" resid="InsertHarvey.32"/><bt:Image size="80" resid="InsertHarvey.80"/></Icon><Control xsi:type="Button" id="B_InsertHarvey"><Label resid="L_InsertHarvey"/><Supertip><Title resid="L_InsertHarvey"/><Description resid="T_InsertHarvey"/></Supertip><Icon><bt:Image size="16" resid="InsertHarvey.16"/><bt:Image size="32" resid="InsertHarvey.32"/><bt:Image size="80" resid="InsertHarvey.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_InsertHarvey</FunctionName></Action></Control><Control xsi:type="Button" id="B_InsertChevron"><Label resid="L_InsertChevron"/><Supertip><Title resid="L_InsertChevron"/><Description resid="T_InsertChevron"/></Supertip><Icon><bt:Image size="16" resid="InsertChevron.16"/><bt:Image size="32" resid="InsertChevron.32"/><bt:Image size="80" resid="InsertChevron.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_InsertChevron</FunctionName></Action></Control><Control xsi:type="Button" id="B_InsertSticky"><Label resid="L_InsertSticky"/><Supertip><Title resid="L_InsertSticky"/><Description resid="T_InsertSticky"/></Supertip><Icon><bt:Image size="16" resid="InsertSticky.16"/><bt:Image size="32" resid="InsertSticky.32"/><bt:Image size="80" resid="InsertSticky.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_InsertSticky</FunctionName></Action></Control><Control xsi:type="Button" id="B_AgendaInsert"><Label resid="L_AgendaInsert"/><Supertip><Title resid="L_AgendaInsert"/><Description resid="T_AgendaInsert"/></Supertip><Icon><bt:Image size="16" resid="AgendaInsert.16"/><bt:Image size="32" resid="AgendaInsert.32"/><bt:Image size="80" resid="AgendaInsert.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_AgendaInsert</FunctionName></Action></Control><Control xsi:type="Button" id="B_AgendaPerChapter"><Label resid="L_AgendaPerChapter"/><Supertip><Title resid="L_AgendaPerChapter"/><Description resid="T_AgendaPerChapter"/></Supertip><Icon><bt:Image size="16" resid="AgendaPerChapter.16"/><bt:Image size="32" resid="AgendaPerChapter.32"/><bt:Image size="80" resid="AgendaPerChapter.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_AgendaPerChapter</FunctionName></Action></Control><Control xsi:type="Menu" id="M_pInsert"><Label resid="M_pInsert"/><Supertip><Title resid="M_pInsert"/><Description resid="MT_pInsert"/></Supertip><Icon><bt:Image size="16" resid="More.16"/><bt:Image size="32" resid="More.32"/><bt:Image size="80" resid="More.80"/></Icon><Items><Item id="I_InsertTracker"><Label resid="L_InsertTracker"/><Supertip><Title resid="L_InsertTracker"/><Description resid="T_InsertTracker"/></Supertip><Icon><bt:Image size="16" resid="InsertTracker.16"/><bt:Image size="32" resid="InsertTracker.32"/><bt:Image size="80" resid="InsertTracker.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_InsertTracker</FunctionName></Action></Item><Item id="I_InsertTable"><Label resid="L_InsertTable"/><Supertip><Title resid="L_InsertTable"/><Description resid="T_InsertTable"/></Supertip><Icon><bt:Image size="16" resid="InsertTable.16"/><bt:Image size="32" resid="InsertTable.32"/><bt:Image size="80" resid="InsertTable.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_InsertTable</FunctionName></Action></Item><Item id="I_ChartStudio"><Label resid="L_ChartStudio"/><Supertip><Title resid="L_ChartStudio"/><Description resid="T_ChartStudio"/></Supertip><Icon><bt:Image size="16" resid="ChartStudio.16"/><bt:Image size="32" resid="ChartStudio.32"/><bt:Image size="80" resid="ChartStudio.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_ChartStudio</FunctionName></Action></Item></Items></Control></Group><Group id="G_pTools"><Label resid="G_pTools"/><Icon><bt:Image size="16" resid="Palette.16"/><bt:Image size="32" resid="Palette.32"/><bt:Image size="80" resid="Palette.80"/></Icon><Control xsi:type="Button" id="B_Palette"><Label resid="L_Palette"/><Supertip><Title resid="L_Palette"/><Description resid="T_Palette"/></Supertip><Icon><bt:Image size="16" resid="Palette.16"/><bt:Image size="32" resid="Palette.32"/><bt:Image size="80" resid="Palette.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_Palette</FunctionName></Action></Control><Control xsi:type="Button" id="B_Cheatsheet"><Label resid="L_Cheatsheet"/><Supertip><Title resid="L_Cheatsheet"/><Description resid="T_Cheatsheet"/></Supertip><Icon><bt:Image size="16" resid="Cheatsheet.16"/><bt:Image size="32" resid="Cheatsheet.32"/><bt:Image size="80" resid="Cheatsheet.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_Cheatsheet</FunctionName></Action></Control><Control xsi:type="Button" id="B_Pane"><Label resid="L_Pane"/><Supertip><Title resid="L_Pane"/><Description resid="T_Pane"/></Supertip><Icon><bt:Image size="16" resid="Pane.16"/><bt:Image size="32" resid="Pane.32"/><bt:Image size="80" resid="Pane.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_Pane</FunctionName></Action></Control><Control xsi:type="Button" id="B_RenameSeq"><Label resid="L_RenameSeq"/><Supertip><Title resid="L_RenameSeq"/><Description resid="T_RenameSeq"/></Supertip><Icon><bt:Image size="16" resid="RenameSeq.16"/><bt:Image size="32" resid="RenameSeq.32"/><bt:Image size="80" resid="RenameSeq.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_RenameSeq</FunctionName></Action></Control><Control xsi:type="Button" id="B_RemoveDuplicates"><Label resid="L_RemoveDuplicates"/><Supertip><Title resid="L_RemoveDuplicates"/><Description resid="T_RemoveDuplicates"/></Supertip><Icon><bt:Image size="16" resid="RemoveDuplicates.16"/><bt:Image size="32" resid="RemoveDuplicates.32"/><bt:Image size="80" resid="RemoveDuplicates.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_RemoveDuplicates</FunctionName></Action></Control><Control xsi:type="Menu" id="M_pTools"><Label resid="M_pTools"/><Supertip><Title resid="M_pTools"/><Description resid="MT_pTools"/></Supertip><Icon><bt:Image size="16" resid="More.16"/><bt:Image size="32" resid="More.32"/><bt:Image size="80" resid="More.80"/></Icon><Items><Item id="I_DeleteStickies"><Label resid="L_DeleteStickies"/><Supertip><Title resid="L_DeleteStickies"/><Description resid="T_DeleteStickies"/></Supertip><Icon><bt:Image size="16" resid="DeleteStickies.16"/><bt:Image size="32" resid="DeleteStickies.32"/><bt:Image size="80" resid="DeleteStickies.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_DeleteStickies</FunctionName></Action></Item><Item id="I_DecimalToggle"><Label resid="L_DecimalToggle"/><Supertip><Title resid="L_DecimalToggle"/><Description resid="T_DecimalToggle"/></Supertip><Icon><bt:Image size="16" resid="DecimalToggle.16"/><bt:Image size="32" resid="DecimalToggle.32"/><bt:Image size="80" resid="DecimalToggle.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_DecimalToggle</FunctionName></Action></Item><Item id="I_Settings"><Label resid="L_Settings"/><Supertip><Title resid="L_Settings"/><Description resid="T_Settings"/></Supertip><Icon><bt:Image size="16" resid="Settings.16"/><bt:Image size="32" resid="Settings.32"/><bt:Image size="80" resid="Settings.80"/></Icon><Action xsi:type="ExecuteFunction"><FunctionName>R_Settings</FunctionName></Action></Item></Items></Control></Group>
+              <Label resid="Tab.Label"/>
+            </CustomTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="AlignLeft.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/AlignLeft-16.png"/>
+        <bt:Image id="AlignLeft.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/AlignLeft-32.png"/>
+        <bt:Image id="AlignLeft.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/AlignLeft-80.png"/>
+        <bt:Image id="AlignRight.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/AlignRight-16.png"/>
+        <bt:Image id="AlignRight.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/AlignRight-32.png"/>
+        <bt:Image id="AlignRight.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/AlignRight-80.png"/>
+        <bt:Image id="AlignTop.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/AlignTop-16.png"/>
+        <bt:Image id="AlignTop.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/AlignTop-32.png"/>
+        <bt:Image id="AlignTop.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/AlignTop-80.png"/>
+        <bt:Image id="AlignBottom.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/AlignBottom-16.png"/>
+        <bt:Image id="AlignBottom.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/AlignBottom-32.png"/>
+        <bt:Image id="AlignBottom.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/AlignBottom-80.png"/>
+        <bt:Image id="AlignCenter.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/AlignCenter-16.png"/>
+        <bt:Image id="AlignCenter.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/AlignCenter-32.png"/>
+        <bt:Image id="AlignCenter.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/AlignCenter-80.png"/>
+        <bt:Image id="AlignMiddle.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/AlignMiddle-16.png"/>
+        <bt:Image id="AlignMiddle.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/AlignMiddle-32.png"/>
+        <bt:Image id="AlignMiddle.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/AlignMiddle-80.png"/>
+        <bt:Image id="SlideCenterH.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/SlideCenterH-16.png"/>
+        <bt:Image id="SlideCenterH.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/SlideCenterH-32.png"/>
+        <bt:Image id="SlideCenterH.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/SlideCenterH-80.png"/>
+        <bt:Image id="SlideCenterV.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/SlideCenterV-16.png"/>
+        <bt:Image id="SlideCenterV.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/SlideCenterV-32.png"/>
+        <bt:Image id="SlideCenterV.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/SlideCenterV-80.png"/>
+        <bt:Image id="SnapLeft.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/SnapLeft-16.png"/>
+        <bt:Image id="SnapLeft.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/SnapLeft-32.png"/>
+        <bt:Image id="SnapLeft.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/SnapLeft-80.png"/>
+        <bt:Image id="SnapRight.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/SnapRight-16.png"/>
+        <bt:Image id="SnapRight.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/SnapRight-32.png"/>
+        <bt:Image id="SnapRight.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/SnapRight-80.png"/>
+        <bt:Image id="SnapTop.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/SnapTop-16.png"/>
+        <bt:Image id="SnapTop.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/SnapTop-32.png"/>
+        <bt:Image id="SnapTop.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/SnapTop-80.png"/>
+        <bt:Image id="SnapBottom.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/SnapBottom-16.png"/>
+        <bt:Image id="SnapBottom.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/SnapBottom-32.png"/>
+        <bt:Image id="SnapBottom.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/SnapBottom-80.png"/>
+        <bt:Image id="DistributeH.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/DistributeH-16.png"/>
+        <bt:Image id="DistributeH.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/DistributeH-32.png"/>
+        <bt:Image id="DistributeH.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/DistributeH-80.png"/>
+        <bt:Image id="DistributeV.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/DistributeV-16.png"/>
+        <bt:Image id="DistributeV.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/DistributeV-32.png"/>
+        <bt:Image id="DistributeV.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/DistributeV-80.png"/>
+        <bt:Image id="MatchWidth.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/MatchWidth-16.png"/>
+        <bt:Image id="MatchWidth.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/MatchWidth-32.png"/>
+        <bt:Image id="MatchWidth.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/MatchWidth-80.png"/>
+        <bt:Image id="MatchHeight.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/MatchHeight-16.png"/>
+        <bt:Image id="MatchHeight.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/MatchHeight-32.png"/>
+        <bt:Image id="MatchHeight.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/MatchHeight-80.png"/>
+        <bt:Image id="MatchBoth.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/MatchBoth-16.png"/>
+        <bt:Image id="MatchBoth.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/MatchBoth-32.png"/>
+        <bt:Image id="MatchBoth.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/MatchBoth-80.png"/>
+        <bt:Image id="Scale.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/Scale-16.png"/>
+        <bt:Image id="Scale.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/Scale-32.png"/>
+        <bt:Image id="Scale.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/Scale-80.png"/>
+        <bt:Image id="GapH.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/GapH-16.png"/>
+        <bt:Image id="GapH.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/GapH-32.png"/>
+        <bt:Image id="GapH.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/GapH-80.png"/>
+        <bt:Image id="GapV.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/GapV-16.png"/>
+        <bt:Image id="GapV.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/GapV-32.png"/>
+        <bt:Image id="GapV.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/GapV-80.png"/>
+        <bt:Image id="StretchLeft.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/StretchLeft-16.png"/>
+        <bt:Image id="StretchLeft.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/StretchLeft-32.png"/>
+        <bt:Image id="StretchLeft.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/StretchLeft-80.png"/>
+        <bt:Image id="StretchRight.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/StretchRight-16.png"/>
+        <bt:Image id="StretchRight.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/StretchRight-32.png"/>
+        <bt:Image id="StretchRight.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/StretchRight-80.png"/>
+        <bt:Image id="StretchTop.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/StretchTop-16.png"/>
+        <bt:Image id="StretchTop.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/StretchTop-32.png"/>
+        <bt:Image id="StretchTop.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/StretchTop-80.png"/>
+        <bt:Image id="StretchBottom.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/StretchBottom-16.png"/>
+        <bt:Image id="StretchBottom.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/StretchBottom-32.png"/>
+        <bt:Image id="StretchBottom.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/StretchBottom-80.png"/>
+        <bt:Image id="Grid.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/Grid-16.png"/>
+        <bt:Image id="Grid.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/Grid-32.png"/>
+        <bt:Image id="Grid.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/Grid-80.png"/>
+        <bt:Image id="Swap.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/Swap-16.png"/>
+        <bt:Image id="Swap.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/Swap-32.png"/>
+        <bt:Image id="Swap.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/Swap-80.png"/>
+        <bt:Image id="Group.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/Group-16.png"/>
+        <bt:Image id="Group.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/Group-32.png"/>
+        <bt:Image id="Group.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/Group-80.png"/>
+        <bt:Image id="Ungroup.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/Ungroup-16.png"/>
+        <bt:Image id="Ungroup.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/Ungroup-32.png"/>
+        <bt:Image id="Ungroup.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/Ungroup-80.png"/>
+        <bt:Image id="More.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/More-16.png"/>
+        <bt:Image id="More.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/More-32.png"/>
+        <bt:Image id="More.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/More-80.png"/>
+        <bt:Image id="SelectNextLeft.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/SelectNextLeft-16.png"/>
+        <bt:Image id="SelectNextLeft.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/SelectNextLeft-32.png"/>
+        <bt:Image id="SelectNextLeft.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/SelectNextLeft-80.png"/>
+        <bt:Image id="SelectNextUp.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/SelectNextUp-16.png"/>
+        <bt:Image id="SelectNextUp.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/SelectNextUp-32.png"/>
+        <bt:Image id="SelectNextUp.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/SelectNextUp-80.png"/>
+        <bt:Image id="SelectNextDown.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/SelectNextDown-16.png"/>
+        <bt:Image id="SelectNextDown.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/SelectNextDown-32.png"/>
+        <bt:Image id="SelectNextDown.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/SelectNextDown-80.png"/>
+        <bt:Image id="BringToFront.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/BringToFront-16.png"/>
+        <bt:Image id="BringToFront.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/BringToFront-32.png"/>
+        <bt:Image id="BringToFront.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/BringToFront-80.png"/>
+        <bt:Image id="BringForward.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/BringForward-16.png"/>
+        <bt:Image id="BringForward.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/BringForward-32.png"/>
+        <bt:Image id="BringForward.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/BringForward-80.png"/>
+        <bt:Image id="SendBackward.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/SendBackward-16.png"/>
+        <bt:Image id="SendBackward.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/SendBackward-32.png"/>
+        <bt:Image id="SendBackward.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/SendBackward-80.png"/>
+        <bt:Image id="SendToBack.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/SendToBack-16.png"/>
+        <bt:Image id="SendToBack.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/SendToBack-32.png"/>
+        <bt:Image id="SendToBack.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/SendToBack-80.png"/>
+        <bt:Image id="SelectNextRight.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/SelectNextRight-16.png"/>
+        <bt:Image id="SelectNextRight.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/SelectNextRight-32.png"/>
+        <bt:Image id="SelectNextRight.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/SelectNextRight-80.png"/>
+        <bt:Image id="PickStyle.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/PickStyle-16.png"/>
+        <bt:Image id="PickStyle.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/PickStyle-32.png"/>
+        <bt:Image id="PickStyle.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/PickStyle-80.png"/>
+        <bt:Image id="ApplyStyle.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/ApplyStyle-16.png"/>
+        <bt:Image id="ApplyStyle.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/ApplyStyle-32.png"/>
+        <bt:Image id="ApplyStyle.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/ApplyStyle-80.png"/>
+        <bt:Image id="Transparency.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/Transparency-16.png"/>
+        <bt:Image id="Transparency.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/Transparency-32.png"/>
+        <bt:Image id="Transparency.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/Transparency-80.png"/>
+        <bt:Image id="SelectSameFill.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/SelectSameFill-16.png"/>
+        <bt:Image id="SelectSameFill.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/SelectSameFill-32.png"/>
+        <bt:Image id="SelectSameFill.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/SelectSameFill-80.png"/>
+        <bt:Image id="SelectSameSize.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/SelectSameSize-16.png"/>
+        <bt:Image id="SelectSameSize.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/SelectSameSize-32.png"/>
+        <bt:Image id="SelectSameSize.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/SelectSameSize-80.png"/>
+        <bt:Image id="FontReplace.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/FontReplace-16.png"/>
+        <bt:Image id="FontReplace.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/FontReplace-32.png"/>
+        <bt:Image id="FontReplace.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/FontReplace-80.png"/>
+        <bt:Image id="InsertTracker.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/InsertTracker-16.png"/>
+        <bt:Image id="InsertTracker.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/InsertTracker-32.png"/>
+        <bt:Image id="InsertTracker.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/InsertTracker-80.png"/>
+        <bt:Image id="InsertTable.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/InsertTable-16.png"/>
+        <bt:Image id="InsertTable.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/InsertTable-32.png"/>
+        <bt:Image id="InsertTable.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/InsertTable-80.png"/>
+        <bt:Image id="ChartStudio.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/ChartStudio-16.png"/>
+        <bt:Image id="ChartStudio.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/ChartStudio-32.png"/>
+        <bt:Image id="ChartStudio.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/ChartStudio-80.png"/>
+        <bt:Image id="InsertHarvey.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/InsertHarvey-16.png"/>
+        <bt:Image id="InsertHarvey.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/InsertHarvey-32.png"/>
+        <bt:Image id="InsertHarvey.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/InsertHarvey-80.png"/>
+        <bt:Image id="InsertChevron.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/InsertChevron-16.png"/>
+        <bt:Image id="InsertChevron.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/InsertChevron-32.png"/>
+        <bt:Image id="InsertChevron.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/InsertChevron-80.png"/>
+        <bt:Image id="InsertSticky.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/InsertSticky-16.png"/>
+        <bt:Image id="InsertSticky.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/InsertSticky-32.png"/>
+        <bt:Image id="InsertSticky.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/InsertSticky-80.png"/>
+        <bt:Image id="AgendaInsert.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/AgendaInsert-16.png"/>
+        <bt:Image id="AgendaInsert.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/AgendaInsert-32.png"/>
+        <bt:Image id="AgendaInsert.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/AgendaInsert-80.png"/>
+        <bt:Image id="AgendaPerChapter.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/AgendaPerChapter-16.png"/>
+        <bt:Image id="AgendaPerChapter.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/AgendaPerChapter-32.png"/>
+        <bt:Image id="AgendaPerChapter.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/AgendaPerChapter-80.png"/>
+        <bt:Image id="DeleteStickies.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/DeleteStickies-16.png"/>
+        <bt:Image id="DeleteStickies.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/DeleteStickies-32.png"/>
+        <bt:Image id="DeleteStickies.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/DeleteStickies-80.png"/>
+        <bt:Image id="DecimalToggle.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/DecimalToggle-16.png"/>
+        <bt:Image id="DecimalToggle.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/DecimalToggle-32.png"/>
+        <bt:Image id="DecimalToggle.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/DecimalToggle-80.png"/>
+        <bt:Image id="Settings.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/Settings-16.png"/>
+        <bt:Image id="Settings.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/Settings-32.png"/>
+        <bt:Image id="Settings.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/Settings-80.png"/>
+        <bt:Image id="Palette.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/Palette-16.png"/>
+        <bt:Image id="Palette.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/Palette-32.png"/>
+        <bt:Image id="Palette.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/Palette-80.png"/>
+        <bt:Image id="Cheatsheet.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/Cheatsheet-16.png"/>
+        <bt:Image id="Cheatsheet.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/Cheatsheet-32.png"/>
+        <bt:Image id="Cheatsheet.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/Cheatsheet-80.png"/>
+        <bt:Image id="Pane.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/Pane-16.png"/>
+        <bt:Image id="Pane.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/Pane-32.png"/>
+        <bt:Image id="Pane.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/Pane-80.png"/>
+        <bt:Image id="RenameSeq.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/RenameSeq-16.png"/>
+        <bt:Image id="RenameSeq.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/RenameSeq-32.png"/>
+        <bt:Image id="RenameSeq.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/RenameSeq-80.png"/>
+        <bt:Image id="RemoveDuplicates.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/RemoveDuplicates-16.png"/>
+        <bt:Image id="RemoveDuplicates.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/RemoveDuplicates-32.png"/>
+        <bt:Image id="RemoveDuplicates.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/RemoveDuplicates-80.png"/>
+        <bt:Image id="App.16" DefaultValue="https://sgymdik.github.io/slidekit/assets/App-16.png"/>
+        <bt:Image id="App.32" DefaultValue="https://sgymdik.github.io/slidekit/assets/App-32.png"/>
+        <bt:Image id="App.80" DefaultValue="https://sgymdik.github.io/slidekit/assets/App-80.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://sgymdik.github.io/slidekit/taskpane.html"/>
+        <bt:Url id="Help.Url" DefaultValue="https://sgymdik.github.io/slidekit/taskpane.html"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="G_pAlign" DefaultValue="揃え"/>
+        <bt:String id="L_AlignLeft" DefaultValue="左揃え"/>
+        <bt:String id="L_AlignRight" DefaultValue="右揃え"/>
+        <bt:String id="L_AlignTop" DefaultValue="上揃え"/>
+        <bt:String id="L_AlignBottom" DefaultValue="下揃え"/>
+        <bt:String id="L_AlignCenter" DefaultValue="左右中央"/>
+        <bt:String id="L_AlignMiddle" DefaultValue="上下中央"/>
+        <bt:String id="G_pSlide" DefaultValue="スライド基準"/>
+        <bt:String id="L_SlideCenterH" DefaultValue="スライド水平中央"/>
+        <bt:String id="L_SlideCenterV" DefaultValue="スライド垂直中央"/>
+        <bt:String id="L_SnapLeft" DefaultValue="スライド左端へ"/>
+        <bt:String id="L_SnapRight" DefaultValue="スライド右端へ"/>
+        <bt:String id="L_SnapTop" DefaultValue="スライド上端へ"/>
+        <bt:String id="L_SnapBottom" DefaultValue="スライド下端へ"/>
+        <bt:String id="G_pSize" DefaultValue="均等・サイズ"/>
+        <bt:String id="L_DistributeH" DefaultValue="水平均等"/>
+        <bt:String id="L_DistributeV" DefaultValue="垂直均等"/>
+        <bt:String id="L_MatchWidth" DefaultValue="幅を揃える"/>
+        <bt:String id="L_MatchHeight" DefaultValue="高さを揃える"/>
+        <bt:String id="L_MatchBoth" DefaultValue="サイズを揃える"/>
+        <bt:String id="L_Scale" DefaultValue="倍率で拡大縮小"/>
+        <bt:String id="G_pStretch" DefaultValue="間隔・伸縮"/>
+        <bt:String id="L_GapH" DefaultValue="横間隔を指定"/>
+        <bt:String id="L_GapV" DefaultValue="縦間隔を指定"/>
+        <bt:String id="L_StretchLeft" DefaultValue="左端まで伸ばす"/>
+        <bt:String id="L_StretchRight" DefaultValue="右端まで伸ばす"/>
+        <bt:String id="L_StretchTop" DefaultValue="上端まで伸ばす"/>
+        <bt:String id="L_StretchBottom" DefaultValue="下端まで伸ばす"/>
+        <bt:String id="G_pArrange" DefaultValue="配置"/>
+        <bt:String id="L_Grid" DefaultValue="グリッド整列"/>
+        <bt:String id="L_Swap" DefaultValue="位置を入れ替え"/>
+        <bt:String id="L_Group" DefaultValue="グループ化"/>
+        <bt:String id="L_Ungroup" DefaultValue="グループ解除"/>
+        <bt:String id="G_pNav" DefaultValue="重ね順・移動"/>
+        <bt:String id="M_pNav" DefaultValue="その他"/>
+        <bt:String id="L_SelectNextLeft" DefaultValue="左隣の図形を選択"/>
+        <bt:String id="L_SelectNextUp" DefaultValue="上隣の図形を選択"/>
+        <bt:String id="L_SelectNextDown" DefaultValue="下隣の図形を選択"/>
+        <bt:String id="L_BringToFront" DefaultValue="最前面へ"/>
+        <bt:String id="L_BringForward" DefaultValue="前面へ"/>
+        <bt:String id="L_SendBackward" DefaultValue="背面へ"/>
+        <bt:String id="L_SendToBack" DefaultValue="最背面へ"/>
+        <bt:String id="L_SelectNextRight" DefaultValue="右隣の図形を選択"/>
+        <bt:String id="G_pStyle" DefaultValue="書式"/>
+        <bt:String id="L_PickStyle" DefaultValue="書式をつまむ"/>
+        <bt:String id="L_ApplyStyle" DefaultValue="書式を貼る"/>
+        <bt:String id="L_Transparency" DefaultValue="透明度"/>
+        <bt:String id="L_SelectSameFill" DefaultValue="同じ色を選択"/>
+        <bt:String id="L_SelectSameSize" DefaultValue="同じサイズを選択"/>
+        <bt:String id="L_FontReplace" DefaultValue="フォント統一"/>
+        <bt:String id="G_pInsert" DefaultValue="挿入"/>
+        <bt:String id="M_pInsert" DefaultValue="その他"/>
+        <bt:String id="L_InsertTracker" DefaultValue="アジェンダトラッカー"/>
+        <bt:String id="L_InsertTable" DefaultValue="表を貼り付け"/>
+        <bt:String id="L_ChartStudio" DefaultValue="チャート"/>
+        <bt:String id="L_InsertHarvey" DefaultValue="ハーベイボール"/>
+        <bt:String id="L_InsertChevron" DefaultValue="プロセスフロー"/>
+        <bt:String id="L_InsertSticky" DefaultValue="付箋"/>
+        <bt:String id="L_AgendaInsert" DefaultValue="アジェンダ挿入"/>
+        <bt:String id="L_AgendaPerChapter" DefaultValue="アジェンダを各章の前に"/>
+        <bt:String id="G_pTools" DefaultValue="ツール"/>
+        <bt:String id="M_pTools" DefaultValue="その他"/>
+        <bt:String id="L_DeleteStickies" DefaultValue="付箋を一括削除"/>
+        <bt:String id="L_DecimalToggle" DefaultValue="小数点 . ↔ ,"/>
+        <bt:String id="L_Settings" DefaultValue="設定"/>
+        <bt:String id="L_Palette" DefaultValue="コマンドパレット"/>
+        <bt:String id="L_Cheatsheet" DefaultValue="ショートカット一覧"/>
+        <bt:String id="L_Pane" DefaultValue="ヒントパネル"/>
+        <bt:String id="L_RenameSeq" DefaultValue="連番リネーム"/>
+        <bt:String id="L_RemoveDuplicates" DefaultValue="重複図形を削除"/>
+        <bt:String id="Tab.Label" DefaultValue="SlideKit"/>
+        <bt:String id="GetStarted.Title" DefaultValue="SlideKit を読み込みました"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="T_AlignLeft" DefaultValue="選択図形の左端を、最も左の図形に揃える（基準図形モード時は最初に選んだ図形）
+⌃⌥←
+⌃⌥P → AL"/>
+        <bt:String id="T_AlignRight" DefaultValue="選択図形の右端を揃える
+⌃⌥→
+⌃⌥P → AR"/>
+        <bt:String id="T_AlignTop" DefaultValue="選択図形の上端を揃える
+⌃⌥↑
+⌃⌥P → AT"/>
+        <bt:String id="T_AlignBottom" DefaultValue="選択図形の下端を揃える
+⌃⌥↓
+⌃⌥P → AB"/>
+        <bt:String id="T_AlignCenter" DefaultValue="選択図形の左右中央を揃える
+⌃⌥C
+⌃⌥P → AC"/>
+        <bt:String id="T_AlignMiddle" DefaultValue="選択図形の上下中央を揃える
+⌃⌥M
+⌃⌥P → AM"/>
+        <bt:String id="T_SlideCenterH" DefaultValue="選択範囲全体をスライドの左右中央へ（相対位置は維持）
+⌃⌥⇧C
+⌃⌥P → SC"/>
+        <bt:String id="T_SlideCenterV" DefaultValue="選択範囲全体をスライドの上下中央へ
+⌃⌥⇧M
+⌃⌥P → SM"/>
+        <bt:String id="T_SnapLeft" DefaultValue="選択範囲をスライドの左マージン（設定値）へ寄せる
+⌃⌥⇧←
+⌃⌥P → SL"/>
+        <bt:String id="T_SnapRight" DefaultValue="選択範囲をスライドの右マージンへ寄せる
+⌃⌥⇧→
+⌃⌥P → SR"/>
+        <bt:String id="T_SnapTop" DefaultValue="選択範囲をスライドの上マージンへ寄せる
+⌃⌥⇧↑
+⌃⌥P → ST"/>
+        <bt:String id="T_SnapBottom" DefaultValue="選択範囲をスライドの下マージンへ寄せる
+⌃⌥⇧↓
+⌃⌥P → SB"/>
+        <bt:String id="T_DistributeH" DefaultValue="左右両端の図形を固定し、間隔を均等にする
+⌃⌥H
+⌃⌥P → DH"/>
+        <bt:String id="T_DistributeV" DefaultValue="上下両端の図形を固定し、間隔を均等にする
+⌃⌥V
+⌃⌥P → DV"/>
+        <bt:String id="T_MatchWidth" DefaultValue="基準図形（最初に選んだ図形）の幅に揃える
+⌃⌥W
+⌃⌥P → MW"/>
+        <bt:String id="T_MatchHeight" DefaultValue="基準図形の高さに揃える
+⌃⌥E
+⌃⌥P → ME"/>
+        <bt:String id="T_MatchBoth" DefaultValue="基準図形の幅・高さ両方に揃える
+⌃⌥S
+⌃⌥P → MS"/>
+        <bt:String id="T_Scale" DefaultValue="中心を保って指定 % で拡大縮小（文字サイズも追従）
+⌃⌥P → SZ"/>
+        <bt:String id="T_GapH" DefaultValue="左から順に、指定した pt 間隔で並べ直す（既定は設定の「標準間隔」）
+⌃⌥⇧H
+⌃⌥P → GH"/>
+        <bt:String id="T_GapV" DefaultValue="上から順に、指定 pt 間隔で並べ直す
+⌃⌥⇧V
+⌃⌥P → GV"/>
+        <bt:String id="T_StretchLeft" DefaultValue="選択図形の左辺を、最も左の図形の左辺まで伸ばす（右辺は固定）
+⌃⌥P → XL"/>
+        <bt:String id="T_StretchRight" DefaultValue="右辺を最も右の図形の右辺まで伸ばす
+⌃⌥P → XR"/>
+        <bt:String id="T_StretchTop" DefaultValue="上辺を最も上の図形の上辺まで伸ばす
+⌃⌥P → XT"/>
+        <bt:String id="T_StretchBottom" DefaultValue="下辺を最も下の図形の下辺まで伸ばす
+⌃⌥P → XB"/>
+        <bt:String id="T_Grid" DefaultValue="選択図形を N 列のグリッドに並べ直す（間隔は標準間隔）
+⌃⌥T
+⌃⌥P → GR"/>
+        <bt:String id="T_Swap" DefaultValue="2 つの図形の位置を入れ替える（中心基準なのでサイズが違っても自然）
+⌃⌥X
+⌃⌥P → SW"/>
+        <bt:String id="T_Group" DefaultValue="選択図形をグループ化
+⌃⌥G
+⌃⌥P → GG"/>
+        <bt:String id="T_Ungroup" DefaultValue="選択中のグループを解除
+⌃⌥U
+⌃⌥P → UG"/>
+        <bt:String id="MT_pNav" DefaultValue="左隣の図形を選択 / 上隣の図形を選択 / 下隣の図形を選択"/>
+        <bt:String id="T_SelectNextLeft" DefaultValue="左方向にある最も近い図形を選択
+⌃⌥⇧J
+⌃⌥P → NL"/>
+        <bt:String id="T_SelectNextUp" DefaultValue="上方向にある最も近い図形を選択
+⌃⌥⇧I
+⌃⌥P → NU"/>
+        <bt:String id="T_SelectNextDown" DefaultValue="下方向にある最も近い図形を選択
+⌃⌥⇧K
+⌃⌥P → ND"/>
+        <bt:String id="T_BringToFront" DefaultValue="最前面へ移動
+⌃⌥1
+⌃⌥P → Z1"/>
+        <bt:String id="T_BringForward" DefaultValue="1 つ前面へ
+⌃⌥2
+⌃⌥P → Z2"/>
+        <bt:String id="T_SendBackward" DefaultValue="1 つ背面へ
+⌃⌥3
+⌃⌥P → Z3"/>
+        <bt:String id="T_SendToBack" DefaultValue="最背面へ移動
+⌃⌥4
+⌃⌥P → Z4"/>
+        <bt:String id="T_SelectNextRight" DefaultValue="選択中の図形から右方向にある最も近い図形を選択（旧 Alt+矢印 の代替）
+⌃⌥⇧L
+⌃⌥P → NR"/>
+        <bt:String id="T_PickStyle" DefaultValue="選択図形の塗り・線・文字書式を記憶（スポイト）
+⌃⌥Q
+⌃⌥P → FP"/>
+        <bt:String id="T_ApplyStyle" DefaultValue="記憶した書式を選択図形に適用
+⌃⌥A
+⌃⌥P → FA"/>
+        <bt:String id="T_Transparency" DefaultValue="塗りの透明度を設定（0〜100%）
+⌃⌥P → TR"/>
+        <bt:String id="T_SelectSameFill" DefaultValue="選択図形と同じ塗り色の図形をスライド内で全選択
+⌃⌥⇧F
+⌃⌥P → SF"/>
+        <bt:String id="T_SelectSameSize" DefaultValue="選択図形と同じサイズ（±0.5pt）の図形を全選択
+⌃⌥P → SS"/>
+        <bt:String id="T_FontReplace" DefaultValue="全スライドのフォントを指定フォントへ置換（既定: Meiryo UI）
+⌃⌥P → FR"/>
+        <bt:String id="MT_pInsert" DefaultValue="アジェンダトラッカー / 表を貼り付け / チャート"/>
+        <bt:String id="T_InsertTracker" DefaultValue="スライド右上に章トラッカー（現在地ハイライト）を挿入
+⌃⌥P → AG"/>
+        <bt:String id="T_InsertTable" DefaultValue="Excel からコピーしたセル範囲（タブ区切り）を書式付きの表として挿入
+⌃⌥P → TB"/>
+        <bt:String id="T_ChartStudio" DefaultValue="滝グラフ・積み上げ棒・Gantt・Marimekko をデータから図形で生成
+⌃⌥R
+⌃⌥P → CH"/>
+        <bt:String id="T_InsertHarvey" DefaultValue="0/25/50/75/100% のハーベイボールを挿入。選択中のハーベイボールなら値を切替
+⌃⌥B
+⌃⌥P → HB"/>
+        <bt:String id="T_InsertChevron" DefaultValue="シェブロンのプロセスフローを挿入（ステップ名を入力）
+⌃⌥P → PF"/>
+        <bt:String id="T_InsertSticky" DefaultValue="レビュー用の黄色い付箋を挿入（[ToDo] 一括削除の対象）
+⌃⌥N
+⌃⌥P → NT"/>
+        <bt:String id="T_AgendaInsert" DefaultValue="表示中のスライドの次にアジェンダ（目次）スライドを追加。章はセクション見出しのスライドから自動で拾う
+⌃⌥P → AN"/>
+        <bt:String id="T_AgendaPerChapter" DefaultValue="各章（セクション見出し）の前に、現在地をハイライトしたアジェンダを置く。もう一度実行すると作り直す
+⌃⌥P → AP"/>
+        <bt:String id="MT_pTools" DefaultValue="付箋を一括削除 / 小数点 . ↔ , / 設定"/>
+        <bt:String id="T_DeleteStickies" DefaultValue="全スライドから付箋（SlideKit 製）を削除
+⌃⌥P → DS"/>
+        <bt:String id="T_DecimalToggle" DefaultValue="選択図形のテキストの小数点記号を切替
+⌃⌥P → DT"/>
+        <bt:String id="T_Settings" DefaultValue="標準間隔・マージン・基準図形モード・ヒント表示を設定
+⌃⌥P → CF"/>
+        <bt:String id="T_Palette" DefaultValue="全コマンドを検索・コード入力で実行（迷ったらこれ）
+⌃⌥P
+⌃⌥P → PP"/>
+        <bt:String id="T_Cheatsheet" DefaultValue="ショートカットとクイックコードの一覧（ヒント）
+⌃⌥K
+⌃⌥P → ??"/>
+        <bt:String id="T_Pane" DefaultValue="選択に応じて使えるショートカットを表示するパネルを開く
+⌃⌥I
+⌃⌥P → HP"/>
+        <bt:String id="T_RenameSeq" DefaultValue="選択図形の名前を位置順に「接頭辞_01…」へ
+⌃⌥P → RN"/>
+        <bt:String id="T_RemoveDuplicates" DefaultValue="同じ位置・サイズ・テキストで重なった図形を削除
+⌃⌥P → RD"/>
+        <bt:String id="GetStarted.Desc" DefaultValue="「SlideKit」タブから使えます。⌃⌥P でコマンドパレット、⌃⌥K でショートカット一覧。"/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+  <ExtendedOverrides Url="https://sgymdik.github.io/slidekit/shortcuts-ppt.json"/>
+</OfficeApp>

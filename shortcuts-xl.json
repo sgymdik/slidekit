@@ -1,0 +1,394 @@
+{
+  "actions": [
+    {
+      "id": "XCycleNumber",
+      "type": "ExecuteFunction",
+      "name": "数値書式を巡回"
+    },
+    {
+      "id": "XCycleDate",
+      "type": "ExecuteFunction",
+      "name": "日付書式を巡回"
+    },
+    {
+      "id": "XDecimalUp",
+      "type": "ExecuteFunction",
+      "name": "小数桁 +"
+    },
+    {
+      "id": "XDecimalDown",
+      "type": "ExecuteFunction",
+      "name": "小数桁 −"
+    },
+    {
+      "id": "XScaleK",
+      "type": "ExecuteFunction",
+      "name": "千単位表示"
+    },
+    {
+      "id": "XCycleFontColor",
+      "type": "ExecuteFunction",
+      "name": "文字色を巡回"
+    },
+    {
+      "id": "XCycleFill",
+      "type": "ExecuteFunction",
+      "name": "塗りを巡回"
+    },
+    {
+      "id": "XCycleBorder",
+      "type": "ExecuteFunction",
+      "name": "罫線を巡回"
+    },
+    {
+      "id": "XCycleAlign",
+      "type": "ExecuteFunction",
+      "name": "横位置を巡回"
+    },
+    {
+      "id": "XCenterAcross",
+      "type": "ExecuteFunction",
+      "name": "選択範囲内で中央"
+    },
+    {
+      "id": "XHeaderStyle",
+      "type": "ExecuteFunction",
+      "name": "見出しスタイル"
+    },
+    {
+      "id": "XIndentUp",
+      "type": "ExecuteFunction",
+      "name": "インデント +"
+    },
+    {
+      "id": "XIndentDown",
+      "type": "ExecuteFunction",
+      "name": "インデント −"
+    },
+    {
+      "id": "XAutofit",
+      "type": "ExecuteFunction",
+      "name": "列幅を自動調整"
+    },
+    {
+      "id": "XTrim",
+      "type": "ExecuteFunction",
+      "name": "空白を除去"
+    },
+    {
+      "id": "XToValues",
+      "type": "ExecuteFunction",
+      "name": "値に変換"
+    },
+    {
+      "id": "XTextToNumber",
+      "type": "ExecuteFunction",
+      "name": "文字列→数値"
+    },
+    {
+      "id": "XFillDown",
+      "type": "ExecuteFunction",
+      "name": "空白を上の値で埋める"
+    },
+    {
+      "id": "XWrapIfError",
+      "type": "ExecuteFunction",
+      "name": "IFERROR で囲む"
+    },
+    {
+      "id": "XToggleAbsolute",
+      "type": "ExecuteFunction",
+      "name": "参照の絶対/相対"
+    },
+    {
+      "id": "XCase",
+      "type": "ExecuteFunction",
+      "name": "大文字/小文字/全半角"
+    },
+    {
+      "id": "XTracePrecedents",
+      "type": "ExecuteFunction",
+      "name": "参照元へジャンプ"
+    },
+    {
+      "id": "XTraceDependents",
+      "type": "ExecuteFunction",
+      "name": "参照先へジャンプ"
+    },
+    {
+      "id": "XHighlightFormulas",
+      "type": "ExecuteFunction",
+      "name": "数式/定数を色分け"
+    },
+    {
+      "id": "XFindErrors",
+      "type": "ExecuteFunction",
+      "name": "エラーセルを選択"
+    },
+    {
+      "id": "XFindHardcodes",
+      "type": "ExecuteFunction",
+      "name": "数式内の直書き数値"
+    },
+    {
+      "id": "XSheetNext",
+      "type": "ExecuteFunction",
+      "name": "次のシート"
+    },
+    {
+      "id": "XSheetPrev",
+      "type": "ExecuteFunction",
+      "name": "前のシート"
+    },
+    {
+      "id": "XSheetIndex",
+      "type": "ExecuteFunction",
+      "name": "目次シート作成"
+    },
+    {
+      "id": "XResetView",
+      "type": "ExecuteFunction",
+      "name": "全シート A1 へ"
+    },
+    {
+      "id": "XGridlines",
+      "type": "ExecuteFunction",
+      "name": "枠線表示 切替"
+    },
+    {
+      "id": "XFreeze",
+      "type": "ExecuteFunction",
+      "name": "ウィンドウ枠固定"
+    },
+    {
+      "id": "XGroupRows",
+      "type": "ExecuteFunction",
+      "name": "行/列をグループ化"
+    },
+    {
+      "id": "XUngroupRows",
+      "type": "ExecuteFunction",
+      "name": "グループ解除"
+    },
+    {
+      "id": "XPalette",
+      "type": "ExecuteFunction",
+      "name": "コマンドパレット"
+    },
+    {
+      "id": "XCheatsheet",
+      "type": "ExecuteFunction",
+      "name": "ショートカット一覧"
+    },
+    {
+      "id": "XPane",
+      "type": "ExecuteFunction",
+      "name": "ヒントパネル"
+    }
+  ],
+  "shortcuts": [
+    {
+      "action": "XCycleNumber",
+      "key": {
+        "default": "Ctrl+Alt+1",
+        "mac": "Ctrl+Alt+1"
+      }
+    },
+    {
+      "action": "XCycleDate",
+      "key": {
+        "default": "Ctrl+Alt+2",
+        "mac": "Ctrl+Alt+2"
+      }
+    },
+    {
+      "action": "XDecimalUp",
+      "key": {
+        "default": "Ctrl+Alt+Shift+Up",
+        "mac": "Ctrl+Alt+Shift+Up"
+      }
+    },
+    {
+      "action": "XDecimalDown",
+      "key": {
+        "default": "Ctrl+Alt+Shift+Down",
+        "mac": "Ctrl+Alt+Shift+Down"
+      }
+    },
+    {
+      "action": "XCycleFontColor",
+      "key": {
+        "default": "Ctrl+Alt+C",
+        "mac": "Ctrl+Alt+C"
+      }
+    },
+    {
+      "action": "XCycleFill",
+      "key": {
+        "default": "Ctrl+Alt+F",
+        "mac": "Ctrl+Alt+F"
+      }
+    },
+    {
+      "action": "XCycleBorder",
+      "key": {
+        "default": "Ctrl+Alt+B",
+        "mac": "Ctrl+Alt+B"
+      }
+    },
+    {
+      "action": "XCycleAlign",
+      "key": {
+        "default": "Ctrl+Alt+A",
+        "mac": "Ctrl+Alt+A"
+      }
+    },
+    {
+      "action": "XCenterAcross",
+      "key": {
+        "default": "Ctrl+Alt+M",
+        "mac": "Ctrl+Alt+M"
+      }
+    },
+    {
+      "action": "XHeaderStyle",
+      "key": {
+        "default": "Ctrl+Alt+H",
+        "mac": "Ctrl+Alt+H"
+      }
+    },
+    {
+      "action": "XIndentUp",
+      "key": {
+        "default": "Ctrl+Alt+Right",
+        "mac": "Ctrl+Alt+Right"
+      }
+    },
+    {
+      "action": "XIndentDown",
+      "key": {
+        "default": "Ctrl+Alt+Left",
+        "mac": "Ctrl+Alt+Left"
+      }
+    },
+    {
+      "action": "XAutofit",
+      "key": {
+        "default": "Ctrl+Alt+W",
+        "mac": "Ctrl+Alt+W"
+      }
+    },
+    {
+      "action": "XToValues",
+      "key": {
+        "default": "Ctrl+Alt+V",
+        "mac": "Ctrl+Alt+V"
+      }
+    },
+    {
+      "action": "XFillDown",
+      "key": {
+        "default": "Ctrl+Alt+D",
+        "mac": "Ctrl+Alt+D"
+      }
+    },
+    {
+      "action": "XToggleAbsolute",
+      "key": {
+        "default": "Ctrl+Alt+4",
+        "mac": "Ctrl+Alt+4"
+      }
+    },
+    {
+      "action": "XTracePrecedents",
+      "key": {
+        "default": "Ctrl+Alt+R",
+        "mac": "Ctrl+Alt+R"
+      }
+    },
+    {
+      "action": "XTraceDependents",
+      "key": {
+        "default": "Ctrl+Alt+Shift+R",
+        "mac": "Ctrl+Alt+Shift+R"
+      }
+    },
+    {
+      "action": "XFindErrors",
+      "key": {
+        "default": "Ctrl+Alt+E",
+        "mac": "Ctrl+Alt+E"
+      }
+    },
+    {
+      "action": "XSheetNext",
+      "key": {
+        "default": "Ctrl+Alt+Shift+Right",
+        "mac": "Ctrl+Alt+Shift+Right"
+      }
+    },
+    {
+      "action": "XSheetPrev",
+      "key": {
+        "default": "Ctrl+Alt+Shift+Left",
+        "mac": "Ctrl+Alt+Shift+Left"
+      }
+    },
+    {
+      "action": "XResetView",
+      "key": {
+        "default": "Ctrl+Alt+0",
+        "mac": "Ctrl+Alt+0"
+      }
+    },
+    {
+      "action": "XGridlines",
+      "key": {
+        "default": "Ctrl+Alt+L",
+        "mac": "Ctrl+Alt+L"
+      }
+    },
+    {
+      "action": "XFreeze",
+      "key": {
+        "default": "Ctrl+Alt+Z",
+        "mac": "Ctrl+Alt+Z"
+      }
+    },
+    {
+      "action": "XGroupRows",
+      "key": {
+        "default": "Ctrl+Alt+G",
+        "mac": "Ctrl+Alt+G"
+      }
+    },
+    {
+      "action": "XUngroupRows",
+      "key": {
+        "default": "Ctrl+Alt+U",
+        "mac": "Ctrl+Alt+U"
+      }
+    },
+    {
+      "action": "XPalette",
+      "key": {
+        "default": "Ctrl+Alt+P",
+        "mac": "Ctrl+Alt+P"
+      }
+    },
+    {
+      "action": "XCheatsheet",
+      "key": {
+        "default": "Ctrl+Alt+K",
+        "mac": "Ctrl+Alt+K"
+      }
+    },
+    {
+      "action": "XPane",
+      "key": {
+        "default": "Ctrl+Alt+I",
+        "mac": "Ctrl+Alt+I"
+      }
+    }
+  ]
+}

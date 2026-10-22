@@ -297,7 +297,7 @@
         <bt:String id="L_Transparency" DefaultValue="透明度"/>
         <bt:String id="L_SelectSameFill" DefaultValue="同じ色を選択"/>
         <bt:String id="L_SelectSameSize" DefaultValue="同じサイズを選択"/>
-        <bt:String id="L_FontReplace" DefaultValue="フォント統一"/>
+        <bt:String id="L_FontReplace" DefaultValue="フォントを揃える"/>
         <bt:String id="G_pInsert" DefaultValue="挿入"/>
         <bt:String id="M_pInsert" DefaultValue="その他"/>
         <bt:String id="L_DeltaArrow" DefaultValue="差分の矢印"/>
@@ -452,7 +452,8 @@
 ⌃⌥P → SF"/>
         <bt:String id="T_SelectSameSize" DefaultValue="選択図形と同じサイズ（±0.5pt）の図形を全選択
 ⌃⌥P → SS"/>
-        <bt:String id="T_FontReplace" DefaultValue="全スライドのフォントを指定フォントへ置換（既定: Meiryo UI）
+        <bt:String id="T_FontReplace" DefaultValue="全スライドの文字を Meiryo などに揃える。グループの中・表のセル・スライドマスターまで
+⌃⌥⇧T
 ⌃⌥P → FR"/>
         <bt:String id="MT_pInsert" DefaultValue="差分の矢印 / アジェンダトラッカー / 表を貼り付け / チャート"/>
         <bt:String id="T_DeltaArrow" DefaultValue="棒を 2 本選ぶと、間に矢印と増減率（または CAGR）のラベルを置く

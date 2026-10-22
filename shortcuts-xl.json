@@ -56,6 +56,11 @@
       "name": "見出しスタイル"
     },
     {
+      "id": "XFontUnify",
+      "type": "ExecuteFunction",
+      "name": "フォントを揃える"
+    },
+    {
       "id": "XIndentUp",
       "type": "ExecuteFunction",
       "name": "インデント +"
@@ -270,6 +275,13 @@
       "key": {
         "default": "Ctrl+Alt+H",
         "mac": "Ctrl+Alt+H"
+      }
+    },
+    {
+      "action": "XFontUnify",
+      "key": {
+        "default": "Ctrl+Alt+Shift+T",
+        "mac": "Ctrl+Alt+Shift+T"
       }
     },
     {

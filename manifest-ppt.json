@@ -279,7 +279,7 @@
             {
               "id": "FontReplace",
               "type": "executeFunction",
-              "displayName": "フォント統一"
+              "displayName": "フォントを揃える"
             },
             {
               "id": "InsertHarvey",
@@ -609,7 +609,7 @@
             {
               "id": "R_FontReplace",
               "type": "executeFunction",
-              "displayName": "フォント統一"
+              "displayName": "フォントを揃える"
             },
             {
               "id": "R_InsertHarvey",
@@ -1953,7 +1953,7 @@
                     {
                       "id": "B_FontReplace",
                       "type": "button",
-                      "label": "F6 フォント統一",
+                      "label": "F6 フォントを揃える",
                       "icons": [
                         {
                           "size": 16,
@@ -1969,8 +1969,8 @@
                         }
                       ],
                       "supertip": {
-                        "title": "フォント統一",
-                        "description": "全スライドのフォントを指定フォントへ置換（既定: Meiryo UI）　⌥ → Y → F6　⌃⌥P → FR"
+                        "title": "フォントを揃える",
+                        "description": "全スライドの文字を Meiryo などに揃える。グループの中・表のセル・スライドマスターまで　⌥ → Y → F6　⌃⌥⇧T　⌃⌥P → FR"
                       },
                       "actionId": "R_FontReplace",
                       "keytip": "F6"
@@ -2854,6 +2854,13 @@
                 "mac": "Ctrl+Alt+Shift+F"
               },
               "actionId": "SelectSameFill"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+T",
+                "mac": "Ctrl+Alt+Shift+T"
+              },
+              "actionId": "FontReplace"
             },
             {
               "key": {

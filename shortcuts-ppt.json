@@ -218,7 +218,7 @@
     {
       "id": "FontReplace",
       "type": "ExecuteFunction",
-      "name": "フォント統一"
+      "name": "フォントを揃える"
     },
     {
       "id": "InsertHarvey",
@@ -582,6 +582,13 @@
       "key": {
         "default": "Ctrl+Alt+Shift+F",
         "mac": "Ctrl+Alt+Shift+F"
+      }
+    },
+    {
+      "action": "FontReplace",
+      "key": {
+        "default": "Ctrl+Alt+Shift+T",
+        "mac": "Ctrl+Alt+Shift+T"
       }
     },
     {

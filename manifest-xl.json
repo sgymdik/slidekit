@@ -117,6 +117,11 @@
               "displayName": "見出しスタイル"
             },
             {
+              "id": "XFontUnify",
+              "type": "executeFunction",
+              "displayName": "フォントを揃える"
+            },
+            {
               "id": "XIndentUp",
               "type": "executeFunction",
               "displayName": "インデント +"
@@ -315,6 +320,11 @@
               "id": "R_XHeaderStyle",
               "type": "executeFunction",
               "displayName": "見出しスタイル"
+            },
+            {
+              "id": "R_XFontUnify",
+              "type": "executeFunction",
+              "displayName": "フォントを揃える"
             },
             {
               "id": "R_XIndentUp",
@@ -646,9 +656,34 @@
                       "keytip": "5"
                     },
                     {
+                      "id": "B_XFontUnify",
+                      "type": "button",
+                      "label": "F7 フォントを揃える",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XFontUnify-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XFontUnify-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XFontUnify-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "フォントを揃える",
+                        "description": "全シートの文字を Meiryo などに揃える。標準スタイルも変えて、これから入力するセルも同じフォントに　⌥ → Y → F7　⌃⌥⇧T　⌃⌥P → FU"
+                      },
+                      "actionId": "R_XFontUnify",
+                      "keytip": "F7"
+                    },
+                    {
                       "id": "B_XIndentUp",
                       "type": "button",
-                      "label": "F7 インデント +",
+                      "label": "F8 インデント +",
                       "icons": [
                         {
                           "size": 16,
@@ -665,15 +700,15 @@
                       ],
                       "supertip": {
                         "title": "インデント +",
-                        "description": "インデントを 1 段増やす　⌥ → Y → F7　⌃⌥→　⌃⌥P → I+"
+                        "description": "インデントを 1 段増やす　⌥ → Y → F8　⌃⌥→　⌃⌥P → I+"
                       },
                       "actionId": "R_XIndentUp",
-                      "keytip": "F7"
+                      "keytip": "F8"
                     },
                     {
                       "id": "B_XIndentDown",
                       "type": "button",
-                      "label": "F8 インデント −",
+                      "label": "F9 インデント −",
                       "icons": [
                         {
                           "size": 16,
@@ -690,10 +725,10 @@
                       ],
                       "supertip": {
                         "title": "インデント −",
-                        "description": "インデントを 1 段減らす　⌥ → Y → F8　⌃⌥←　⌃⌥P → I-"
+                        "description": "インデントを 1 段減らす　⌥ → Y → F9　⌃⌥←　⌃⌥P → I-"
                       },
                       "actionId": "R_XIndentDown",
-                      "keytip": "F8"
+                      "keytip": "F9"
                     }
                   ]
                 },
@@ -1682,6 +1717,13 @@
                 "mac": "Ctrl+Alt+H"
               },
               "actionId": "XHeaderStyle"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+T",
+                "mac": "Ctrl+Alt+Shift+T"
+              },
+              "actionId": "XFontUnify"
             },
             {
               "key": {

@@ -484,29 +484,29 @@
     {
       "action": "SelectNextRight",
       "key": {
-        "default": "Ctrl+Alt+Shift+L",
-        "mac": "Ctrl+Alt+Shift+L"
+        "default": "Ctrl+Right",
+        "mac": "Ctrl+Right"
       }
     },
     {
       "action": "SelectNextLeft",
       "key": {
-        "default": "Ctrl+Alt+Shift+J",
-        "mac": "Ctrl+Alt+Shift+J"
+        "default": "Ctrl+Left",
+        "mac": "Ctrl+Left"
       }
     },
     {
       "action": "SelectNextUp",
       "key": {
-        "default": "Ctrl+Alt+Shift+I",
-        "mac": "Ctrl+Alt+Shift+I"
+        "default": "Ctrl+Up",
+        "mac": "Ctrl+Up"
       }
     },
     {
       "action": "SelectNextDown",
       "key": {
-        "default": "Ctrl+Alt+Shift+K",
-        "mac": "Ctrl+Alt+Shift+K"
+        "default": "Ctrl+Down",
+        "mac": "Ctrl+Down"
       }
     },
     {

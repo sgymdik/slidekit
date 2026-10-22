@@ -377,13 +377,13 @@
 ⌃⌥P → UG"/>
         <bt:String id="MT_pNav" DefaultValue="左隣の図形を選択 / 上隣の図形を選択 / 下隣の図形を選択"/>
         <bt:String id="T_SelectNextLeft" DefaultValue="左方向にある最も近い図形を選択
-⌃⌥⇧J
+⌃←
 ⌃⌥P → NL"/>
         <bt:String id="T_SelectNextUp" DefaultValue="上方向にある最も近い図形を選択
-⌃⌥⇧I
+⌃↑
 ⌃⌥P → NU"/>
         <bt:String id="T_SelectNextDown" DefaultValue="下方向にある最も近い図形を選択
-⌃⌥⇧K
+⌃↓
 ⌃⌥P → ND"/>
         <bt:String id="T_BringToFront" DefaultValue="最前面へ移動
 ⌃⌥1
@@ -397,8 +397,8 @@
         <bt:String id="T_SendToBack" DefaultValue="最背面へ移動
 ⌃⌥4
 ⌃⌥P → Z4"/>
-        <bt:String id="T_SelectNextRight" DefaultValue="選択中の図形から右方向にある最も近い図形を選択（旧 Alt+矢印 の代替）
-⌃⌥⇧L
+        <bt:String id="T_SelectNextRight" DefaultValue="選択中の図形から右方向にある最も近い図形を選択
+⌃→
 ⌃⌥P → NR"/>
         <bt:String id="T_PickStyle" DefaultValue="選択図形の塗り・線・文字書式を記憶（スポイト）
 ⌃⌥Q

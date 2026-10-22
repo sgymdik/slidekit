@@ -1595,7 +1595,7 @@
                       ],
                       "supertip": {
                         "title": "右隣の図形を選択",
-                        "description": "選択中の図形から右方向にある最も近い図形を選択（旧 Alt+矢印 の代替）　⌥ → Y → Z5　⌃⌥⇧L　⌃⌥P → NR"
+                        "description": "選択中の図形から右方向にある最も近い図形を選択　⌥ → Y → Z5　⌃→　⌃⌥P → NR"
                       },
                       "actionId": "R_SelectNextRight",
                       "keytip": "Z5"
@@ -1620,7 +1620,7 @@
                       ],
                       "supertip": {
                         "title": "左隣の図形を選択",
-                        "description": "左方向にある最も近い図形を選択　⌥ → Y → Z6　⌃⌥⇧J　⌃⌥P → NL"
+                        "description": "左方向にある最も近い図形を選択　⌥ → Y → Z6　⌃←　⌃⌥P → NL"
                       },
                       "actionId": "R_SelectNextLeft",
                       "keytip": "Z6"
@@ -1645,7 +1645,7 @@
                       ],
                       "supertip": {
                         "title": "上隣の図形を選択",
-                        "description": "上方向にある最も近い図形を選択　⌥ → Y → Z7　⌃⌥⇧I　⌃⌥P → NU"
+                        "description": "上方向にある最も近い図形を選択　⌥ → Y → Z7　⌃↑　⌃⌥P → NU"
                       },
                       "actionId": "R_SelectNextUp",
                       "keytip": "Z7"
@@ -1670,7 +1670,7 @@
                       ],
                       "supertip": {
                         "title": "下隣の図形を選択",
-                        "description": "下方向にある最も近い図形を選択　⌥ → Y → Z8　⌃⌥⇧K　⌃⌥P → ND"
+                        "description": "下方向にある最も近い図形を選択　⌥ → Y → Z8　⌃↓　⌃⌥P → ND"
                       },
                       "actionId": "R_SelectNextDown",
                       "keytip": "Z8"
@@ -2494,29 +2494,29 @@
             },
             {
               "key": {
-                "default": "Ctrl+Alt+Shift+L",
-                "mac": "Ctrl+Alt+Shift+L"
+                "default": "Ctrl+Right",
+                "mac": "Ctrl+Right"
               },
               "actionId": "SelectNextRight"
             },
             {
               "key": {
-                "default": "Ctrl+Alt+Shift+J",
-                "mac": "Ctrl+Alt+Shift+J"
+                "default": "Ctrl+Left",
+                "mac": "Ctrl+Left"
               },
               "actionId": "SelectNextLeft"
             },
             {
               "key": {
-                "default": "Ctrl+Alt+Shift+I",
-                "mac": "Ctrl+Alt+Shift+I"
+                "default": "Ctrl+Up",
+                "mac": "Ctrl+Up"
               },
               "actionId": "SelectNextUp"
             },
             {
               "key": {
-                "default": "Ctrl+Alt+Shift+K",
-                "mac": "Ctrl+Alt+Shift+K"
+                "default": "Ctrl+Down",
+                "mac": "Ctrl+Down"
               },
               "actionId": "SelectNextDown"
             },

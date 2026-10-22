@@ -695,7 +695,7 @@
                       ],
                       "supertip": {
                         "title": "左揃え",
-                        "description": "選択図形の左端を、最も左の図形に揃える（基準図形モード時は最初に選んだ図形）　⌥ → Y → 1　⌃⌥←　⌃⌥P → AL"
+                        "description": "選択図形の左端を、最も左の図形に揃える（基準図形モード時は最初に選んだ図形）　⌥ → Y → 1　⌃⇧←　⌃⌥P → AL"
                       },
                       "actionId": "R_AlignLeft",
                       "keytip": "1"
@@ -720,7 +720,7 @@
                       ],
                       "supertip": {
                         "title": "右揃え",
-                        "description": "選択図形の右端を揃える　⌥ → Y → A2　⌃⌥→　⌃⌥P → AR"
+                        "description": "選択図形の右端を揃える　⌥ → Y → A2　⌃⇧→　⌃⌥P → AR"
                       },
                       "actionId": "R_AlignRight",
                       "keytip": "A2"
@@ -745,7 +745,7 @@
                       ],
                       "supertip": {
                         "title": "上揃え",
-                        "description": "選択図形の上端を揃える　⌥ → Y → 2　⌃⌥↑　⌃⌥P → AT"
+                        "description": "選択図形の上端を揃える　⌥ → Y → 2　⌃⇧↑　⌃⌥P → AT"
                       },
                       "actionId": "R_AlignTop",
                       "keytip": "2"
@@ -770,7 +770,7 @@
                       ],
                       "supertip": {
                         "title": "下揃え",
-                        "description": "選択図形の下端を揃える　⌥ → Y → A4　⌃⌥↓　⌃⌥P → AB"
+                        "description": "選択図形の下端を揃える　⌥ → Y → A4　⌃⇧↓　⌃⌥P → AB"
                       },
                       "actionId": "R_AlignBottom",
                       "keytip": "A4"
@@ -2305,29 +2305,29 @@
           "shortcuts": [
             {
               "key": {
-                "default": "Ctrl+Alt+Left",
-                "mac": "Ctrl+Alt+Left"
+                "default": "Ctrl+Shift+Left",
+                "mac": "Ctrl+Shift+Left"
               },
               "actionId": "AlignLeft"
             },
             {
               "key": {
-                "default": "Ctrl+Alt+Right",
-                "mac": "Ctrl+Alt+Right"
+                "default": "Ctrl+Shift+Right",
+                "mac": "Ctrl+Shift+Right"
               },
               "actionId": "AlignRight"
             },
             {
               "key": {
-                "default": "Ctrl+Alt+Up",
-                "mac": "Ctrl+Alt+Up"
+                "default": "Ctrl+Shift+Up",
+                "mac": "Ctrl+Shift+Up"
               },
               "actionId": "AlignTop"
             },
             {
               "key": {
-                "default": "Ctrl+Alt+Down",
-                "mac": "Ctrl+Alt+Down"
+                "default": "Ctrl+Shift+Down",
+                "mac": "Ctrl+Shift+Down"
               },
               "actionId": "AlignBottom"
             },

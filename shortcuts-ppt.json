@@ -295,29 +295,29 @@
     {
       "action": "AlignLeft",
       "key": {
-        "default": "Ctrl+Alt+Left",
-        "mac": "Ctrl+Alt+Left"
+        "default": "Ctrl+Shift+Left",
+        "mac": "Ctrl+Shift+Left"
       }
     },
     {
       "action": "AlignRight",
       "key": {
-        "default": "Ctrl+Alt+Right",
-        "mac": "Ctrl+Alt+Right"
+        "default": "Ctrl+Shift+Right",
+        "mac": "Ctrl+Shift+Right"
       }
     },
     {
       "action": "AlignTop",
       "key": {
-        "default": "Ctrl+Alt+Up",
-        "mac": "Ctrl+Alt+Up"
+        "default": "Ctrl+Shift+Up",
+        "mac": "Ctrl+Shift+Up"
       }
     },
     {
       "action": "AlignBottom",
       "key": {
-        "default": "Ctrl+Alt+Down",
-        "mac": "Ctrl+Alt+Down"
+        "default": "Ctrl+Shift+Down",
+        "mac": "Ctrl+Shift+Down"
       }
     },
     {

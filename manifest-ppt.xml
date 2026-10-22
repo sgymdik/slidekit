@@ -297,16 +297,16 @@
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="T_AlignLeft" DefaultValue="選択図形の左端を、最も左の図形に揃える（基準図形モード時は最初に選んだ図形）
-⌃⌥←
+⌃⇧←
 ⌃⌥P → AL"/>
         <bt:String id="T_AlignRight" DefaultValue="選択図形の右端を揃える
-⌃⌥→
+⌃⇧→
 ⌃⌥P → AR"/>
         <bt:String id="T_AlignTop" DefaultValue="選択図形の上端を揃える
-⌃⌥↑
+⌃⇧↑
 ⌃⌥P → AT"/>
         <bt:String id="T_AlignBottom" DefaultValue="選択図形の下端を揃える
-⌃⌥↓
+⌃⇧↓
 ⌃⌥P → AB"/>
         <bt:String id="T_AlignCenter" DefaultValue="選択図形の左右中央を揃える
 ⌃⌥C

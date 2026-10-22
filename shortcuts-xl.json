@@ -126,6 +126,11 @@
       "name": "エラーセルを選択"
     },
     {
+      "id": "XInconsistent",
+      "type": "ExecuteFunction",
+      "name": "数式のずれを検出"
+    },
+    {
       "id": "XFindHardcodes",
       "type": "ExecuteFunction",
       "name": "数式内の直書き数値"
@@ -179,6 +184,16 @@
       "id": "XCheatsheet",
       "type": "ExecuteFunction",
       "name": "ショートカット一覧"
+    },
+    {
+      "id": "XAIExplain",
+      "type": "ExecuteFunction",
+      "name": "AI: 数式を説明"
+    },
+    {
+      "id": "XAISummary",
+      "type": "ExecuteFunction",
+      "name": "AI: 表を要約"
     },
     {
       "id": "XPane",
@@ -318,6 +333,13 @@
       "key": {
         "default": "Ctrl+Alt+E",
         "mac": "Ctrl+Alt+E"
+      }
+    },
+    {
+      "action": "XInconsistent",
+      "key": {
+        "default": "Ctrl+Alt+Shift+I",
+        "mac": "Ctrl+Alt+Shift+I"
       }
     },
     {

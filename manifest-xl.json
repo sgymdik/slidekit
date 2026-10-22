@@ -187,6 +187,11 @@
               "displayName": "エラーセルを選択"
             },
             {
+              "id": "XInconsistent",
+              "type": "executeFunction",
+              "displayName": "数式のずれを検出"
+            },
+            {
               "id": "XFindHardcodes",
               "type": "executeFunction",
               "displayName": "数式内の直書き数値"
@@ -240,6 +245,16 @@
               "id": "XCheatsheet",
               "type": "executeFunction",
               "displayName": "ショートカット一覧"
+            },
+            {
+              "id": "XAIExplain",
+              "type": "executeFunction",
+              "displayName": "AI: 数式を説明"
+            },
+            {
+              "id": "XAISummary",
+              "type": "executeFunction",
+              "displayName": "AI: 表を要約"
             },
             {
               "id": "XPane",
@@ -372,6 +387,11 @@
               "displayName": "エラーセルを選択"
             },
             {
+              "id": "R_XInconsistent",
+              "type": "executeFunction",
+              "displayName": "数式のずれを検出"
+            },
+            {
               "id": "R_XFindHardcodes",
               "type": "executeFunction",
               "displayName": "数式内の直書き数値"
@@ -425,6 +445,16 @@
               "id": "R_XCheatsheet",
               "type": "executeFunction",
               "displayName": "ショートカット一覧"
+            },
+            {
+              "id": "R_XAIExplain",
+              "type": "executeFunction",
+              "displayName": "AI: 数式を説明"
+            },
+            {
+              "id": "R_XAISummary",
+              "type": "executeFunction",
+              "displayName": "AI: 表を要約"
             },
             {
               "id": "R_XPane",
@@ -1151,9 +1181,34 @@
                       "keytip": "A4"
                     },
                     {
+                      "id": "B_XInconsistent",
+                      "type": "button",
+                      "label": "A5 数式のずれを検出",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XInconsistent-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XInconsistent-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XInconsistent-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "数式のずれを検出",
+                        "description": "同じ行・列に並ぶ数式の中で、1 つだけ形の違うもの（コピーし忘れ・直書き）を選択　⌥ → Y → A5　⌃⌥⇧I　⌃⌥P → IC"
+                      },
+                      "actionId": "R_XInconsistent",
+                      "keytip": "A5"
+                    },
+                    {
                       "id": "B_XFindHardcodes",
                       "type": "button",
-                      "label": "A5 数式内の直書き数値",
+                      "label": "A6 数式内の直書き数値",
                       "icons": [
                         {
                           "size": 16,
@@ -1170,10 +1225,10 @@
                       ],
                       "supertip": {
                         "title": "数式内の直書き数値",
-                        "description": "数式中に定数（=A1*1.1 の 1.1 など）を含むセルを選択　⌥ → Y → A5　⌃⌥P → HC"
+                        "description": "数式中に定数（=A1*1.1 の 1.1 など）を含むセルを選択　⌥ → Y → A6　⌃⌥P → HC"
                       },
                       "actionId": "R_XFindHardcodes",
-                      "keytip": "A5"
+                      "keytip": "A6"
                     }
                   ]
                 },
@@ -1466,9 +1521,59 @@
                       "keytip": "9"
                     },
                     {
+                      "id": "B_XAIExplain",
+                      "type": "button",
+                      "label": "T3 AI: 数式を説明",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XAIExplain-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XAIExplain-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XAIExplain-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "AI: 数式を説明",
+                        "description": "アクティブセルの数式が何を計算しているかを、AI が日本語で説明（ローカルの Bedrock を使う）　⌥ → Y → T3　⌃⌥P → QX"
+                      },
+                      "actionId": "R_XAIExplain",
+                      "keytip": "T3"
+                    },
+                    {
+                      "id": "B_XAISummary",
+                      "type": "button",
+                      "label": "T4 AI: 表を要約",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XAISummary-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XAISummary-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/XAISummary-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "AI: 表を要約",
+                        "description": "選択した表の傾向・目立つ点を、AI が 3 行で要約（ローカルの Bedrock を使う）　⌥ → Y → T4　⌃⌥P → QS"
+                      },
+                      "actionId": "R_XAISummary",
+                      "keytip": "T4"
+                    },
+                    {
                       "id": "B_XPane",
                       "type": "button",
-                      "label": "T3 ヒントパネル",
+                      "label": "T5 ヒントパネル",
                       "icons": [
                         {
                           "size": 16,
@@ -1485,10 +1590,10 @@
                       ],
                       "supertip": {
                         "title": "ヒントパネル",
-                        "description": "選択に応じて使えるショートカットを表示するパネルを開く　⌥ → Y → T3　⌃⌥I　⌃⌥P → HP"
+                        "description": "選択に応じて使えるショートカットを表示するパネルを開く　⌥ → Y → T5　⌃⌥I　⌃⌥P → HP"
                       },
                       "actionId": "R_XPane",
-                      "keytip": "T3"
+                      "keytip": "T5"
                     }
                   ]
                 }
@@ -1640,6 +1745,13 @@
                 "mac": "Ctrl+Alt+E"
               },
               "actionId": "XFindErrors"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+I",
+                "mac": "Ctrl+Alt+Shift+I"
+              },
+              "actionId": "XInconsistent"
             },
             {
               "key": {

@@ -202,6 +202,16 @@
               "displayName": "グループ解除"
             },
             {
+              "id": "CopyPosition",
+              "type": "executeFunction",
+              "displayName": "位置をコピー"
+            },
+            {
+              "id": "PastePosition",
+              "type": "executeFunction",
+              "displayName": "位置を貼り付け"
+            },
+            {
               "id": "BringToFront",
               "type": "executeFunction",
               "displayName": "最前面へ"
@@ -297,6 +307,11 @@
               "displayName": "アジェンダを各章の前に"
             },
             {
+              "id": "DeltaArrow",
+              "type": "executeFunction",
+              "displayName": "差分の矢印"
+            },
+            {
               "id": "InsertTracker",
               "type": "executeFunction",
               "displayName": "アジェンダトラッカー"
@@ -332,6 +347,11 @@
               "displayName": "連番リネーム"
             },
             {
+              "id": "DeckCheck",
+              "type": "executeFunction",
+              "displayName": "資料チェック"
+            },
+            {
               "id": "RemoveDuplicates",
               "type": "executeFunction",
               "displayName": "重複図形を削除"
@@ -350,6 +370,26 @@
               "id": "Settings",
               "type": "executeFunction",
               "displayName": "設定"
+            },
+            {
+              "id": "AIRewrite",
+              "type": "executeFunction",
+              "displayName": "AI: 言い換え"
+            },
+            {
+              "id": "AIBullets",
+              "type": "executeFunction",
+              "displayName": "AI: 箇条書きに"
+            },
+            {
+              "id": "AITitle",
+              "type": "executeFunction",
+              "displayName": "AI: タイトル案"
+            },
+            {
+              "id": "AITranslate",
+              "type": "executeFunction",
+              "displayName": "AI: 英訳 ↔ 和訳"
             },
             {
               "id": "R_AlignLeft",
@@ -492,6 +532,16 @@
               "displayName": "グループ解除"
             },
             {
+              "id": "R_CopyPosition",
+              "type": "executeFunction",
+              "displayName": "位置をコピー"
+            },
+            {
+              "id": "R_PastePosition",
+              "type": "executeFunction",
+              "displayName": "位置を貼り付け"
+            },
+            {
               "id": "R_BringToFront",
               "type": "executeFunction",
               "displayName": "最前面へ"
@@ -587,6 +637,11 @@
               "displayName": "アジェンダを各章の前に"
             },
             {
+              "id": "R_DeltaArrow",
+              "type": "executeFunction",
+              "displayName": "差分の矢印"
+            },
+            {
               "id": "R_InsertTracker",
               "type": "executeFunction",
               "displayName": "アジェンダトラッカー"
@@ -622,6 +677,11 @@
               "displayName": "連番リネーム"
             },
             {
+              "id": "R_DeckCheck",
+              "type": "executeFunction",
+              "displayName": "資料チェック"
+            },
+            {
               "id": "R_RemoveDuplicates",
               "type": "executeFunction",
               "displayName": "重複図形を削除"
@@ -640,6 +700,26 @@
               "id": "R_Settings",
               "type": "executeFunction",
               "displayName": "設定"
+            },
+            {
+              "id": "R_AIRewrite",
+              "type": "executeFunction",
+              "displayName": "AI: 言い換え"
+            },
+            {
+              "id": "R_AIBullets",
+              "type": "executeFunction",
+              "displayName": "AI: 箇条書きに"
+            },
+            {
+              "id": "R_AITitle",
+              "type": "executeFunction",
+              "displayName": "AI: タイトル案"
+            },
+            {
+              "id": "R_AITranslate",
+              "type": "executeFunction",
+              "displayName": "AI: 英訳 ↔ 和訳"
             }
           ]
         }
@@ -1454,6 +1534,56 @@
                       },
                       "actionId": "R_Ungroup",
                       "keytip": "R4"
+                    },
+                    {
+                      "id": "B_CopyPosition",
+                      "type": "button",
+                      "label": "R5 位置をコピー",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/CopyPosition-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/CopyPosition-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/CopyPosition-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "位置をコピー",
+                        "description": "選択図形の位置とサイズを覚える（別のスライドで貼れる）　⌥ → Y → R5　⌃⌥⇧Q　⌃⌥P → PC"
+                      },
+                      "actionId": "R_CopyPosition",
+                      "keytip": "R5"
+                    },
+                    {
+                      "id": "B_PastePosition",
+                      "type": "button",
+                      "label": "R6 位置を貼り付け",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/PastePosition-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/PastePosition-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/PastePosition-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "位置を貼り付け",
+                        "description": "覚えた位置とサイズを選択図形に当てる（スライドをまたいで位置を揃える）　⌥ → Y → R6　⌃⌥⇧A　⌃⌥P → PV"
+                      },
+                      "actionId": "R_PastePosition",
+                      "keytip": "R6"
                     }
                   ]
                 },
@@ -1991,9 +2121,34 @@
                       "keytip": "I5"
                     },
                     {
+                      "id": "B_DeltaArrow",
+                      "type": "button",
+                      "label": "I6 差分の矢印",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/DeltaArrow-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/DeltaArrow-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/DeltaArrow-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "差分の矢印",
+                        "description": "棒を 2 本選ぶと、間に矢印と増減率（または CAGR）のラベルを置く　⌥ → Y → I6　⌃⌥P → DA"
+                      },
+                      "actionId": "R_DeltaArrow",
+                      "keytip": "I6"
+                    },
+                    {
                       "id": "B_InsertTracker",
                       "type": "button",
-                      "label": "I6 アジェンダトラッカー",
+                      "label": "I7 アジェンダトラッカー",
                       "icons": [
                         {
                           "size": 16,
@@ -2010,15 +2165,15 @@
                       ],
                       "supertip": {
                         "title": "アジェンダトラッカー",
-                        "description": "スライド右上に章トラッカー（現在地ハイライト）を挿入　⌥ → Y → I6　⌃⌥P → AG"
+                        "description": "スライド右上に章トラッカー（現在地ハイライト）を挿入　⌥ → Y → I7　⌃⌥P → AG"
                       },
                       "actionId": "R_InsertTracker",
-                      "keytip": "I6"
+                      "keytip": "I7"
                     },
                     {
                       "id": "B_InsertTable",
                       "type": "button",
-                      "label": "I7 表を貼り付け",
+                      "label": "I8 表を貼り付け",
                       "icons": [
                         {
                           "size": 16,
@@ -2035,10 +2190,10 @@
                       ],
                       "supertip": {
                         "title": "表を貼り付け",
-                        "description": "Excel からコピーしたセル範囲（タブ区切り）を書式付きの表として挿入　⌥ → Y → I7　⌃⌥P → TB"
+                        "description": "Excel からコピーしたセル範囲（タブ区切り）を書式付きの表として挿入　⌥ → Y → I8　⌃⌥P → TB"
                       },
                       "actionId": "R_InsertTable",
-                      "keytip": "I7"
+                      "keytip": "I8"
                     },
                     {
                       "id": "B_ChartStudio",
@@ -2186,9 +2341,34 @@
                       "keytip": "T4"
                     },
                     {
+                      "id": "B_DeckCheck",
+                      "type": "button",
+                      "label": "T5 資料チェック",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/DeckCheck-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/DeckCheck-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/DeckCheck-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "資料チェック",
+                        "description": "デッキ全体を点検: はみ出し・フォントのばらつき・空のプレースホルダ・タイトル位置のずれ　⌥ → Y → T5　⌃⌥⇧D　⌃⌥P → DC"
+                      },
+                      "actionId": "R_DeckCheck",
+                      "keytip": "T5"
+                    },
+                    {
                       "id": "B_RemoveDuplicates",
                       "type": "button",
-                      "label": "T5 重複図形を削除",
+                      "label": "T6 重複図形を削除",
                       "icons": [
                         {
                           "size": 16,
@@ -2205,15 +2385,15 @@
                       ],
                       "supertip": {
                         "title": "重複図形を削除",
-                        "description": "同じ位置・サイズ・テキストで重なった図形を削除　⌥ → Y → T5　⌃⌥P → RD"
+                        "description": "同じ位置・サイズ・テキストで重なった図形を削除　⌥ → Y → T6　⌃⌥P → RD"
                       },
                       "actionId": "R_RemoveDuplicates",
-                      "keytip": "T5"
+                      "keytip": "T6"
                     },
                     {
                       "id": "B_DeleteStickies",
                       "type": "button",
-                      "label": "T6 付箋を一括削除",
+                      "label": "T7 付箋を一括削除",
                       "icons": [
                         {
                           "size": 16,
@@ -2230,15 +2410,15 @@
                       ],
                       "supertip": {
                         "title": "付箋を一括削除",
-                        "description": "全スライドから付箋（SlideKit 製）を削除　⌥ → Y → T6　⌃⌥P → DS"
+                        "description": "全スライドから付箋（SlideKit 製）を削除　⌥ → Y → T7　⌃⌥P → DS"
                       },
                       "actionId": "R_DeleteStickies",
-                      "keytip": "T6"
+                      "keytip": "T7"
                     },
                     {
                       "id": "B_DecimalToggle",
                       "type": "button",
-                      "label": "T7 小数点 . ↔ ,",
+                      "label": "T8 小数点 . ↔ ,",
                       "icons": [
                         {
                           "size": 16,
@@ -2255,15 +2435,15 @@
                       ],
                       "supertip": {
                         "title": "小数点 . ↔ ,",
-                        "description": "選択図形のテキストの小数点記号を切替　⌥ → Y → T7　⌃⌥P → DT"
+                        "description": "選択図形のテキストの小数点記号を切替　⌥ → Y → T8　⌃⌥P → DT"
                       },
                       "actionId": "R_DecimalToggle",
-                      "keytip": "T7"
+                      "keytip": "T8"
                     },
                     {
                       "id": "B_Settings",
                       "type": "button",
-                      "label": "T8 設定",
+                      "label": "T9 設定",
                       "icons": [
                         {
                           "size": 16,
@@ -2280,10 +2460,130 @@
                       ],
                       "supertip": {
                         "title": "設定",
-                        "description": "標準間隔・マージン・基準図形モード・ヒント表示を設定　⌥ → Y → T8　⌃⌥P → CF"
+                        "description": "標準間隔・マージン・基準図形モード・ヒント表示を設定　⌥ → Y → T9　⌃⌥P → CF"
                       },
                       "actionId": "R_Settings",
-                      "keytip": "T8"
+                      "keytip": "T9"
+                    }
+                  ]
+                },
+                {
+                  "id": "G_pAI",
+                  "label": "AI",
+                  "icons": [
+                    {
+                      "size": 16,
+                      "url": "https://sgymdik.github.io/slidekit/assets/AIRewrite-16.png"
+                    },
+                    {
+                      "size": 32,
+                      "url": "https://sgymdik.github.io/slidekit/assets/AIRewrite-32.png"
+                    },
+                    {
+                      "size": 80,
+                      "url": "https://sgymdik.github.io/slidekit/assets/AIRewrite-80.png"
+                    }
+                  ],
+                  "controls": [
+                    {
+                      "id": "B_AIRewrite",
+                      "type": "button",
+                      "label": "Q1 AI: 言い換え",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AIRewrite-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AIRewrite-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AIRewrite-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "AI: 言い換え",
+                        "description": "選択した図形の文章を、AI が簡潔なビジネス文に書き直す（ローカルの Bedrock を使う）　⌥ → Y → Q1　⌃⌥⇧W　⌃⌥P → QR"
+                      },
+                      "actionId": "R_AIRewrite",
+                      "keytip": "Q1"
+                    },
+                    {
+                      "id": "B_AIBullets",
+                      "type": "button",
+                      "label": "Q2 AI: 箇条書きに",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AIBullets-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AIBullets-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AIBullets-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "AI: 箇条書きに",
+                        "description": "選択した図形の文章を、要点の箇条書き（3〜5 個）にする　⌥ → Y → Q2　⌃⌥P → QB"
+                      },
+                      "actionId": "R_AIBullets",
+                      "keytip": "Q2"
+                    },
+                    {
+                      "id": "B_AITitle",
+                      "type": "button",
+                      "label": "Q3 AI: タイトル案",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AITitle-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AITitle-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AITitle-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "AI: タイトル案",
+                        "description": "スライドの中身から、結論が伝わるタイトル（メッセージ）を 3 案出す　⌥ → Y → Q3　⌃⌥P → QT"
+                      },
+                      "actionId": "R_AITitle",
+                      "keytip": "Q3"
+                    },
+                    {
+                      "id": "B_AITranslate",
+                      "type": "button",
+                      "label": "Q4 AI: 英訳 ↔ 和訳",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AITranslate-16.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AITranslate-32.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://sgymdik.github.io/slidekit/assets/AITranslate-80.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "AI: 英訳 ↔ 和訳",
+                        "description": "選択した図形の文章を英語なら日本語に、日本語なら英語に訳す　⌥ → Y → Q4　⌃⌥P → QE"
+                      },
+                      "actionId": "R_AITranslate",
+                      "keytip": "Q4"
                     }
                   ]
                 }
@@ -2466,6 +2766,20 @@
             },
             {
               "key": {
+                "default": "Ctrl+Alt+Shift+Q",
+                "mac": "Ctrl+Alt+Shift+Q"
+              },
+              "actionId": "CopyPosition"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+A",
+                "mac": "Ctrl+Alt+Shift+A"
+              },
+              "actionId": "PastePosition"
+            },
+            {
+              "key": {
                 "default": "Ctrl+Alt+1",
                 "mac": "Ctrl+Alt+1"
               },
@@ -2582,6 +2896,20 @@
                 "mac": "Ctrl+Alt+I"
               },
               "actionId": "Pane"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+D",
+                "mac": "Ctrl+Alt+Shift+D"
+              },
+              "actionId": "DeckCheck"
+            },
+            {
+              "key": {
+                "default": "Ctrl+Alt+Shift+W",
+                "mac": "Ctrl+Alt+Shift+W"
+              },
+              "actionId": "AIRewrite"
             }
           ]
         }

@@ -141,6 +141,16 @@
       "name": "グループ解除"
     },
     {
+      "id": "CopyPosition",
+      "type": "ExecuteFunction",
+      "name": "位置をコピー"
+    },
+    {
+      "id": "PastePosition",
+      "type": "ExecuteFunction",
+      "name": "位置を貼り付け"
+    },
+    {
       "id": "BringToFront",
       "type": "ExecuteFunction",
       "name": "最前面へ"
@@ -236,6 +246,11 @@
       "name": "アジェンダを各章の前に"
     },
     {
+      "id": "DeltaArrow",
+      "type": "ExecuteFunction",
+      "name": "差分の矢印"
+    },
+    {
       "id": "InsertTracker",
       "type": "ExecuteFunction",
       "name": "アジェンダトラッカー"
@@ -271,6 +286,11 @@
       "name": "連番リネーム"
     },
     {
+      "id": "DeckCheck",
+      "type": "ExecuteFunction",
+      "name": "資料チェック"
+    },
+    {
       "id": "RemoveDuplicates",
       "type": "ExecuteFunction",
       "name": "重複図形を削除"
@@ -289,6 +309,26 @@
       "id": "Settings",
       "type": "ExecuteFunction",
       "name": "設定"
+    },
+    {
+      "id": "AIRewrite",
+      "type": "ExecuteFunction",
+      "name": "AI: 言い換え"
+    },
+    {
+      "id": "AIBullets",
+      "type": "ExecuteFunction",
+      "name": "AI: 箇条書きに"
+    },
+    {
+      "id": "AITitle",
+      "type": "ExecuteFunction",
+      "name": "AI: タイトル案"
+    },
+    {
+      "id": "AITranslate",
+      "type": "ExecuteFunction",
+      "name": "AI: 英訳 ↔ 和訳"
     }
   ],
   "shortcuts": [
@@ -454,6 +494,20 @@
       }
     },
     {
+      "action": "CopyPosition",
+      "key": {
+        "default": "Ctrl+Alt+Shift+Q",
+        "mac": "Ctrl+Alt+Shift+Q"
+      }
+    },
+    {
+      "action": "PastePosition",
+      "key": {
+        "default": "Ctrl+Alt+Shift+A",
+        "mac": "Ctrl+Alt+Shift+A"
+      }
+    },
+    {
       "action": "BringToFront",
       "key": {
         "default": "Ctrl+Alt+1",
@@ -570,6 +624,20 @@
       "key": {
         "default": "Ctrl+Alt+I",
         "mac": "Ctrl+Alt+I"
+      }
+    },
+    {
+      "action": "DeckCheck",
+      "key": {
+        "default": "Ctrl+Alt+Shift+D",
+        "mac": "Ctrl+Alt+Shift+D"
+      }
+    },
+    {
+      "action": "AIRewrite",
+      "key": {
+        "default": "Ctrl+Alt+Shift+W",
+        "mac": "Ctrl+Alt+Shift+W"
       }
     }
   ]
